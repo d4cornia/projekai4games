@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4059806470621875440}
   - component: {fileID: 4059806470621875446}
   - component: {fileID: 4059806470621875445}
-  m_Layer: 0
-  m_Name: Obstacle 1
+  - component: {fileID: 1575443962540855827}
+  m_Layer: 6
+  m_Name: T Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 425686227
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.745283, g: 0.49753624, b: 0.2214756, a: 1}
@@ -132,6 +133,46 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1575443962540855827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059806470621875441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -3.31935, y: -0.2896, z: 0}
+  - {x: -0.49797654, y: 0.5312724, z: 0}
+  - {x: -0.5007094, y: -0.5650578, z: 0}
+  - {x: -0.18369642, y: -0.59638155, z: 0}
+  - {x: 0.40387058, y: -0.5337341, z: 0}
+  - {x: 0.40933633, y: -5.5768547, z: 0}
+  - {x: 0.50225395, y: -5.5455313, z: 0}
+  - {x: 0.50225395, y: -4.417877, z: 0}
+  - {x: 0.5077197, y: -0.47108665, z: 0}
+  - {x: 3.31935, y: -0.2896, z: 0}
+  - {x: 3.31935, y: 0.2896, z: 0}
+  - {x: 0.5049868, y: -0.50241035, z: 0}
+  - {x: 0.5077197, y: 0.56259614, z: 0}
+  - {x: 0.5049868, y: 5.918954, z: 0}
+  - {x: 0.41480207, y: 5.918954, z: 0}
+  - {x: 0.4120692, y: 0.6565673, z: 0}
+  - {x: -0.4952438, y: 0.5939199, z: 0}
+  - {x: -3.31935, y: 0.2896, z: 0}
+  m_ShapePathHash: 2012091115
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 60308
 --- !u!1 &4059806470820356188
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +185,7 @@ GameObject:
   - component: {fileID: 4059806470820356178}
   - component: {fileID: 4059806470820356177}
   - component: {fileID: 4059806470820356176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
