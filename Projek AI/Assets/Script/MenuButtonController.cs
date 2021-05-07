@@ -18,6 +18,7 @@ public class MenuButtonController : MonoBehaviour {
 	void Update () {
 		if(Input.GetAxis ("Vertical") != 0){
 			if(!keyDown){
+				audioSource.Play();
 				if (Input.GetAxis ("Vertical") < 0) {
 					if(index < maxIndex){
 						index++;
