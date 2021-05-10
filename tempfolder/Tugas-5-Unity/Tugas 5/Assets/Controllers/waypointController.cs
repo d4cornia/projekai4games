@@ -71,6 +71,7 @@ public class waypointController : MonoBehaviour{
     public GameObject obj;
     public List<waypointController> waypointControllers;
     public Waypoint waypoint;
+    public float valuePoint;
 
     private void Awake() {
         waypointControllers = new List<waypointController>();

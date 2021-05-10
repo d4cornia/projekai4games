@@ -53,3 +53,6 @@ TagManager:
   - name: player
     uniqueID: 186142843
     locked: 0
+  - name: lantai
+    uniqueID: 2622995717
+    locked: 0
