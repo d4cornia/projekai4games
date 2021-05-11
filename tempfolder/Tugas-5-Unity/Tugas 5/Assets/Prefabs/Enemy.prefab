@@ -100,8 +100,10 @@ MonoBehaviour:
   rb: {fileID: 0}
   rbTarget: {fileID: 0}
   enemyObj: {fileID: 7936529196282730045}
-  maxSpeed: 1
-  acceleration: 1
+  maxSpeed: 7
+  acceleration: 5
+  radiusPlayerDetection: 5
+  coneEvadeRadius: 120
   fov: {fileID: 0}
   blindSpotFOV: {fileID: 0}
 --- !u!50 &7936529196282730040

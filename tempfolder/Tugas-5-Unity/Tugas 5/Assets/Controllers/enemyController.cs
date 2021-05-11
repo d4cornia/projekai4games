@@ -13,7 +13,8 @@ public class enemyController : MonoBehaviour
 {
     public static void initEnemies() {
         GameObject enemyObject = GameObject.Find("Enemy");
-        for (int i = 0; i < 5; i++) {
+        int numberOfEnemy = 5;
+        for (int i = 0; i < numberOfEnemy; i++) {
             GameObject newObj = Instantiate(enemyObject);
             Waypoint waypoint = waypointController.graph.getRandomWaypoint();
             newObj.transform.position = waypoint.position;
@@ -27,6 +28,9 @@ public class enemyController : MonoBehaviour
     public GameObject enemyObj;
     public float maxSpeed;
     public float acceleration;
+
+    public int radiusPlayerDetection;
+    public int coneEvadeRadius;
 
     public fieldOfView fov;
     public fieldOfView blindSpotFOV;
@@ -66,12 +70,8 @@ public class enemyController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate(){
         // Check apakah sudah saatnya pindah waypoint
+        // & Pergi ke waypoint jika ada target waypoint
         checkPosition();
-        // Pergi ke waypoint jika ada target waypoint
-        if (this.targetWaypoint != null){
-            Steering steering = move_seek(this.targetWaypoint.position);
-            updateMovement(steering);
-        }
         // Check apakah sudah sampai waypoint
         checkReachWaypoint();
         // Check kecepatan
@@ -80,27 +80,66 @@ public class enemyController : MonoBehaviour
         }
     }
 
-    void calcWaypointValue()
-    {
-        foreach (var item in waypointController.graph.waypoints)
-        {
-            item.coverValueCalc();
+    // Helper Function
+    GameObject getPlayerAround() {
+
+        GameObject player = null;
+        float x = this.rb.velocity.x;
+        float y = this.rb.velocity.y;
+        float degreeVelo = Mathf.Atan(x / y);
+        //for (int deg = -coneEvadeRadius / 2; deg < coneEvadeRadius / 2; deg++) {
+        //    float degree = degreeVelo + deg;
+        //}
+        for (int deg = 0; deg < 360; deg++) {
+            float degree = deg;
+            Vector2 direction = new Vector2(Mathf.Sin(degree), Mathf.Cos(degree));
+            Vector3 origin = (Vector3)this.rb.position + (Vector3)direction;
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, this.radiusPlayerDetection);
+            // layer mask -> yang mau dikenain layer apa aja, bukan di ignore
+            if (raycastHit2D.collider != null) {
+                // hit object
+                GameObject otherObj = raycastHit2D.collider.gameObject;
+                if (otherObj.CompareTag("Player")) {
+                    player = otherObj;
+                }
+            }
         }
+        return player;
     }
 
-    // Helper Function
+    void moveToWaypoint(Waypoint targetWaypoint) {
+        this.targetWaypoint = targetWaypoint;
+        this.targetRadius = Random.Range(0.5f, 1);
+        this.rb.drag = 0;
+        Debug.Log($"{this.name} start running! to ${this.targetWaypoint.name}");
+    }
+
     void checkPosition(){
     	// Buat check waypiint AI
     	if(this.targetWaypoint == null){
             //Debug.Log("New Target!");
-            // calculate cover value 
-            calcWaypointValue();
-            this.targetWaypoint = this.lastWaypoint.getRandomNeighbour();
-            this.targetRadius = Random.Range(0.5f, 1);
-        } else {
-            //Debug.Log("No Target");
+            // calculate cover value last Waypoint
+            float coverValue = this.lastWaypoint.coverVal;
+            // Jika Cover value rendah pindah Waypoint tetangga dengan Cover value tertinggi
+            if (coverValue < 6) { // Posisi tidak aman
+                Waypoint targetWaypoint = this.lastWaypoint.getHighestCoverNeighbour();
+                moveToWaypoint(targetWaypoint);
+            } else { 
+                // Posisi aman
+            }
+        } else { // Jika ada waypoint gerak
+            // Move
+            Steering steering = move_seek(this.targetWaypoint.position);
+            updateMovement(steering);
+            GameObject player = getPlayerAround();
+            if(player != null) {
+                Vector2 position = this.rb.position;
+                Waypoint targetWaypoint = waypointController.graph.getClosestWaypoint(position);
+                moveToWaypoint(targetWaypoint);
+            }
         }
     } 
+
     void checkReachWaypoint() {
         if(targetWaypoint == null) {
             return;
@@ -108,9 +147,12 @@ public class enemyController : MonoBehaviour
         Vector2 position = this.transform.position;
         Vector2 targetPosition = this.targetWaypoint.position;
         Vector2 diffPosition = position - targetPosition;
+        // Jika sudah smp tujuan (Waypoint)
         if(diffPosition.magnitude < this.targetRadius) {
             this.lastWaypoint = this.targetWaypoint;
             this.targetWaypoint = null;
+            this.rb.AddForce(Vector2.zero, ForceMode2D.Force);
+            this.rb.drag = 5;
             Debug.Log($"{this.name} reached waypoint!");
         }
     }
@@ -134,92 +176,5 @@ public class enemyController : MonoBehaviour
         steering.linear = steering.linear.normalized * acceleration;
         steering.angular = 0;
         return steering;
-    }
-
-    Vector2 wallCollisionAvoidance()
-    {
-        // Paramter
-        float avoidDistance = 50;
-        Vector2 target = Vector2.zero;
-        if(fov.obj != null){
-            Debug.Log("fov masuk");
-            Rigidbody2D rb_target = fov.obj.GetComponent<Rigidbody2D>(); // Cari rb dari object yang intersect dengan Raycast
-            target = ((Vector2)rb_target.transform.position) + fov.rayCast.normal * avoidDistance;
-        }else if(blindSpotFOV.obj != null){
-            Debug.Log("blindSpotFOV masuk");
-            Rigidbody2D rb_target = blindSpotFOV.obj.GetComponent<Rigidbody2D>();
-            target = ((Vector2)rb_target.transform.position) + blindSpotFOV.rayCast.normal * avoidDistance;
-        }
-        // Debug.DrawLine(rb.transform.position + new Vector3(0,0,-5), rb.transform.position + new Vector3(rb.velocity.x, rb.velocity.y, -5), Color.red, 1, true);
-
-        return target; // Terus manggil Seek
-    }
-
-    Steering characterAvoidance() {
-        // return variable
-        Steering steering = null;
-        // Constant
-        float radius = 2;
-        // Temp
-        Rigidbody2D firstRb = null;
-        float firstLength = Mathf.Infinity;
-        // Iterate Setiap AI
-        var list_enemy = GameObject.FindGameObjectsWithTag("AI");
-        foreach (var enemy in list_enemy) {
-            if (enemy.GetComponent<enemyController>().id == this.id) {
-                continue;
-            }
-            Rigidbody2D rb_target = enemy.GetComponent<Rigidbody2D>();
-            // Get Prediction Position (This Enemy)
-            Vector2 predThis = new Vector2(rb.transform.position.x, rb.transform.position.y) + rb.velocity;
-            // Get Prediction Position (Other Enemy)
-            Vector2 predOther = new Vector2(rb_target.transform.position.x, rb_target.transform.position.y) + rb_target.velocity;
-            // Dapetin Selisih Posisi
-            Vector2 diff = predThis - predOther;
-            float length_diff = diff.magnitude;
-            if (length_diff > radius) {
-                continue;
-            } else {
-                Debug.Log("Length Diff: " + length_diff);
-                Debug.Log("MASUK");
-                Debug.DrawLine(predThis, predOther, Color.red, 10000, true);
-                if (length_diff < firstLength) {
-                    firstRb = rb_target;
-                    firstLength = length_diff;
-                }
-            }
-            
-        }
-        // Check apakah ketemu target
-        if (firstRb == null) {
-            return null;
-        } else {
-            // Action AI menjauhi AI lainnya
-            Debug.Log("OTW NABRAK");
-            rb.AddForce(new Vector2(rb.velocity.y, -rb.velocity.x), ForceMode2D.Impulse);
-            Debug.DrawLine(rb.position, rb.position + rb.velocity, Color.green);
-        }
-        return steering;
-    }
-
-	// OLD
-	void oldFixedUpdate() {
-        Steering steering = null;
-        steering = move_seek();
-        updateMovement(steering);
-
-        steering = characterAvoidance();
-        updateMovement(steering);
-
-        if (fov.obj != null || blindSpotFOV.obj != null) {
-            //Debug.Log(fov.obj.name);
-            Vector2 temp = wallCollisionAvoidance();
-            if (temp != Vector2.zero) {
-                steering = move_seek(temp);
-                updateMovement(steering);
-            }
-        } else {
-            // Debug.Log("Null");
-        }
     }
 }

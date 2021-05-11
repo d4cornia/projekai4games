@@ -5,8 +5,25 @@ using UnityEngine;
 public class GraphWaypoint {
     public List<Waypoint> waypoints { get; set; }
 
-    public Waypoint getClosestWaypoint(Vector2 location) {
-        return waypoints[0];
+    public Waypoint getClosestWaypoint(Vector2 position) {
+        Waypoint waypoint = null;
+        float max = -1;
+        foreach (var wp in this.waypoints) {
+            Vector2 targetPosition = wp.position;
+            Vector2 diff = targetPosition - position;
+            Vector2 direction = diff.normalized;
+            Vector3 origin = position + direction;
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, diff.magnitude);
+            //Debug.Log(diff.magnitude); // Hitung panjang jarak ke Waypoint
+            bool isWaypointValid = raycastHit2D.collider == null;
+            if (isWaypointValid) {
+                if (waypoint == null || wp.coverVal > max) {
+                    max = wp.coverVal;
+                    waypoint = wp;
+                }
+            }
+        }
+        return waypoint;
     }
     public Waypoint getRandomWaypoint() {
         int idx = Random.Range(0, this.waypoints.Count);
@@ -19,8 +36,6 @@ public class Waypoint {
     public string name;
     public LayerMask layerMask;
     public Vector2 position { get; set; }
-    // Attributes Waypoint
-    public float coverValue;
     // References
     public List<Waypoint> waypoints { get; set; }
 
@@ -34,30 +49,37 @@ public class Waypoint {
     }
 
     // Method
-    public Waypoint getRandomNeighbour() {
-        int idx = Random.Range(0, this.waypoints.Count);
-        return this.waypoints[idx];
-    }
-
-    public void coverValueCalc()
-    {
-        for (int deg = 0; deg < 360; deg++)
-        {
-            Vector2 direction = new Vector2(Mathf.Sin(deg), Mathf.Cos(deg));
-            Vector3 origin = (Vector3)position + (Vector3)direction;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 250, layerMask);
-            // layer mask -> yang mau dikenain layer apa aja, bukan di ignore
-            if (raycastHit2D.collider != null)
-            {
-                // hit object
-                GameObject otherObj = raycastHit2D.collider.gameObject;
-                if (otherObj.CompareTag("Player"))
-                {
-                    coverValue = raycastHit2D.distance;
-                }
+    public Waypoint getHighestCoverNeighbour() {
+        Waypoint waypoint = null;
+        float max = -1;
+        foreach (var wp in this.waypoints) {
+            if(waypoint == null || wp.coverVal > max) {
+                max = wp.coverVal;
+                waypoint = wp;
             }
         }
-        //Debug.Log("Nama : " + this.name + "Cover value : " + coverValue);
+        return waypoint;
+    }
+
+    public float coverVal { 
+        get {
+            float tempResult = 0;
+            for (int deg = 0; deg < 360; deg++) {
+                Vector2 direction = new Vector2(Mathf.Sin(deg), Mathf.Cos(deg));
+                Vector3 origin = (Vector3)position + (Vector3)direction;
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 250, layerMask);
+                // layer mask -> yang mau dikenain layer apa aja, bukan di ignore
+                if (raycastHit2D.collider != null) {
+                    // hit object
+                    GameObject otherObj = raycastHit2D.collider.gameObject;
+                    if (otherObj.CompareTag("Player")) {
+                        tempResult = raycastHit2D.distance;
+                    }
+                }
+            }
+            //Debug.Log("Nama : " + this.name + "Cover value : " + coverValue);
+            return tempResult;
+        }
     }
 }
 
@@ -116,7 +138,7 @@ public class waypointController : MonoBehaviour{
         for (int deg = 0; deg < 360; deg++) {
             Vector2 direction = new Vector2(Mathf.Sin(deg), Mathf.Cos(deg));
             Vector3 origin = obj.GetComponent<Transform>().position + (Vector3)direction;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 15);
             if (raycastHit2D.collider == null) {
                 // no hit
             } else {
