@@ -16,19 +16,21 @@ public class GraphWaypoint {
 
 public class Waypoint {
     // Posisi Waypoint
+    public string name;
+    public LayerMask layerMask;
     public Vector2 position { get; set; }
     // Attributes Waypoint
-    public bool isCover { get; set; }
-    public bool isShadow { get; set; }
+    public float coverValue;
     // References
     public List<Waypoint> waypoints { get; set; }
 
     // Constructor
-    public Waypoint(Vector2 position, bool isCover, bool isShadow) {
+    public Waypoint(Vector2 position,string name, LayerMask layermask) {
         this.position = position;
-        this.isCover = isCover;
-        this.isShadow = isShadow;
+        this.name = name;
         this.waypoints = new List<Waypoint>();
+        this.layerMask = layermask;
+        Debug.Log("Layer mask : " + layerMask.value);
     }
 
     // Method
@@ -36,11 +38,33 @@ public class Waypoint {
         int idx = Random.Range(0, this.waypoints.Count);
         return this.waypoints[idx];
     }
+
+    public void coverValueCalc()
+    {
+        for (int deg = 0; deg < 360; deg++)
+        {
+            Vector2 direction = new Vector2(Mathf.Sin(deg), Mathf.Cos(deg));
+            Vector3 origin = (Vector3)position + (Vector3)direction;
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 250, layerMask);
+            // layer mask -> yang mau dikenain layer apa aja, bukan di ignore
+            if (raycastHit2D.collider != null)
+            {
+                // hit object
+                GameObject otherObj = raycastHit2D.collider.gameObject;
+                if (otherObj.CompareTag("Player"))
+                {
+                    coverValue = raycastHit2D.distance;
+                }
+            }
+        }
+        //Debug.Log("Nama : " + this.name + "Cover value : " + coverValue);
+    }
 }
 
 public class waypointController : MonoBehaviour{
-    static int ctrWaypoint = 0;
+    public static int ctrWaypoint = 0;
     public static GraphWaypoint graph = null;
+    public LayerMask layerMask;
     static void incrementWaypoint() {
         ctrWaypoint++;
         var gameObjects = GameObject.FindGameObjectsWithTag("Waypoint");
@@ -59,27 +83,27 @@ public class waypointController : MonoBehaviour{
             GraphWaypoint graph = new GraphWaypoint { waypoints = listWaypoint };
             waypointController.graph = graph;
             Debug.Log(listWaypoint.Count);
-            // Remove GameObject
-            foreach (var gameObject1 in gameObjects) {
-                gameObject1.GetComponent<SpriteRenderer>().sprite = null;
-                gameObject1.GetComponent<CircleCollider2D>().enabled = false;
-            }
             // Spawn Enemy
             enemyController.initEnemies();
+            // Remove GameObject
+            foreach (var gameObject1 in gameObjects) {
+                Destroy(gameObject1);
+                /*gameObject1.GetComponent<SpriteRenderer>().sprite = null;
+                gameObject1.GetComponent<CircleCollider2D>().enabled = false;*/
+            }
         }
     }
 
     public GameObject obj;
     public List<waypointController> waypointControllers;
     public Waypoint waypoint;
-    public float coverValue;
 
     private void Awake() {
         waypointControllers = new List<waypointController>();
         waypoint = new Waypoint(
             this.GetComponent<Transform>().position,
-            false,
-            false
+            this.name,
+            layerMask
         );
     }
 

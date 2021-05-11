@@ -19,6 +19,7 @@ public class enemyController : MonoBehaviour
             newObj.transform.position = waypoint.position;
             newObj.GetComponent<enemyController>().lastWaypoint = waypoint;
         }
+        Destroy(enemyObject);
     }
 
     public Rigidbody2D rb;
@@ -79,15 +80,25 @@ public class enemyController : MonoBehaviour
         }
     }
 
+    void calcWaypointValue()
+    {
+        foreach (var item in waypointController.graph.waypoints)
+        {
+            item.coverValueCalc();
+        }
+    }
+
     // Helper Function
     void checkPosition(){
     	// Buat check waypiint AI
     	if(this.targetWaypoint == null){
-            Debug.Log("New Target!");
-    		this.targetWaypoint = this.lastWaypoint.getRandomNeighbour();
+            //Debug.Log("New Target!");
+            // calculate cover value 
+            calcWaypointValue();
+            this.targetWaypoint = this.lastWaypoint.getRandomNeighbour();
             this.targetRadius = Random.Range(0.5f, 1);
         } else {
-            Debug.Log("No Target");
+            //Debug.Log("No Target");
         }
     } 
     void checkReachWaypoint() {

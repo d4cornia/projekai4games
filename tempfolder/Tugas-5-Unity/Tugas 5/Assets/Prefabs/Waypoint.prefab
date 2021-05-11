@@ -45,8 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f8e83dcca0b0a499bb716f31cdb6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
   obj: {fileID: 6774159157372944680}
-  waypoints: []
+  waypointControllers: []
 --- !u!212 &291866925802760856
 SpriteRenderer:
   m_ObjectHideFlags: 0
