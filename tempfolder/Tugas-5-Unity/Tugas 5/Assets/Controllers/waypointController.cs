@@ -61,7 +61,8 @@ public class waypointController : MonoBehaviour{
             Debug.Log(listWaypoint.Count);
             // Remove GameObject
             foreach (var gameObject1 in gameObjects) {
-                Destroy(gameObject1);
+                gameObject1.GetComponent<SpriteRenderer>().sprite = null;
+                gameObject1.GetComponent<CircleCollider2D>().enabled = false;
             }
             // Spawn Enemy
             enemyController.initEnemies();
@@ -71,7 +72,7 @@ public class waypointController : MonoBehaviour{
     public GameObject obj;
     public List<waypointController> waypointControllers;
     public Waypoint waypoint;
-    public float valuePoint;
+    public float coverValue;
 
     private void Awake() {
         waypointControllers = new List<waypointController>();
