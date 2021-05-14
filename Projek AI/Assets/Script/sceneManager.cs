@@ -14,8 +14,8 @@ public class sceneManager : MonoBehaviour
 
     public void mouseClick(int index)
     {
-        MenuButton menuButton = GameObject.Find("Button " + index).GetComponent<MenuButton>();
-        menuButton.animator.SetBool("pressed", true);
+        MenuButton menuButton = GameObject.Find(index == 0? "NewGame" : "Exit").GetComponent<MenuButton>();
+        //menuButton.animator.SetBool("pressed", true);
         StartCoroutine(loadScene(menuButton));
     }
 

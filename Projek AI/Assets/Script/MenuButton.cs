@@ -22,17 +22,17 @@ public class MenuButton : MonoBehaviour
     {
         if (menuButtonController.index == thisIndex)
         {
-            animator.SetBool("selected", true);
+            //animator.SetBool("selected", true);
             if (Input.GetAxis("Submit") == 1)
             {
-                animator.SetBool("pressed", true);
+                //animator.SetBool("pressed", true);
                 StartCoroutine(loadScene());
             }
         }
         else
         {
-            animator.SetBool("pressed", false);
-            animator.SetBool("selected", false);
+            //animator.SetBool("pressed", false);
+            //animator.SetBool("selected", false);
         }
     }
 
@@ -40,7 +40,7 @@ public class MenuButton : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-        if (thisIndex == 2)
+        if (thisIndex == 1)
         {
             Application.Quit();
         }
