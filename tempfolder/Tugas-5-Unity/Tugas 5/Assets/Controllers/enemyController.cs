@@ -152,7 +152,7 @@ public class enemyController : MonoBehaviour
             this.lastWaypoint = this.targetWaypoint;
             this.targetWaypoint = null;
             this.rb.AddForce(Vector2.zero, ForceMode2D.Force);
-            this.rb.drag = 5;
+            this.rb.drag = 25;
             Debug.Log($"{this.name} reached waypoint!");
         }
     }
