@@ -39,22 +39,19 @@ public class enemyController : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        fieldOfView();
+        detection();
     }
 
-    void fieldOfView()
+    void detection()
     {
-        for (float deg = 0; deg < fov; deg++)
+        for (float deg = (curAngle - fov / 2); deg < (curAngle + fov / 2); deg++)
         {
-            deg += (enemyLight.transform.rotation.z - fov / 2);
             Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
-            Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.51), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.51), 0);
+            Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
             Vector3 origin = (Vector3)this.rb.position + offset;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, range);
-            // layer mask -> yang mau dikenain layer apa aja, bukan di ignore
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, (float)(range - 0.5));
             if (raycastHit2D.collider != null)
             {
                 // hit object
@@ -62,7 +59,7 @@ public class enemyController : MonoBehaviour
                 if (otherObj.CompareTag("Player"))
                 {
                     player = otherObj;
-                    Debug.Log("got u");
+                    Debug.Log("Got u");
                 }
             }
         }
