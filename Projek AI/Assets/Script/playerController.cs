@@ -8,28 +8,25 @@ public class playerController : MonoBehaviour
 { 
 
     public Rigidbody2D rb;
+    public GameObject playerLight;
     public GameObject playerObj;
-    public float maxSpeed;
     public Animator animator;
-    private Vector2 force;
+    public float speed;
     private int look;
-
-
-    public Light2D light;
-
-   [SerializeField]
-    public fieldOfView fov;
+    public float curAngle;
+    public float range;
+    public float fov;
 
     void Awake()
     {
         if (rb == null)
         {
-            playerObj = GameObject.Find("Player");
+            playerObj = GameObject.Find("PF Player");
             rb = playerObj.GetComponent<Rigidbody2D>();
             animator = playerObj.GetComponent<Animator>();
-            fov = Instantiate(GameObject.Find("FieldOfView").GetComponent<fieldOfView>());
-            fov.name = "playerFOV";
-            light = playerObj.GetComponent<Light2D>();
+            playerLight = GameObject.Find("Player Direction light");
+            playerLight.transform.rotation = Quaternion.Euler(0, 0, 0);
+            range = 6;
         }
         look = 4;
     }
@@ -41,43 +38,51 @@ public class playerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        move();
-        walkAnim();
         updateOrientationPlayer();
-        spriteOrientation();
+        //walkAnim();
+        //spriteOrientation();
     }
-
-    private float moveX, moveY;
 
     void processInput()
     {
-        moveX = Input.GetAxisRaw("Horizontal");
-        moveY = Input.GetAxisRaw("Vertical");
-
-        float xForce = moveX * maxSpeed;
-        float yForce = moveY * maxSpeed;
-
-        force = new Vector2(xForce, yForce);
-    }
-
-    void move()
-    {
-        if (moveX == 0 && moveY == 0)
+        Vector2 dir = Vector2.zero;
+        if (Input.GetKey(KeyCode.A))
         {
-            rb.drag = 1;
+            dir.x = -1;
+            animator.SetInteger("Direction", 3);
         }
-        rb.AddForce(force);
+        else if (Input.GetKey(KeyCode.D))
+        {
+            dir.x = 1;
+            animator.SetInteger("Direction", 2);
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            dir.y = 1;
+            animator.SetInteger("Direction", 1);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            dir.y = -1;
+            animator.SetInteger("Direction", 0);
+        }
+
+        dir.Normalize();
+        animator.SetBool("IsMoving", dir.magnitude > 0);
+
+        rb.velocity = speed * dir;
     }
+
 
     public void updateOrientationPlayer()
     {
         Vector3 targetPosition = UtilsClass.GetWorldPositionFromUI();
-        fov.setAimDirection((targetPosition - transform.position).normalized);
-        fov.setOrigin(transform.position);
-        light.transform.rotation = Quaternion.Euler(0, 0, fov.curAngle - fov.fov * 2f);
+        curAngle = UtilsClass.GetAngleFromVectorFloat((targetPosition - transform.position).normalized);
+        playerLight.transform.rotation = Quaternion.Euler(0, 0, curAngle - 90);
     }
 
-    void spriteOrientation()
+    /*void spriteOrientation()
     {
         if (fov.curAngle > 60 && fov.curAngle < 170) look = 1;
         else if (fov.curAngle > 170 && fov.curAngle < 250) look = 3;
@@ -93,5 +98,5 @@ public class playerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x + rb.velocity.y));
         if (Mathf.Abs(rb.velocity.x + rb.velocity.y) > 2) animator.speed = 1.3f;
         else animator.speed = 0.6f;
-    }
+    }*/
 }
