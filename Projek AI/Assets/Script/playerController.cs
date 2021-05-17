@@ -49,6 +49,7 @@ public class playerController : MonoBehaviour
 
     void processInput()
     {
+        // movement keybind
         Vector2 dir = Vector2.zero;
         if (Input.GetKey(KeyCode.A))
         {
@@ -70,6 +71,17 @@ public class playerController : MonoBehaviour
             dir.y = -1;
             animator.SetInteger("Direction", 0);
         }
+
+        // item keybind
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            idxItem = 0;
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            idxItem = 1;
+        }
+
         if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.KeypadEnter))
         {
             // 0 : burning cloth
