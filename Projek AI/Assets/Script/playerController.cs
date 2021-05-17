@@ -16,6 +16,10 @@ public class playerController : MonoBehaviour
     public float curAngle;
     public float range;
     public float fov;
+    public int idxItem;
+
+    // prefab item
+    public GameObject[] PFitem;
 
     void Awake()
     {
@@ -45,6 +49,7 @@ public class playerController : MonoBehaviour
 
     void processInput()
     {
+        // movement keybind
         Vector2 dir = Vector2.zero;
         if (Input.GetKey(KeyCode.A))
         {
@@ -56,7 +61,6 @@ public class playerController : MonoBehaviour
             dir.x = 1;
             animator.SetInteger("Direction", 2);
         }
-
         if (Input.GetKey(KeyCode.W))
         {
             dir.y = 1;
@@ -66,6 +70,25 @@ public class playerController : MonoBehaviour
         {
             dir.y = -1;
             animator.SetInteger("Direction", 0);
+        }
+
+        // item keybind
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            idxItem = 0;
+        }
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            idxItem = 1;
+        }
+
+        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.KeypadEnter))
+        {
+            // 0 : burning cloth
+            // 1 : bottle
+            // 2 : Health
+            // 3 : turn on/off flashlight
+            GameObject b = Instantiate(PFitem[idxItem]) as GameObject;
         }
 
         dir.Normalize();

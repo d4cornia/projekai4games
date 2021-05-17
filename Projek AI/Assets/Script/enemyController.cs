@@ -27,11 +27,12 @@ public class enemyController : MonoBehaviour
     {
         if (rb == null)
         {
+            ctr_id++;
             enemyObj = GameObject.Find("PF Normal Bot");
-            enemyObj.name += " (" + ctr_id++ + ")";
+            enemyObj.name += " (" + ctr_id + ")";
             rb = enemyObj.GetComponent<Rigidbody2D>();
             enemyLight = GameObject.Find("Enemy Directional light");
-            enemyLight.name += " (" + ctr_id++ + ")";
+            enemyLight.name += " (" + ctr_id + ")";
             enemyLight.transform.rotation = Quaternion.Euler(0, 0, 0);
             curAngle = 90;
             range = 6;
