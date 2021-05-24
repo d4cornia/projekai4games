@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.UI;
 
 public class playerController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject playerLight;
     public GameObject playerObj;
+    public GameObject inventory;
     public Animator animator;
     private int look;
 
@@ -31,6 +33,7 @@ public class playerController : MonoBehaviour
     public GameObject[] PFitem;
 
     //item
+    bool flagc;
     public int[] items;
     // 0 : burning cloth
     // 1 : bottle
@@ -65,6 +68,7 @@ public class playerController : MonoBehaviour
             pickedUp = null;
             fstate = false;
             maxBackpack = 30;
+            flagc = true;
         }
         look = 4;
     }
@@ -132,10 +136,37 @@ public class playerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.C))
+        {
+            flagc = true;
+        }
+        if (Input.GetKey(KeyCode.C) && flagc)
         {
             // Ke UI craft
             // setiap item yang dicraft akan mengurangi raw item dan menambah 1 item 
+            flagc = false;
+            if (inventory.active)
+            {
+                inventory.SetActive(false);
+            }
+            else
+            {
+                inventory.SetActive(true);
+                GameObject[] rawItems = new GameObject[6]
+                {
+                    GameObject.Find("Text Battery"),
+                    GameObject.Find("Text Alkohol"),
+                    GameObject.Find("Text Cloth"),
+                    GameObject.Find("Text Wire"),
+                    GameObject.Find("Text Iron"),
+                    GameObject.Find("Text Bottle")
+                };
+
+                for (int i = 0; i < 6; i++)
+                {
+                    rawItems[i].GetComponent<Text>().text = this.rawItems[i] + "";
+                }
+            }
         }
 
         // kurangi flashlight life 

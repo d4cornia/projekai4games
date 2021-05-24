@@ -48,10 +48,4 @@ public class rawItemController : MonoBehaviour
             ri.name = "-";
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
