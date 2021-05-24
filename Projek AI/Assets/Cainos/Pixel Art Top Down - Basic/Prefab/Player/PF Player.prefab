@@ -138,7 +138,10 @@ MonoBehaviour:
   animator: {fileID: 0}
   speed: 3
   curAngle: 270
+  range: 0
   fov: 60
+  idxItem: 0
+  PFitem: []
 --- !u!212 &5628018141983903107
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -375,7 +378,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.712
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 0000000003819490c93960fdb391b5f9
   m_LightCookieSprite: {fileID: 0}
