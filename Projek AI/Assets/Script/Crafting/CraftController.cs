@@ -23,14 +23,9 @@ public class CraftController : MonoBehaviour
         }
     }
 
-    void Start()
+    public void craft()
     {
-        
-    }
+        GameObject playerObj = GameObject.Find("PF Player");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
