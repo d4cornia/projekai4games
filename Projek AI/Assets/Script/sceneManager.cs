@@ -23,7 +23,6 @@ public class sceneManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
 
-
         if (menuButton.thisIndex == 2)
         {
             Application.Quit();
