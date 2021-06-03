@@ -34,7 +34,7 @@ public class playerController : MonoBehaviour
     public GameObject[] PFitem;
 
     //item
-    bool flagc, flagf, flagi;
+    bool flagc, flagf, flagi, flagg, flagr;
     public int[] items;
     // 0 : burning cloth
     // 1 : bottle
@@ -52,6 +52,7 @@ public class playerController : MonoBehaviour
 
 
     public GameObject[] activeItem;
+    public GameObject[] texts;
 
 
     void Awake()
@@ -67,26 +68,22 @@ public class playerController : MonoBehaviour
             lightPlayer = playerLight.GetComponent<Light2D>();
             lightPlayer.intensity = 1;
 
+            health = 100;
             range = 6;
             rawItems = new int[6] { 1, 2, 2, 3, 5, 7 };
             items = new int[3] { 3, 3, 3};
             pickedUp = null;
-            fstate = false;
+            fstate = true;
             maxBackpack = 30;
             flashLife = 1;
 
             flagc = true;
             flagf = true;
             flagi = false;
+            flagg = true;
+            flagr = true;
 
-            /*activeItem 
-            {
-                GameObject.Find("Active Item BC"),
-                GameObject.Find("Active Item DB"),
-                GameObject.Find("Active Item B")
-            };
-            activeItem[1].SetActive(false);
-            activeItem[2].SetActive(false);*/
+            updateCtrItem();
         }
         look = 4;
     }
@@ -151,7 +148,7 @@ public class playerController : MonoBehaviour
             {
                 if(i == idxItem)
                 {
-                    activeItem[i].SetActive(true);
+                    activeItem[i].SetActive(true); 
                 }
                 else
                 {
@@ -192,6 +189,27 @@ public class playerController : MonoBehaviour
             }
         }
 
+        // Reload senter
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            flagr = true;
+        }
+        if (Input.GetKey(KeyCode.R) && flagr)
+        {
+            flagr = false;
+            if(rawItems[0] - 1 >= 0)
+            {
+                rawItems[0]--;
+                flashLife = 1;
+            }
+            else
+            {
+                Debug.Log("Don't have any battery left");
+            }
+        }
+
+
+
         if (Input.GetKeyUp(KeyCode.C))
         {
             flagc = true;
@@ -216,9 +234,9 @@ public class playerController : MonoBehaviour
                     GameObject.Find("Text Wire"),
                     GameObject.Find("Text Iron"),
                     GameObject.Find("Text Bottle"),
-                    GameObject.Find("Burning Cloth Indicator"),
-                    GameObject.Find("Decoy Bottle Indicator"),
-                    GameObject.Find("Bandage Indicator")
+                    GameObject.Find("BC Indicator"),
+                    GameObject.Find("DB Indicator"),
+                    GameObject.Find("B Indicator")
                 };
 
                 for (int i = 0; i < 9; i++)
@@ -232,6 +250,8 @@ public class playerController : MonoBehaviour
                         rawItems[i].GetComponent<Text>().text = this.GetComponent<playerController>().items[i - 6] + "";
                     }
                 }
+                GameObject.Find("countBP").GetComponent<Text>().text = this.GetComponent<playerController>().countBackpack() + "";
+                GameObject.Find("Max Size").GetComponent<Text>().text = this.GetComponent<playerController>().maxBackpack + "";
             }
         }
 
@@ -277,14 +297,21 @@ public class playerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.G) || Input.GetKey(KeyCode.KeypadEnter))
+        if (Input.GetKeyUp(KeyCode.G))
+        {
+            flagg = true;
+        }
+        if (Input.GetKey(KeyCode.G) && flagg)
         {
             // 0 : burning cloth
             // 1 : bottle
             // 2 : Health
-            if(items[idxItem] - 1 >= 0)
+            flagg = false;
+            if (items[idxItem] - 1 >= 0)
             {
                 items[idxItem]--;
+                texts[idxItem].GetComponent<Text>().text = items[idxItem] + "";
+                texts[idxItem + 3].GetComponent<Text>().text = items[idxItem] + "";
                 Instantiate(PFitem[idxItem]);
             }
             else
@@ -297,6 +324,15 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMoving", dir.magnitude > 0);
 
         rb.velocity = speed * dir;
+    }
+
+    public void updateCtrItem()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            texts[i].GetComponent<Text>().text = items[i] + "";
+            texts[i + 3].GetComponent<Text>().text = items[i] + "";
+        }
     }
 
     public int countBackpack()

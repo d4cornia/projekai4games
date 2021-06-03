@@ -8,6 +8,7 @@ public class CraftController : MonoBehaviour
     // Start is called before the first frame update
     public int index;
     public GameObject[] icons;
+    public GameObject[] texts;
 
     public void hover()
     {
@@ -76,9 +77,9 @@ public class CraftController : MonoBehaviour
                 GameObject.Find("Text Wire"),
                 GameObject.Find("Text Iron"),
                 GameObject.Find("Text Bottle"),
-                GameObject.Find("Burning Cloth Indicator"),
-                GameObject.Find("Decoy Bottle Indicator"),
-                GameObject.Find("Bandage Bottle Indicator")
+                GameObject.Find("BC Indicator"),
+                GameObject.Find("DB Indicator"),
+                GameObject.Find("B Indicator")
             };
 
             for (int i = 0; i < 9; i++)
@@ -92,6 +93,9 @@ public class CraftController : MonoBehaviour
                     rawItems[i].GetComponent<Text>().text = playerObj.GetComponent<playerController>().items[i - 6] + "";
                 }
             }
+            GameObject.Find("countBP").GetComponent<Text>().text = playerObj.GetComponent<playerController>().countBackpack() + "";
+            GameObject.Find("Max Size").GetComponent<Text>().text = playerObj.GetComponent<playerController>().maxBackpack + "";
+            playerObj.GetComponent<playerController>().updateCtrItem();
         }
         else
         {
