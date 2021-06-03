@@ -221,7 +221,7 @@ public class playerController : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.KeypadEnter))
+        if (Input.GetKey(KeyCode.G) || Input.GetKey(KeyCode.KeypadEnter))
         {
             // 0 : burning cloth
             // 1 : bottle
