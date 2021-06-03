@@ -68,19 +68,29 @@ public class CraftController : MonoBehaviour
         if (flag)
         {
             playerObj.GetComponent<playerController>().items[index]++;
-            GameObject[] rawItems = new GameObject[6]
+            GameObject[] rawItems = new GameObject[9]
             {
                 GameObject.Find("Text Battery"),
                 GameObject.Find("Text Alkohol"),
                 GameObject.Find("Text Cloth"),
                 GameObject.Find("Text Wire"),
                 GameObject.Find("Text Iron"),
-                GameObject.Find("Text Bottle")
+                GameObject.Find("Text Bottle"),
+                GameObject.Find("Burning Cloth Indicator"),
+                GameObject.Find("Decoy Bottle Indicator"),
+                GameObject.Find("Bandage Bottle Indicator")
             };
 
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 9; i++)
             {
-                rawItems[i].GetComponent<Text>().text = playerObj.GetComponent<playerController>().rawItems[i] + "";
+                if(i < 6)
+                {
+                    rawItems[i].GetComponent<Text>().text = playerObj.GetComponent<playerController>().rawItems[i] + "";
+                }
+                else
+                {
+                    rawItems[i].GetComponent<Text>().text = playerObj.GetComponent<playerController>().items[i - 6] + "";
+                }
             }
         }
         else

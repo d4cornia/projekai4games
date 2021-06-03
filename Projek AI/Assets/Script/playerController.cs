@@ -27,13 +27,14 @@ public class playerController : MonoBehaviour
     // flashlight
     Light2D lightPlayer;
     bool fstate;
+    float flashLife = 1;
 
 
     // prefab item
     public GameObject[] PFitem;
 
     //item
-    bool flagc;
+    bool flagc, flagf, flagi;
     public int[] items;
     // 0 : burning cloth
     // 1 : bottle
@@ -48,6 +49,10 @@ public class playerController : MonoBehaviour
     // 4 : besi
     // 5 : botol
     GameObject pickedUp;
+
+
+    public GameObject[] activeItem;
+
 
     void Awake()
     {
@@ -68,7 +73,20 @@ public class playerController : MonoBehaviour
             pickedUp = null;
             fstate = false;
             maxBackpack = 30;
+            flashLife = 1;
+
             flagc = true;
+            flagf = true;
+            flagi = false;
+
+            /*activeItem 
+            {
+                GameObject.Find("Active Item BC"),
+                GameObject.Find("Active Item DB"),
+                GameObject.Find("Active Item B")
+            };
+            activeItem[1].SetActive(false);
+            activeItem[2].SetActive(false);*/
         }
         look = 4;
     }
@@ -113,25 +131,63 @@ public class playerController : MonoBehaviour
         // item keybind
         if (Input.GetKey(KeyCode.Alpha1))
         {
-            idxItem = 0;
+            idxItem = 0; 
+            flagi = true;
         }
         if (Input.GetKey(KeyCode.Alpha2))
         {
             idxItem = 1;
+            flagi = true;
         }
         if (Input.GetKey(KeyCode.Alpha3))
         {
             idxItem = 2;
+            flagi = true;
         }
-        if (Input.GetKey(KeyCode.F))
+        if (flagi)
         {
-            // turn on flashlight
-            if (lightPlayer.intensity >= 0)
+            flagi = false;
+            for (int i = 0; i < 3; i++)
             {
-                fstate = true;
+                if(i == idxItem)
+                {
+                    activeItem[i].SetActive(true);
+                }
+                else
+                {
+                    activeItem[i].SetActive(false);
+                }
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            flagf = true;
+        }
+        if (Input.GetKey(KeyCode.F) && flagf)
+        {
+            flagf = false;
+            // turn off flashlight
+            if (fstate)
+            {
+                lightPlayer.intensity = 0;
+                fstate = false;
             }
             else
             {
+                lightPlayer.intensity = flashLife;
+                fstate = true;
+            }
+        }
+
+        // kurangi flashlight life 
+        if (fstate)
+        {
+            flashLife -= (float)0.00001;
+            lightPlayer.intensity = flashLife;
+            if (flashLife <= 0)
+            {
+                lightPlayer.intensity = 0;
                 fstate = false;
             }
         }
@@ -152,30 +208,30 @@ public class playerController : MonoBehaviour
             else
             {
                 inventory.SetActive(true);
-                GameObject[] rawItems = new GameObject[6]
+                GameObject[] rawItems = new GameObject[9]
                 {
                     GameObject.Find("Text Battery"),
                     GameObject.Find("Text Alkohol"),
                     GameObject.Find("Text Cloth"),
                     GameObject.Find("Text Wire"),
                     GameObject.Find("Text Iron"),
-                    GameObject.Find("Text Bottle")
+                    GameObject.Find("Text Bottle"),
+                    GameObject.Find("Burning Cloth Indicator"),
+                    GameObject.Find("Decoy Bottle Indicator"),
+                    GameObject.Find("Bandage Indicator")
                 };
 
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < 9; i++)
                 {
-                    rawItems[i].GetComponent<Text>().text = this.rawItems[i] + "";
+                    if (i < 6)
+                    {
+                        rawItems[i].GetComponent<Text>().text = this.GetComponent<playerController>().rawItems[i] + "";
+                    }
+                    else
+                    {
+                        rawItems[i].GetComponent<Text>().text = this.GetComponent<playerController>().items[i - 6] + "";
+                    }
                 }
-            }
-        }
-
-        // kurangi flashlight life 
-        if (fstate)
-        {
-            lightPlayer.intensity -= (float)0.00001;
-            if(lightPlayer.intensity <= 0)
-            {
-                fstate = false;
             }
         }
 
