@@ -54,11 +54,22 @@ public class playerController : MonoBehaviour
     public GameObject[] activeItem;
     public GameObject[] texts;
 
+    //health
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
 
     void Awake()
     {
         if (rb == null)
-        {
+        { 
             playerObj = GameObject.Find("PF Player");
             rb = playerObj.GetComponent<Rigidbody2D>();
             animator = playerObj.GetComponent<Animator>();
@@ -90,7 +101,25 @@ public class playerController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(5);
+        }
         processInput();
+    }
+
+    void TakeDamage(int damage)
+    {
+        if(currentHealth - damage >= 0)
+        {
+            currentHealth -= damage;
+            healthBar.SetHealth(currentHealth);
+        }
+        else
+        {
+            currentHealth = 0;
+        }
+    
     }
 
     void FixedUpdate()
