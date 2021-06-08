@@ -12,7 +12,6 @@ public class Inventory : MonoBehaviour
 
     public void openInventory()
     {
-
         //inventory.SetActive(true);
         if (inventory.active)
         {

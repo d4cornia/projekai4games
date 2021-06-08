@@ -23,6 +23,7 @@ public class playerController : MonoBehaviour
     public float fov;
     public int idxItem;
     public int maxBackpack;
+    public int money;
 
     // flashlight
     Light2D lightPlayer;
@@ -34,7 +35,7 @@ public class playerController : MonoBehaviour
     public GameObject[] PFitem;
 
     //item
-    bool flagc, flagf, flagi, flagg, flagr;
+    bool flagi;
     public int[] items;
     // 0 : burning cloth
     // 1 : bottle
@@ -87,12 +88,9 @@ public class playerController : MonoBehaviour
             fstate = true;
             maxBackpack = 30;
             flashLife = 1;
+            money = 250;
 
-            flagc = true;
-            flagf = true;
             flagi = false;
-            flagg = true;
-            flagr = true;
 
             updateCtrItem();
         }
@@ -155,17 +153,17 @@ public class playerController : MonoBehaviour
         }
 
         // item keybind
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             idxItem = 0; 
             flagi = true;
         }
-        if (Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             idxItem = 1;
             flagi = true;
         }
-        if (Input.GetKey(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             idxItem = 2;
             flagi = true;
@@ -186,13 +184,10 @@ public class playerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.F))
+
+        //flashlihght
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            flagf = true;
-        }
-        if (Input.GetKey(KeyCode.F) && flagf)
-        {
-            flagf = false;
             // turn off flashlight
             if (fstate)
             {
@@ -219,13 +214,8 @@ public class playerController : MonoBehaviour
         }
 
         // Reload senter
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            flagr = true;
-        }
-        if (Input.GetKey(KeyCode.R) && flagr)
-        {
-            flagr = false;
             if(rawItems[0] - 1 >= 0)
             {
                 rawItems[0]--;
@@ -238,55 +228,19 @@ public class playerController : MonoBehaviour
         }
 
 
-
-        if (Input.GetKeyUp(KeyCode.C))
-        {
-            flagc = true;
-        }
-        if (Input.GetKey(KeyCode.C) && flagc)
+        // Crafting item
+        if (Input.GetKeyDown(KeyCode.C))
         {
             // Ke UI craft
             // setiap item yang dicraft akan mengurangi raw item dan menambah 1 item 
-            flagc = false;
-            if (inventory.active)
-            {
-                inventory.SetActive(false);
-            }
-            else
-            {
-                inventory.SetActive(true);
-                GameObject[] rawItems = new GameObject[9]
-                {
-                    GameObject.Find("Text Battery"),
-                    GameObject.Find("Text Alkohol"),
-                    GameObject.Find("Text Cloth"),
-                    GameObject.Find("Text Wire"),
-                    GameObject.Find("Text Iron"),
-                    GameObject.Find("Text Bottle"),
-                    GameObject.Find("BC Indicator"),
-                    GameObject.Find("DB Indicator"),
-                    GameObject.Find("B Indicator")
-                };
-
-                for (int i = 0; i < 9; i++)
-                {
-                    if (i < 6)
-                    {
-                        rawItems[i].GetComponent<Text>().text = this.GetComponent<playerController>().rawItems[i] + "";
-                    }
-                    else
-                    {
-                        rawItems[i].GetComponent<Text>().text = this.GetComponent<playerController>().items[i - 6] + "";
-                    }
-                }
-                GameObject.Find("countBP").GetComponent<Text>().text = this.GetComponent<playerController>().countBackpack() + "";
-                GameObject.Find("Max Size").GetComponent<Text>().text = this.GetComponent<playerController>().maxBackpack + "";
-            }
+            inventory.GetComponent<Inventory>().openInventory();
         }
 
+
         // pickup item
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
+            checkMerchant();
             if (countBackpack() + 1 <= maxBackpack)
             {
                 // cek collider dia ambil item apa
@@ -326,22 +280,34 @@ public class playerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.G))
-        {
-            flagg = true;
-        }
-        if (Input.GetKey(KeyCode.G) && flagg)
+
+        // use item
+        if (Input.GetKeyDown(KeyCode.G))
         {
             // 0 : burning cloth
             // 1 : bottle
             // 2 : Health
-            flagg = false;
             if (items[idxItem] - 1 >= 0)
             {
                 items[idxItem]--;
                 texts[idxItem].GetComponent<Text>().text = items[idxItem] + "";
                 texts[idxItem + 3].GetComponent<Text>().text = items[idxItem] + "";
-                Instantiate(PFitem[idxItem]);
+                if(idxItem != 2)
+                {
+                    Instantiate(PFitem[idxItem]);
+                }
+                else
+                {
+                    if(currentHealth + 30 <= maxHealth)
+                    {
+                        currentHealth += 30;
+                    }
+                    else
+                    {
+                        currentHealth = maxHealth;
+                    }
+                    healthBar.SetHealth(currentHealth);
+                }
             }
             else
             {
@@ -353,6 +319,30 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMoving", dir.magnitude > 0);
 
         rb.velocity = speed * dir;
+    }
+
+
+    public void checkMerchant()
+    {
+        bool flag = true;
+        for (float deg = 0; deg < 360; deg++)
+        {
+            Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
+            Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
+            Vector3 origin = playerObj.transform.position + offset;
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 2);
+            if (raycastHit2D.collider != null)
+            {
+                // hit object
+                GameObject otherObj = raycastHit2D.collider.gameObject;
+                if (otherObj.CompareTag("Merchant") && flag)
+                {
+                    flag = false;
+                    otherObj.GetComponent<merchantController>().openMercahnt();
+                    break;
+                }
+            }
+        }
     }
 
     public void updateCtrItem()
