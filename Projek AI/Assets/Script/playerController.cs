@@ -34,12 +34,14 @@ public class playerController : MonoBehaviour
     // prefab item
     public GameObject[] PFitem;
 
+
     //item
-    bool flagi;
+    bool flagi, flagM;
     public int[] items;
     // 0 : burning cloth
     // 1 : bottle
     // 2 : Health
+
 
     // raw item
     public int[] rawItems;
@@ -51,9 +53,9 @@ public class playerController : MonoBehaviour
     // 5 : botol
     GameObject pickedUp;
 
-
     public GameObject[] activeItem;
     public GameObject[] texts;
+
 
     //health
     public int maxHealth = 100;
@@ -91,6 +93,7 @@ public class playerController : MonoBehaviour
             money = 250;
 
             flagi = false;
+            flagM = false;
 
             updateCtrItem();
         }
@@ -129,77 +132,210 @@ public class playerController : MonoBehaviour
 
     void processInput()
     {
-        // movement keybind
         Vector2 dir = Vector2.zero;
-        if (Input.GetKey(KeyCode.A))
+        // jika tidak lagi open merchant
+        if (!flagM)
         {
-            dir.x = -1;
-            animator.SetInteger("Direction", 3);
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            dir.x = 1;
-            animator.SetInteger("Direction", 2);
-        }
-        if (Input.GetKey(KeyCode.W))
-        {
-            dir.y = 1;
-            animator.SetInteger("Direction", 1);
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            dir.y = -1;
-            animator.SetInteger("Direction", 0);
-        }
-
-        // item keybind
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            idxItem = 0; 
-            flagi = true;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            idxItem = 1;
-            flagi = true;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            idxItem = 2;
-            flagi = true;
-        }
-        if (flagi)
-        {
-            flagi = false;
-            for (int i = 0; i < 3; i++)
+            // movement keybind
+            if (Input.GetKey(KeyCode.A))
             {
-                if(i == idxItem)
+                dir.x = -1;
+                animator.SetInteger("Direction", 3);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                dir.x = 1;
+                animator.SetInteger("Direction", 2);
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                dir.y = 1;
+                animator.SetInteger("Direction", 1);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                dir.y = -1;
+                animator.SetInteger("Direction", 0);
+            }
+
+
+            // item keybind
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                idxItem = 0;
+                flagi = true;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                idxItem = 1;
+                flagi = true;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                idxItem = 2;
+                flagi = true;
+            }
+            if (flagi)
+            {
+                flagi = false;
+                for (int i = 0; i < 3; i++)
                 {
-                    activeItem[i].SetActive(true); 
+                    if (i == idxItem)
+                    {
+                        activeItem[i].SetActive(true);
+                    }
+                    else
+                    {
+                        activeItem[i].SetActive(false);
+                    }
+                }
+            }
+
+
+
+            //flashlihght
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                // turn off flashlight
+                if (fstate)
+                {
+                    lightPlayer.intensity = 0;
+                    fstate = false;
                 }
                 else
                 {
-                    activeItem[i].SetActive(false);
+                    lightPlayer.intensity = flashLife;
+                    fstate = true;
+                }
+            }
+
+
+            // Reload senter
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                reloadBattery();
+            }
+
+
+            // Crafting item
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                // Ke UI craft
+                // setiap item yang dicraft akan mengurangi raw item dan menambah 1 item 
+                inventory.GetComponent<Inventory>().openInventory();
+            }
+
+
+            // use item
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                // 0 : burning cloth
+                // 1 : bottle
+                // 2 : Health
+                if (items[idxItem] - 1 >= 0)
+                {
+                    items[idxItem]--;
+                    if (idxItem != 2)
+                    {
+                        Instantiate(PFitem[idxItem]);
+                    }
+                    else
+                    {
+                        if (currentHealth + 30 <= maxHealth)
+                        {
+                            currentHealth += 30;
+                        }
+                        else
+                        {
+                            currentHealth = maxHealth;
+                        }
+                        healthBar.SetHealth(currentHealth);
+                    }
+                    updateCtrItem();
+                }
+                else
+                {
+                    Debug.Log("Don't have any");
                 }
             }
         }
 
 
-        //flashlihght
-        if (Input.GetKeyDown(KeyCode.F))
+        // pickup item and interact with merchant
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            // turn off flashlight
-            if (fstate)
+            checkMerchant();
+
+            // cuman bisa pickup rawItem
+            if (pickedUp != null)
             {
-                lightPlayer.intensity = 0;
-                fstate = false;
-            }
-            else
-            {
-                lightPlayer.intensity = flashLife;
-                fstate = true;
+                if(pickedUp.tag == "rawItem")
+                {
+                    if (countBackpack() + 0.8 <= maxBackpack)
+                    {
+                        // cek collider dia ambil item apa
+                        string namaItem = pickedUp.name;
+                        int idx = -1;
+                        if (namaItem.Contains("Batrei"))
+                        {
+                            idx = 0;
+                        }
+                        else if (namaItem.Contains("Alkohol"))
+                        {
+                            idx = 1;
+                        }
+                        else if (namaItem.Contains("Cloth"))
+                        {
+                            idx = 2;
+                        }
+                        else if (namaItem.Contains("Kabel"))
+                        {
+                            idx = 3;
+                        }
+                        else if (namaItem.Contains("Besi"))
+                        {
+                            idx = 4;
+                        }
+                        else if (namaItem.Contains("Botol"))
+                        {
+                            idx = 5;
+                        }
+                        Debug.Log(namaItem);
+                        rawItems[idx]++;
+                        Destroy(pickedUp);
+                        pickedUp = null;
+                        updateCtrItem();
+                    }
+                }
+                else if(pickedUp.tag == "Item")
+                {
+                    if (countBackpack() + 1 <= maxBackpack)
+                    {
+                        // cek collider dia ambil item apa
+                        string namaItem = pickedUp.name;
+                        int idx = -1;
+                        if (namaItem.Contains("Burning Cloth"))
+                        {
+                            idx = 0;
+                        }
+                        else if (namaItem.Contains("Decoy Bottle"))
+                        {
+                            idx = 1;
+                        }
+                        else if (namaItem.Contains("Bandage"))
+                        {
+                            idx = 2;
+                        }
+                        Debug.Log(namaItem);
+                        items[idx]++;
+                        Destroy(pickedUp);
+                        pickedUp = null;
+                        updateCtrItem();
+                    }
+                }
             }
         }
+
 
         // kurangi flashlight life 
         if (fstate)
@@ -213,114 +349,25 @@ public class playerController : MonoBehaviour
             }
         }
 
-        // Reload senter
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if(rawItems[0] - 1 >= 0)
-            {
-                rawItems[0]--;
-                flashLife = 1;
-            }
-            else
-            {
-                Debug.Log("Don't have any battery left");
-            }
-        }
-
-
-        // Crafting item
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            // Ke UI craft
-            // setiap item yang dicraft akan mengurangi raw item dan menambah 1 item 
-            inventory.GetComponent<Inventory>().openInventory();
-        }
-
-
-        // pickup item
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            checkMerchant();
-            if (countBackpack() + 1 <= maxBackpack)
-            {
-                // cek collider dia ambil item apa
-                if (pickedUp != null)
-                {
-                    string namaItem = pickedUp.name;
-                    int idx = -1;
-                    if (namaItem.Contains("Batrei"))
-                    {
-                        idx = 0;
-                    }
-                    else if(namaItem.Contains("Alkohol"))
-                    {
-                        idx = 1;
-                    }
-                    else if (namaItem.Contains("Cloth"))
-                    {
-                        idx = 2;
-                    }
-                    else if (namaItem.Contains("Kabel"))
-                    {
-                        idx = 3;
-                    }
-                    else if (namaItem.Contains("Besi"))
-                    {
-                        idx = 4;
-                    }
-                    else if (namaItem.Contains("Botol"))
-                    {
-                        idx = 5;
-                    }
-                    Debug.Log(namaItem);
-                    rawItems[idx]++;
-                    Destroy(pickedUp);
-                    pickedUp = null;
-                }
-            }
-        }
-
-
-        // use item
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            // 0 : burning cloth
-            // 1 : bottle
-            // 2 : Health
-            if (items[idxItem] - 1 >= 0)
-            {
-                items[idxItem]--;
-                texts[idxItem].GetComponent<Text>().text = items[idxItem] + "";
-                texts[idxItem + 3].GetComponent<Text>().text = items[idxItem] + "";
-                if(idxItem != 2)
-                {
-                    Instantiate(PFitem[idxItem]);
-                }
-                else
-                {
-                    if(currentHealth + 30 <= maxHealth)
-                    {
-                        currentHealth += 30;
-                    }
-                    else
-                    {
-                        currentHealth = maxHealth;
-                    }
-                    healthBar.SetHealth(currentHealth);
-                }
-            }
-            else
-            {
-                Debug.Log("Don't have any");
-            }
-        }
-
         dir.Normalize();
         animator.SetBool("IsMoving", dir.magnitude > 0);
 
         rb.velocity = speed * dir;
     }
 
+    public void reloadBattery()
+    {
+        if (rawItems[0] - 1 >= 0)
+        {
+            rawItems[0]--;
+            flashLife = 1;
+            texts[6].GetComponent<Text>().text = rawItems[0] + "";
+        }
+        else
+        {
+            Debug.Log("Don't have any battery left");
+        }
+    }
 
     public void checkMerchant()
     {
@@ -338,7 +385,7 @@ public class playerController : MonoBehaviour
                 if (otherObj.CompareTag("Merchant") && flag)
                 {
                     flag = false;
-                    otherObj.GetComponent<merchantController>().openMercahnt();
+                    otherObj.GetComponent<merchantController>().openMerchant();
                     break;
                 }
             }
@@ -352,6 +399,8 @@ public class playerController : MonoBehaviour
             texts[i].GetComponent<Text>().text = items[i] + "";
             texts[i + 3].GetComponent<Text>().text = items[i] + "";
         }
+
+        texts[6].GetComponent<Text>().text = rawItems[0] + "";
     }
 
     public int countBackpack()
@@ -374,7 +423,7 @@ public class playerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "rawItem")
+        if (collision.tag == "rawItem" || collision.tag == "Item")
         {
             pickedUp = collision.gameObject;
             Debug.Log(collision.tag);

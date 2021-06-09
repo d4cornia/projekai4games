@@ -47,6 +47,7 @@ public class Inventory : MonoBehaviour
             }
             GameObject.Find("countBP").GetComponent<Text>().text = playerObj.GetComponent<playerController>().countBackpack() + "";
             GameObject.Find("Max Size").GetComponent<Text>().text = playerObj.GetComponent<playerController>().maxBackpack + "";
+            playerObj.GetComponent<playerController>().updateCtrItem();
         }
 
     }
