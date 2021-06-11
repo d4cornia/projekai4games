@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public class playerController : MonoBehaviour
 {
@@ -62,6 +63,7 @@ public class playerController : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+
 
     void Start()
     {

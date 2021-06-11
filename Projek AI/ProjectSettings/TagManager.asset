@@ -7,6 +7,9 @@ TagManager:
   - Item
   - rawItem
   - Merchant
+  - CenterWall
+  - Gate Closed
+  - Gate Open
   layers:
   - Default
   - TransparentFX
