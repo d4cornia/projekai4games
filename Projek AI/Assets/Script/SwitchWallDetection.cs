@@ -14,7 +14,7 @@ public class SwitchWallDetection : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "CenterWall")
+        if (collision.tag == "Player")
         {
             detection = !detection;
             if (detection)

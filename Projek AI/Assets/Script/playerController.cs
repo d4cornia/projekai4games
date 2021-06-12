@@ -25,11 +25,12 @@ public class playerController : MonoBehaviour
     public int idxItem;
     public int maxBackpack;
     public int money;
+    public const float MAX_FLASH = .5f;
 
     // flashlight
     Light2D lightPlayer;
     bool fstate;
-    float flashLife = 1;
+    float flashLife;
 
 
     // prefab item
@@ -91,7 +92,7 @@ public class playerController : MonoBehaviour
             pickedUp = null;
             fstate = true;
             maxBackpack = 30;
-            flashLife = 1;
+            flashLife = MAX_FLASH;
             money = 250;
 
             flagi = false;
@@ -342,12 +343,11 @@ public class playerController : MonoBehaviour
         // kurangi flashlight life 
         if (fstate)
         {
-            flashLife -= (float)0.00001;
+            flashLife -= (float)0.0001;
             lightPlayer.intensity = flashLife;
             if (flashLife <= 0)
             {
                 lightPlayer.intensity = 0;
-                fstate = false;
             }
         }
 
@@ -362,7 +362,7 @@ public class playerController : MonoBehaviour
         if (rawItems[0] - 1 >= 0)
         {
             rawItems[0]--;
-            flashLife = 1;
+            flashLife = MAX_FLASH;
             texts[6].GetComponent<Text>().text = rawItems[0] + "";
         }
         else

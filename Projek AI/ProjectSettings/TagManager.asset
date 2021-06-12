@@ -10,6 +10,7 @@ TagManager:
   - CenterWall
   - Gate Closed
   - Gate Open
+  - Flashlight
   layers:
   - Default
   - TransparentFX
