@@ -27,7 +27,7 @@ public class BurningClothController : MonoBehaviour
     private void Start()
     {
         lightOrange.pointLightOuterRadius = 4;
-        lightOrange.intensity = (float)0.5;
+        lightOrange.intensity = (float)0.4;
         lightYellow.pointLightOuterRadius = 6;
         lightYellow.intensity = (float)0.5;
     }
