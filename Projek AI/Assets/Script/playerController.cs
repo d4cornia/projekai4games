@@ -12,7 +12,7 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject playerLight;
     public GameObject playerObj;
-    public GameObject inventory;
+    public Inventory inventory;
     public Animator animator;
     private int look;
 
@@ -81,8 +81,7 @@ public class playerController : MonoBehaviour
             rb = playerObj.GetComponent<Rigidbody2D>();
             animator = playerObj.GetComponent<Animator>();
 
-            //inventory.GetComponent<Inventory>().inventory = findChild(GameObject.Find("Player UI"), "Inventory");
-            //Debug.Log(findChild(GameObject.Find("Player UI"), "Inventory").name);
+            inventory = playerObj.GetComponent<Inventory>();
 
             playerLight.transform.rotation = Quaternion.Euler(0, 0, 0);
             lightPlayer = playerLight.GetComponent<Light2D>();
@@ -228,7 +227,7 @@ public class playerController : MonoBehaviour
             {
                 // Ke UI craft
                 // setiap item yang dicraft akan mengurangi raw item dan menambah 1 item 
-                inventory.GetComponent<Inventory>().openInventory();
+                inventory.openInventory();
             }
 
 
@@ -463,19 +462,6 @@ public class playerController : MonoBehaviour
         Vector3 targetPosition = UtilsClass.GetWorldPositionFromUI();
         curAngle = UtilsClass.GetAngleFromVectorFloat((targetPosition - transform.position).normalized);
         playerLight.transform.rotation = Quaternion.Euler(0, 0, curAngle - 90);
-    }
-
-    private GameObject findChild(GameObject parent, string name)
-    {
-        Transform[] trs = parent.GetComponentsInChildren<Transform>(true);
-        foreach (Transform t in trs)
-        {
-            if (t.name == name)
-            {
-                return t.gameObject;
-            }
-        }
-        return null;
     }
 
     /*void spriteOrientation()
