@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -10,8 +11,17 @@ public class PlayerInteraction : MonoBehaviour
     private bool isInBoundary = false;
     private GameObject parentDoor;
     private string tag;
+    public GameObject locationText;
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if(collision.gameObject.tag == "Location")
+        {
+            locationText.GetComponent<Text>().text = collision.gameObject.name;
+        }
+
         if (collision.gameObject.name == GATE)
         {
             tag = GATE;

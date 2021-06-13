@@ -12,8 +12,7 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject playerLight;
     public GameObject playerObj;
-    public GameObject inventory;
-    public GameObject locationText;
+    public Inventory inventory;
     public Animator animator;
     private int look;
 
@@ -81,6 +80,8 @@ public class playerController : MonoBehaviour
             playerObj = GameObject.Find("PF Player");
             rb = playerObj.GetComponent<Rigidbody2D>();
             animator = playerObj.GetComponent<Animator>();
+
+            inventory = playerObj.GetComponent<Inventory>();
 
             playerLight.transform.rotation = Quaternion.Euler(0, 0, 0);
             lightPlayer = playerLight.GetComponent<Light2D>();
@@ -226,7 +227,7 @@ public class playerController : MonoBehaviour
             {
                 // Ke UI craft
                 // setiap item yang dicraft akan mengurangi raw item dan menambah 1 item 
-                inventory.GetComponent<Inventory>().openInventory();
+                inventory.openInventory();
             }
 
 
@@ -448,10 +449,6 @@ public class playerController : MonoBehaviour
         {
             pickedUp = collision.gameObject;
             Debug.Log(collision.tag);
-        }
-        else if (collision.tag == "Location")
-        {
-            locationText.GetComponent<Text>().text = collision.gameObject.name;
         }
     }
 
