@@ -13,6 +13,7 @@ public class playerController : MonoBehaviour
     public GameObject playerLight;
     public GameObject playerObj;
     public GameObject inventory;
+    public GameObject locationText;
     public Animator animator;
     private int look;
 
@@ -43,6 +44,7 @@ public class playerController : MonoBehaviour
     // 0 : burning cloth
     // 1 : bottle
     // 2 : Health
+    public List<string> keys;
 
 
     // raw item
@@ -267,6 +269,7 @@ public class playerController : MonoBehaviour
         // pickup item and interact with merchant
         if (Input.GetKeyDown(KeyCode.E))
         {
+            // jika diarea merchant, open merchant
             checkMerchant();
 
             // cuman bisa pickup rawItem
@@ -335,6 +338,18 @@ public class playerController : MonoBehaviour
                         pickedUp = null;
                         updateCtrItem();
                     }
+                }
+                else if(pickedUp.tag == "Key")
+                {
+                    keys.Add(pickedUp.name);
+                    Destroy(pickedUp);
+                    pickedUp = null;
+                }
+                else if (pickedUp.tag == "Chest")
+                {
+                    pickedUp.GetComponent<keySpawner>().destroyChest();
+                    Destroy(pickedUp);
+                    pickedUp = null;
                 }
             }
         }
@@ -425,10 +440,14 @@ public class playerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "rawItem" || collision.tag == "Item")
+        if (collision.tag == "rawItem" || collision.tag == "Item" || collision.tag == "Key" || collision.tag == "Chest")
         {
             pickedUp = collision.gameObject;
             Debug.Log(collision.tag);
+        }
+        else if (collision.tag == "Location")
+        {
+            locationText.GetComponent<Text>().text = collision.gameObject.name;
         }
     }
 

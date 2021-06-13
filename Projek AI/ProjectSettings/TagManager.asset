@@ -11,6 +11,8 @@ TagManager:
   - Gate Closed
   - Gate Open
   - Flashlight
+  - Key
+  - Chest
   layers:
   - Default
   - TransparentFX
