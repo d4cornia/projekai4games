@@ -81,7 +81,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.48, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -164,12 +164,12 @@ MonoBehaviour:
   - {x: 0.09804964, y: -0.28269973, z: 0}
   - {x: 0.20184372, y: -0.18770356, z: 0}
   - {x: 0.19758268, y: -0.075154096, z: 0}
-  - {x: 0.08161646, y: 0.008216296, z: 0}
-  - {x: -0.13527204, y: 0.0025735646, z: 0}
-  - {x: -0.20494412, y: -0.053888906, z: 0}
-  m_ShapePathHash: 988930011
+  - {x: 0.08875393, y: -0.05245182, z: 0}
+  - {x: -0.11029105, y: -0.047388475, z: 0}
+  - {x: -0.20137545, y: -0.096714035, z: 0}
+  m_ShapePathHash: 186599680
   m_Mesh: {fileID: 0}
-  m_InstanceId: -13196
+  m_InstanceId: 36848
 --- !u!114 &-6268600838926657985
 MonoBehaviour:
   m_ObjectHideFlags: 0

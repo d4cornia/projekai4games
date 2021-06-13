@@ -8,9 +8,12 @@ TagManager:
   - rawItem
   - Merchant
   - CenterWall
-  - Gate Closed
-  - Gate Open
   - Flashlight
+  - Opened
+  - Closed
+  - Door Interact
+  - SurroundLight
+  - Passage
   layers:
   - Default
   - TransparentFX
@@ -35,8 +38,8 @@ TagManager:
   - Layer 1
   - Layer 2
   - Layer 3
-  - 
-  - 
+  - Layer 4
+  - Interaction
   - 
   - 
   - 
@@ -56,4 +59,7 @@ TagManager:
     locked: 0
   - name: Layer 3
     uniqueID: 4189426099
+    locked: 0
+  - name: Layer 4
+    uniqueID: 2886465671
     locked: 0

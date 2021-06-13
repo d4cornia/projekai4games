@@ -80,7 +80,6 @@ public class playerController : MonoBehaviour
             rb = playerObj.GetComponent<Rigidbody2D>();
             animator = playerObj.GetComponent<Animator>();
 
-            playerLight = GameObject.Find("Player Direction light");
             playerLight.transform.rotation = Quaternion.Euler(0, 0, 0);
             lightPlayer = playerLight.GetComponent<Light2D>();
             lightPlayer.intensity = 1;
@@ -355,6 +354,11 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMoving", dir.magnitude > 0);
 
         rb.velocity = speed * dir;
+    }
+
+    public void changeFlashlight()
+    {
+        lightPlayer = playerLight.GetComponent<Light2D>();
     }
 
     public void reloadBattery()
