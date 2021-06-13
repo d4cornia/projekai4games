@@ -16,15 +16,16 @@ public class PlayerInteraction : MonoBehaviour
         {
             tag = GATE;
             isInBoundary = true;
-            this.parentDoor = collision.gameObject;
+            parentDoor = collision.gameObject;
+            Debug.Log(isInBoundary);
         }
         if(collision.gameObject.name == LIFT)
         {
             tag = LIFT;
             isInBoundary = true;
-            this.parentDoor = collision.gameObject;
+            parentDoor = collision.gameObject;
+            Debug.Log(isInBoundary);
         }
-        Debug.Log(isInBoundary);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -34,8 +35,8 @@ public class PlayerInteraction : MonoBehaviour
             tag = "";
             isInBoundary = false;
             this.parentDoor = null;
+            Debug.Log(isInBoundary);
         }
-        Debug.Log(isInBoundary);
     }
 
     private void Update()

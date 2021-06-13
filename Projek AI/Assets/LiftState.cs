@@ -9,21 +9,12 @@ public class LiftState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim.SetBool("isOpen", false);
         isOpen = 0;
     }
 
     public void openLift()
     {
         isOpen = 1;
-    }
-
-    private void Update()
-    {
-        if (isOpen == 1)
-        {
-            anim.SetBool("isOpen", true);
-            isOpen = 2;
-        }
+        anim.SetBool("isOpen", true);
     }
 }

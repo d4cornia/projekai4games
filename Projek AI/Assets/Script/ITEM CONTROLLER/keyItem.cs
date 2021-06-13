@@ -8,6 +8,6 @@ public class keyItem : MonoBehaviour
 
     void Awake()
     {
-        this.gameObject.name = keyName;
+        //this.gameObject.name = keyName;
     }
 }
