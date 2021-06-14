@@ -21,15 +21,14 @@ public class PlayerInteraction : MonoBehaviour
         {
             locationText.GetComponent<Text>().text = collision.gameObject.name;
         }
-
-        if (collision.gameObject.name == GATE)
+        else if (collision.gameObject.name == GATE)
         {
             tag = GATE;
             isInBoundary = true;
             parentDoor = collision.gameObject;
             Debug.Log(isInBoundary);
         }
-        if(collision.gameObject.name == LIFT)
+        else if (collision.gameObject.name == LIFT)
         {
             tag = LIFT;
             isInBoundary = true;

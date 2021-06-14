@@ -8,7 +8,6 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     public GameObject inventory;
 
-    public bool[] taken;
 
     public void openInventory()
     {

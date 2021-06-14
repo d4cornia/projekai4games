@@ -22,8 +22,9 @@ public class keySpawner : MonoBehaviour
             delay--;
         }
 
-        PFkey.transform.position = this.gameObject.transform.position;
+        PFkey.transform.position = this.gameObject.transform.position + new Vector3(Random.Range((float)-0.3, (float)0.3), Random.Range((float)-0.3, (float)0.3), 0);
         PFkey.GetComponent<keyItem>().keyName = keyName;
         Instantiate(PFkey);
+        Destroy(this.gameObject);
     }
 }

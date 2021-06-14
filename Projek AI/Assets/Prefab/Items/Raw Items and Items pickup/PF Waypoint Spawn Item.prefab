@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4489364683357135946}
-  - component: {fileID: 3317221955378491871}
+  - component: {fileID: 192951913133951405}
   - component: {fileID: 6234488870086851062}
   - component: {fileID: 2222344389699397822}
   - component: {fileID: 5778318635166096726}
   m_Layer: 0
-  m_Name: PF Kabel
+  m_Name: PF Waypoint Spawn Item
   m_TagString: rawItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,12 +29,12 @@ Transform:
   m_GameObject: {fileID: 7972038829290734992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.18, y: -9.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3317221955378491871
+--- !u!114 &192951913133951405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,10 +43,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7972038829290734992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1206365bc652a18498c7a5aa8710da75, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b41359e530ee474d81ee41b83d4c6c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ri: {fileID: 7972038829290734992}
+  PFitems:
+  - {fileID: 3953309988764265349, guid: a88cbe356987f6f4b8806952ca9558f8, type: 3}
+  - {fileID: 655965152540722281, guid: 5aff4549c14f3794fab946b95311afbd, type: 3}
+  - {fileID: 5325208214544601268, guid: e851a7735eea2124b921b4b80afcbb5e, type: 3}
+  - {fileID: 1115177207233110875, guid: 7c6095cfa9741ee408e9854d2fa49101, type: 3}
+  - {fileID: 3428610372950977584, guid: 6fb964420d4060f4993cacbe32c17484, type: 3}
+  - {fileID: 7972038829290734992, guid: c7e72063dd67249408b4dc34cb919a2e, type: 3}
+  - {fileID: 1048748739587897574, guid: 35f7cc21ff980504cb2a34cf50a2808e, type: 3}
+  - {fileID: 7712924723058489026, guid: efe97904694e6bd44aa63fdb77fb6dad, type: 3}
+  - {fileID: 5826143170006430750, guid: 64ded80da73372e41b94c9c6abb302d6, type: 3}
 --- !u!212 &6234488870086851062
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -84,8 +93,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1869315837
-  m_SortingLayer: 1
+  m_SortingLayerID: -44025399
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
     type: 3}

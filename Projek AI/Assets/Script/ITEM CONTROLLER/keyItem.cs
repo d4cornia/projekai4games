@@ -8,6 +8,14 @@ public class keyItem : MonoBehaviour
 
     void Awake()
     {
-        //this.gameObject.name = keyName;
+        this.gameObject.name = keyName;
+        if (keyName.Contains("Blue"))
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+        else if (keyName.Contains("Red"))
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        }
     }
 }

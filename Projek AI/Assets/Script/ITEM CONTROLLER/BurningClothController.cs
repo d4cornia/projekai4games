@@ -5,7 +5,6 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class BurningClothController : MonoBehaviour
 {
-    GameObject bc;
     GameObject enemy;
     Light2D lightOrange, lightYellow;
     public static int id;
@@ -15,9 +14,12 @@ public class BurningClothController : MonoBehaviour
     void Awake()
     {
         id++;
-        bc = GameObject.Find("PF Burning Cloth(Clone)");
-        bc.transform.position = GameObject.Find("PF Player").GetComponent<playerController>().transform.position;
-        bc.name += id;
+        this.gameObject.transform.position = GameObject.Find("PF Player").GetComponent<playerController>().transform.position;
+        this.gameObject.name += id;
+
+        this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = GameObject.Find("PF Player").GetComponent<SpriteRenderer>().sortingLayerName;
+        this.gameObject.layer = GameObject.Find("PF Player").layer;
+
         lightOrange = GameObject.Find("Light Source Orange").GetComponent<Light2D>();
         lightOrange.name += id;
         lightYellow = GameObject.Find("Light Source Yellow").GetComponent<Light2D>();
@@ -27,9 +29,9 @@ public class BurningClothController : MonoBehaviour
     private void Start()
     {
         lightOrange.pointLightOuterRadius = 4;
-        lightOrange.intensity = (float)0.4;
+        lightOrange.intensity = (float)0.35;
         lightYellow.pointLightOuterRadius = 6;
-        lightYellow.intensity = (float)0.5;
+        lightYellow.intensity = (float)0.4;
     }
 
 
@@ -55,7 +57,7 @@ public class BurningClothController : MonoBehaviour
         {
             Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
             Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
-            Vector3 origin = this.bc.transform.position + offset;
+            Vector3 origin = this.gameObject.transform.position + offset;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, (float)(lightYellow.pointLightOuterRadius - (1.9 + lightYellow.falloffIntensity * lightYellow.falloffIntensity)));
             if (raycastHit2D.collider != null)
             {

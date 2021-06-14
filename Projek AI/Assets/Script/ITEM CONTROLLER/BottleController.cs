@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BottleController : MonoBehaviour
 {
-    GameObject bc;
     GameObject enemy;
     Rigidbody2D rb;
     public static int id;
@@ -14,10 +13,13 @@ public class BottleController : MonoBehaviour
     private void Awake()
     {
         id++;
-        bc = GameObject.Find("PF Bottle(Clone)");
-        bc.name += id;
-        bc.transform.position = GameObject.Find("PF Player").GetComponent<playerController>().transform.position;
-        rb = bc.GetComponent<Rigidbody2D>();
+        this.gameObject.name += id;
+        this.gameObject.transform.position = GameObject.Find("PF Player").GetComponent<playerController>().transform.position;
+
+        this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = GameObject.Find("PF Player").GetComponent<SpriteRenderer>().sortingLayerName;
+        this.gameObject.layer = GameObject.Find("PF Player").layer;
+
+        rb = this.gameObject.GetComponent<Rigidbody2D>();
         float dir = GameObject.Find("PF Player").GetComponent<playerController>().curAngle;
         direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * dir), Mathf.Sin(Mathf.Deg2Rad * dir));
         direction.Normalize();
@@ -65,7 +67,7 @@ public class BottleController : MonoBehaviour
         {
             Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
             Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
-            Vector3 origin = this.bc.transform.position + offset;
+            Vector3 origin = this.gameObject.transform.position + offset;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, range);
             if (raycastHit2D.collider != null)
             {

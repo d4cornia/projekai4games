@@ -8,13 +8,14 @@ using UnityEngine.Tilemaps;
 
 public class playerController : MonoBehaviour
 {
-
+    // base
     public Rigidbody2D rb;
     public GameObject playerLight;
     public GameObject playerObj;
     public Inventory inventory;
     public Animator animator;
     private int look;
+
 
     // stats
     public float health;
@@ -26,6 +27,7 @@ public class playerController : MonoBehaviour
     public int maxBackpack;
     public int money;
     public const float MAX_FLASH = .5f;
+
 
     // flashlight
     Light2D lightPlayer;
@@ -43,7 +45,6 @@ public class playerController : MonoBehaviour
     // 0 : burning cloth
     // 1 : bottle
     // 2 : Health
-    public List<string> keys;
 
 
     // raw item
@@ -55,6 +56,10 @@ public class playerController : MonoBehaviour
     // 4 : besi
     // 5 : botol
     GameObject pickedUp;
+
+
+    // keys
+    public List<string> keys;
 
     public GameObject[] activeItem;
     public GameObject[] texts;
@@ -312,6 +317,10 @@ public class playerController : MonoBehaviour
                         pickedUp = null;
                         updateCtrItem();
                     }
+                    else
+                    {
+                        Debug.Log("Your Backpack is full");
+                    }
                 }
                 else if(pickedUp.tag == "Item")
                 {
@@ -338,6 +347,10 @@ public class playerController : MonoBehaviour
                         pickedUp = null;
                         updateCtrItem();
                     }
+                    else
+                    {
+                        Debug.Log("Your Backpack is full");
+                    }
                 }
                 else if(pickedUp.tag == "Key")
                 {
@@ -348,7 +361,6 @@ public class playerController : MonoBehaviour
                 else if (pickedUp.tag == "Chest")
                 {
                     pickedUp.GetComponent<keySpawner>().destroyChest();
-                    Destroy(pickedUp);
                     pickedUp = null;
                 }
             }
@@ -407,6 +419,7 @@ public class playerController : MonoBehaviour
                 if (otherObj.CompareTag("Merchant") && flag)
                 {
                     flag = false;
+                    flagM = !flagM;
                     otherObj.GetComponent<merchantController>().openMerchant();
                     break;
                 }

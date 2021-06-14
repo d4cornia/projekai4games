@@ -12,20 +12,21 @@ public class rawItemController : MonoBehaviour
     void Awake()
     {
         id++;
-        if (GameObject.Find("PF Burning Cloth G") != null)
+        ri.name = ri.name + id;
+        /*if (GameObject.Find("PF Burning Cloth G") != null)
         {
             ri = GameObject.Find("PF Burning Cloth G");
-            ri.name = "Burning Cloth " + id;
+            ri.name = "Burning Cloth G" + id;
         }
         else if (GameObject.Find("PF Decoy Bottle G") != null)
         {
             ri = GameObject.Find("PF Decoy Bottle G");
-            ri.name = "Decoy Bottle " + id;
+            ri.name = "Decoy Bottle G" + id;
         }
         else if (GameObject.Find("PF Bandage G") != null)
         {
             ri = GameObject.Find("PF Bandage G");
-            ri.name = "Bandage " + id;
+            ri.name = "Bandage G" + id;
         }
         else if (GameObject.Find("PF Batrei") != null)
         {
@@ -60,6 +61,6 @@ public class rawItemController : MonoBehaviour
         else
         {
             ri.name = "-";
-        }
+        }*/
     }
 }
