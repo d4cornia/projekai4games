@@ -370,7 +370,7 @@ public class playerController : MonoBehaviour
         // kurangi flashlight life 
         if (fstate)
         {
-            flashLife -= (float)0.00005;
+            flashLife -= (float)0.00001;
             lightPlayer.intensity = flashLife;
             if (flashLife <= 0)
             {
