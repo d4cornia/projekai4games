@@ -12,6 +12,8 @@ public class playerController : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject playerLight;
     public GameObject playerObj;
+    public GameObject objective;
+    public GameObject objectiveText;
     public Inventory inventory;
     public Animator animator;
     private int look;
@@ -64,6 +66,9 @@ public class playerController : MonoBehaviour
     public GameObject[] activeItem;
     public GameObject[] texts;
 
+    // objectives
+    public List<string> listObj;
+
 
     //health
     public int maxHealth = 100;
@@ -105,6 +110,8 @@ public class playerController : MonoBehaviour
             flagi = false;
             flagM = false;
 
+            listObj = new List<string>();
+            listObj.Add("Get Blue Key");
             updateCtrItem();
         }
         look = 4;
@@ -112,10 +119,10 @@ public class playerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(5);
-        }
+        }*/
         processInput();
     }
 
@@ -130,7 +137,6 @@ public class playerController : MonoBehaviour
         {
             currentHealth = 0;
         }
-    
     }
 
     void FixedUpdate()
@@ -268,6 +274,13 @@ public class playerController : MonoBehaviour
                     Debug.Log("Don't have any");
                 }
             }
+
+
+            // view objective 
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                objective.SetActive(!objective.active);
+            }
         }
 
 
@@ -313,7 +326,7 @@ public class playerController : MonoBehaviour
                         }
                         Debug.Log(namaItem);
                         rawItems[idx]++;
-                        Destroy(pickedUp);
+                        destroyItem();
                         pickedUp = null;
                         updateCtrItem();
                     }
@@ -343,7 +356,7 @@ public class playerController : MonoBehaviour
                         }
                         Debug.Log(namaItem);
                         items[idx]++;
-                        Destroy(pickedUp);
+                        destroyItem();
                         pickedUp = null;
                         updateCtrItem();
                     }
@@ -354,9 +367,12 @@ public class playerController : MonoBehaviour
                 }
                 else if(pickedUp.tag == "Key")
                 {
-                    keys.Add(pickedUp.name);
-                    Destroy(pickedUp);
-                    pickedUp = null;
+                    if (pickedUp.GetComponent<objectiveController>().reqiurement())
+                    {
+                        keys.Add(pickedUp.name);
+                        destroyItem();
+                        pickedUp = null;
+                    }
                 }
                 else if (pickedUp.tag == "Chest")
                 {
@@ -382,6 +398,23 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMoving", dir.magnitude > 0);
 
         rb.velocity = speed * dir;
+    }
+
+    public void destroyItem()
+    {
+        if (pickedUp.GetComponent<objectiveController>())
+        {
+            pickedUp.GetComponent<objectiveController>().finishAndNewObjective();
+        }
+        Destroy(pickedUp);
+    }
+
+    public void updateObjective()
+    {
+        foreach (var item in listObj)
+        {
+            objectiveText.GetComponent<Text>().text = item + "\n ";
+        }
     }
 
     public void changeFlashlight()
