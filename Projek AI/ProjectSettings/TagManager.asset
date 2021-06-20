@@ -18,6 +18,7 @@ TagManager:
   - Chest
   - Location
   - Interactable
+  - Door
   layers:
   - Default
   - TransparentFX

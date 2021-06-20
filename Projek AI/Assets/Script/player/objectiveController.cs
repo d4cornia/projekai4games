@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class objectiveController : MonoBehaviour
 {
+    public GameObject reqTextGO;
+    public string requirementText;
     public List<string> listNewObj;
     public List<string> finishedObj;
     public List<string> listReq; // req di dalam key
@@ -37,6 +40,13 @@ public class objectiveController : MonoBehaviour
         }
 
         return flag;
+    }
+
+    public void showTextReq()
+    {
+        reqTextGO.GetComponent<reqTextController>().showText();
+        reqTextGO.GetComponent<Text>().text = requirementText;
+        Debug.Log(requirementText);
     }
 
     // ditaro setelah requirement untuk menyelesaikan objective terpenuhi dan objective telah di selesaikan

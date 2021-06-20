@@ -379,6 +379,19 @@ public class playerController : MonoBehaviour
                     pickedUp.GetComponent<keySpawner>().destroyChest();
                     pickedUp = null;
                 }
+                else if (pickedUp.tag == "Door")
+                {
+                    if (pickedUp.GetComponent<objectiveController>().reqiurement())
+                    {
+                        // script door ambil next location dan tp kesana
+                        pickedUp.GetComponent<doorController>().tp();
+                    }
+                    else
+                    {
+                        pickedUp.GetComponent<objectiveController>().showTextReq();
+                    }
+                    pickedUp = null;
+                }
             }
         }
 
@@ -491,7 +504,8 @@ public class playerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "rawItem" || collision.tag == "Item" || collision.tag == "Key" || collision.tag == "Chest")
+        Debug.Log(collision.tag);
+        if (collision.tag == "rawItem" || collision.tag == "Item" || collision.tag == "Key" || collision.tag == "Chest" || collision.tag == "Door")
         {
             pickedUp = collision.gameObject;
             Debug.Log(collision.tag);
