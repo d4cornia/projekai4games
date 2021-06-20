@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5045772497905375433}
   - component: {fileID: 5045772497905375432}
   - component: {fileID: 5045772497905375439}
-  m_Layer: 22
+  m_Layer: 21
   m_Name: PF Key
   m_TagString: Key
   m_Icon: {fileID: 0}
@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552518989c576f444a83d50c9490bd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reqTextGO: {fileID: 0}
+  requirementText: 
   listNewObj:
   - Talk to merchant
   finishedObj:

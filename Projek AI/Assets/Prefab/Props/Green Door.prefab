@@ -93,10 +93,12 @@ GameObject:
   - component: {fileID: 5600492743708485135}
   - component: {fileID: 5600492743708485132}
   - component: {fileID: 5600492743708485133}
+  - component: {fileID: 6336101991008499825}
+  - component: {fileID: 3579696431473655854}
   - component: {fileID: 5600492743708485130}
   m_Layer: 0
   m_Name: Green Door
-  m_TagString: Interactable
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +181,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc5c247721a6fd4aafa6a1f757a5f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6336101991008499825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600492743708485131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ad0fb6921450d4e94797d4e147cb8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextDoor: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &3579696431473655854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600492743708485131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552518989c576f444a83d50c9490bd5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reqTextGO: {fileID: 0}
+  requirementText: 
+  listNewObj: []
+  finishedObj: []
+  listReq:
+  - 
 --- !u!61 &5600492743708485130
 BoxCollider2D:
   m_ObjectHideFlags: 0

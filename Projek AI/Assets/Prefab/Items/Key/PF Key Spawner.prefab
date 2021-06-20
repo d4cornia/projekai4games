@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2209587620788706473}
   - component: {fileID: 2209587620788706472}
   - component: {fileID: 2209587620788706479}
-  m_Layer: 22
+  m_Layer: 21
   m_Name: PF Key Spawner
   m_TagString: Chest
   m_Icon: {fileID: 0}
@@ -49,6 +49,9 @@ MonoBehaviour:
   PFkey: {fileID: 5045772497905375438, guid: 1b6d3dba24038114e979ec19ab93806f, type: 3}
   keyName: Red Key
   delay: 3
+  listNewObj: []
+  finishedObj: []
+  listReq: []
 --- !u!212 &2209587620788706473
 SpriteRenderer:
   m_ObjectHideFlags: 0
