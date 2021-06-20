@@ -1,7 +1,658 @@
 fileFormatVersion: 2
 guid: 6c2a0868a2042a742a766f68d0332004
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8967441862810819796
+    second: Interior4_0
+  - first:
+      213: 6151631599981589513
+    second: Interior4_1
+  - first:
+      213: -278449390228989767
+    second: Interior4_2
+  - first:
+      213: 8868682841158846831
+    second: Interior4_3
+  - first:
+      213: -8770838106651184567
+    second: Interior4_4
+  - first:
+      213: -7083036360832610272
+    second: Interior4_5
+  - first:
+      213: 6575373489143719544
+    second: Interior4_6
+  - first:
+      213: 2337621130861264317
+    second: Interior4_7
+  - first:
+      213: 735274516891121192
+    second: Interior4_8
+  - first:
+      213: -262932111278289451
+    second: Interior4_9
+  - first:
+      213: 1556047758460100200
+    second: Interior4_10
+  - first:
+      213: 2778450551587971281
+    second: Interior4_11
+  - first:
+      213: -5601268457847970981
+    second: Interior4_12
+  - first:
+      213: 8840905150039856398
+    second: Interior4_13
+  - first:
+      213: -5023708984118195149
+    second: Interior4_14
+  - first:
+      213: -3735884946317778110
+    second: Interior4_15
+  - first:
+      213: 846005832773213709
+    second: Interior4_16
+  - first:
+      213: -1502554590744513873
+    second: Interior4_17
+  - first:
+      213: 6884234260094449408
+    second: Interior4_18
+  - first:
+      213: -166180097941678204
+    second: Interior4_19
+  - first:
+      213: -6208305714063559007
+    second: Interior4_20
+  - first:
+      213: 9167268623840238755
+    second: Interior4_21
+  - first:
+      213: 7137418099316826266
+    second: Interior4_22
+  - first:
+      213: 1451447733460371068
+    second: Interior4_23
+  - first:
+      213: 538929787085798924
+    second: Interior4_24
+  - first:
+      213: -4332600762160985323
+    second: Interior4_25
+  - first:
+      213: 8884168923795042294
+    second: Interior4_26
+  - first:
+      213: 4374778535021308504
+    second: Interior4_27
+  - first:
+      213: -7863101126311342810
+    second: Interior4_28
+  - first:
+      213: -1149729486303652923
+    second: Interior4_29
+  - first:
+      213: 3516087732885473755
+    second: Interior4_30
+  - first:
+      213: -6032645561286884241
+    second: Interior4_31
+  - first:
+      213: 8962276195119270096
+    second: Interior4_32
+  - first:
+      213: 4659615030763667639
+    second: Interior4_33
+  - first:
+      213: 6971171862208802887
+    second: Interior4_34
+  - first:
+      213: -5142013482341248209
+    second: Interior4_35
+  - first:
+      213: 6639410491245565546
+    second: Interior4_36
+  - first:
+      213: -4284672444106624940
+    second: Interior4_37
+  - first:
+      213: 847454307327509270
+    second: Interior4_38
+  - first:
+      213: 106601570016011513
+    second: Interior4_39
+  - first:
+      213: 1672927600309980791
+    second: Interior4_40
+  - first:
+      213: -8718527016105874102
+    second: Interior4_41
+  - first:
+      213: -4447583998589777920
+    second: Interior4_42
+  - first:
+      213: 8986034809015860078
+    second: Interior4_43
+  - first:
+      213: 3841643308310810238
+    second: Interior4_44
+  - first:
+      213: 7115843095623885256
+    second: Interior4_45
+  - first:
+      213: 8646855544992295102
+    second: Interior4_46
+  - first:
+      213: 7280006767507271815
+    second: Interior4_47
+  - first:
+      213: 6519151211327646953
+    second: Interior4_48
+  - first:
+      213: 774531696260907714
+    second: Interior4_49
+  - first:
+      213: 9177501391679935557
+    second: Interior4_50
+  - first:
+      213: -1170268412629041455
+    second: Interior4_51
+  - first:
+      213: 763322107094509769
+    second: Interior4_52
+  - first:
+      213: -3271227854874666886
+    second: Interior4_53
+  - first:
+      213: -2075767677685276004
+    second: Interior4_54
+  - first:
+      213: -1840190230296130963
+    second: Interior4_55
+  - first:
+      213: -3966292103112743094
+    second: Interior4_56
+  - first:
+      213: 6682275955446118351
+    second: Interior4_57
+  - first:
+      213: 3983023805689081266
+    second: Interior4_58
+  - first:
+      213: -2453723500803009385
+    second: Interior4_59
+  - first:
+      213: -203330610590806579
+    second: Interior4_60
+  - first:
+      213: 7792568405655189517
+    second: Interior4_61
+  - first:
+      213: 6828186907105127578
+    second: Interior4_62
+  - first:
+      213: 8037754786307939394
+    second: Interior4_63
+  - first:
+      213: 2452559573687308439
+    second: Interior4_64
+  - first:
+      213: -9201918623165144825
+    second: Interior4_65
+  - first:
+      213: -5825026400759693372
+    second: Interior4_66
+  - first:
+      213: -6057532838597853411
+    second: Interior4_67
+  - first:
+      213: -9186318170169947388
+    second: Interior4_68
+  - first:
+      213: 4859466629282268167
+    second: Interior4_69
+  - first:
+      213: 3136813017854831323
+    second: Interior4_70
+  - first:
+      213: -2168723094871124195
+    second: Interior4_71
+  - first:
+      213: 8227128331206982567
+    second: Interior4_72
+  - first:
+      213: 734333145453145233
+    second: Interior4_73
+  - first:
+      213: -1981166041428937022
+    second: Interior4_74
+  - first:
+      213: -7379715850352011601
+    second: Interior4_75
+  - first:
+      213: -4348970988570422445
+    second: Interior4_76
+  - first:
+      213: 429656191141357168
+    second: Interior4_77
+  - first:
+      213: 4429975451239901940
+    second: Interior4_78
+  - first:
+      213: 2947360141756081348
+    second: Interior4_79
+  - first:
+      213: 6686071027771110393
+    second: Interior4_80
+  - first:
+      213: -1114691220226047940
+    second: Interior4_81
+  - first:
+      213: 4081723884785617117
+    second: Interior4_82
+  - first:
+      213: 2005912041629282481
+    second: Interior4_83
+  - first:
+      213: 401513855128546186
+    second: Interior4_84
+  - first:
+      213: 3152665188473763960
+    second: Interior4_85
+  - first:
+      213: -3454718667981696428
+    second: Interior4_86
+  - first:
+      213: -4909205931057959357
+    second: Interior4_87
+  - first:
+      213: -2754142292728508986
+    second: Interior4_88
+  - first:
+      213: -7779543565732904666
+    second: Interior4_89
+  - first:
+      213: -5207918099766819613
+    second: Interior4_90
+  - first:
+      213: 7255979114695025436
+    second: Interior4_91
+  - first:
+      213: 6400519311956651014
+    second: Interior4_92
+  - first:
+      213: 5411924283005130170
+    second: Interior4_93
+  - first:
+      213: 7394757492113817305
+    second: Interior4_94
+  - first:
+      213: -6745711670314979400
+    second: Interior4_95
+  - first:
+      213: 114912576987322408
+    second: Interior4_96
+  - first:
+      213: -3785000357376358113
+    second: Interior4_97
+  - first:
+      213: 4918471634170176902
+    second: Interior4_98
+  - first:
+      213: 8965697609098794264
+    second: Interior4_99
+  - first:
+      213: -1834650448798994526
+    second: Interior4_100
+  - first:
+      213: 8104615303981255373
+    second: Interior4_101
+  - first:
+      213: -2640837450733484304
+    second: Interior4_102
+  - first:
+      213: -5900153251989647342
+    second: Interior4_103
+  - first:
+      213: -100338187896431973
+    second: Interior4_104
+  - first:
+      213: 6442445088768927851
+    second: Interior4_105
+  - first:
+      213: -633066081436465929
+    second: Interior4_106
+  - first:
+      213: -6345687051056509192
+    second: Interior4_107
+  - first:
+      213: -8191139206888185056
+    second: Interior4_108
+  - first:
+      213: 6023357488712927860
+    second: Interior4_109
+  - first:
+      213: -3062699211363949130
+    second: Interior4_110
+  - first:
+      213: 7751303091817685284
+    second: Interior4_111
+  - first:
+      213: 1904164361869542882
+    second: Interior4_112
+  - first:
+      213: 8210892408766555691
+    second: Interior4_113
+  - first:
+      213: -5424807783721617579
+    second: Interior4_114
+  - first:
+      213: -4828283967010733471
+    second: Interior4_115
+  - first:
+      213: -666593552098828255
+    second: Interior4_116
+  - first:
+      213: 4560303859779929385
+    second: Interior4_117
+  - first:
+      213: 2336938592232754180
+    second: Interior4_118
+  - first:
+      213: -1913188914786254286
+    second: Interior4_119
+  - first:
+      213: -4524968105604477719
+    second: Interior4_120
+  - first:
+      213: 6000525331309360904
+    second: Interior4_121
+  - first:
+      213: -7784210578709434727
+    second: Interior4_122
+  - first:
+      213: -791949085707192394
+    second: Interior4_123
+  - first:
+      213: -6130865950254121163
+    second: Interior4_124
+  - first:
+      213: 7390231514776280339
+    second: Interior4_125
+  - first:
+      213: 8396565311508901451
+    second: Interior4_126
+  - first:
+      213: 3716722328678654632
+    second: Interior4_127
+  - first:
+      213: 3058171329220426269
+    second: Interior4_128
+  - first:
+      213: 5629207978621464924
+    second: Interior4_129
+  - first:
+      213: 584383030112429305
+    second: Interior4_130
+  - first:
+      213: -7893166281334881891
+    second: Interior4_131
+  - first:
+      213: 7259052292013365164
+    second: Interior4_132
+  - first:
+      213: -833176831028891158
+    second: Interior4_133
+  - first:
+      213: 2518349568564974936
+    second: Interior4_134
+  - first:
+      213: -5674038889665678051
+    second: Interior4_135
+  - first:
+      213: 1274560276801443343
+    second: Interior4_136
+  - first:
+      213: -4461831403817331235
+    second: Interior4_137
+  - first:
+      213: 6164340912260690782
+    second: Interior4_138
+  - first:
+      213: 3266607632901338926
+    second: Interior4_139
+  - first:
+      213: 3956160725598774225
+    second: Interior4_140
+  - first:
+      213: -3596215993268715311
+    second: Interior4_141
+  - first:
+      213: -7087396030135025816
+    second: Interior4_142
+  - first:
+      213: 9181138503318677242
+    second: Interior4_143
+  - first:
+      213: 8006732148052125680
+    second: Interior4_144
+  - first:
+      213: -7828536860602608522
+    second: Interior4_145
+  - first:
+      213: -8776712222336517714
+    second: Interior4_146
+  - first:
+      213: 1944935573267016337
+    second: Interior4_147
+  - first:
+      213: 2618405821252750988
+    second: Interior4_148
+  - first:
+      213: 8786189763987506300
+    second: Interior4_149
+  - first:
+      213: 1948269688187120895
+    second: Interior4_150
+  - first:
+      213: -4349051390888031964
+    second: Interior4_151
+  - first:
+      213: -1313264812642753309
+    second: Interior4_152
+  - first:
+      213: -6725707244947223551
+    second: Interior4_153
+  - first:
+      213: 716981714353651875
+    second: Interior4_154
+  - first:
+      213: -3967402810221445361
+    second: Interior4_155
+  - first:
+      213: -3510238152402155873
+    second: Interior4_156
+  - first:
+      213: -6179788738339722890
+    second: Interior4_157
+  - first:
+      213: -967102133858987773
+    second: Interior4_158
+  - first:
+      213: 3558003313817967288
+    second: Interior4_159
+  - first:
+      213: 7396155864873430762
+    second: Interior4_160
+  - first:
+      213: -2536760979806954760
+    second: Interior4_161
+  - first:
+      213: -2785103292542644300
+    second: Interior4_162
+  - first:
+      213: 7516920532443333435
+    second: Interior4_163
+  - first:
+      213: -1206785498074699369
+    second: Interior4_164
+  - first:
+      213: -4580552325375599987
+    second: Interior4_165
+  - first:
+      213: -4599848154106742585
+    second: Interior4_166
+  - first:
+      213: -7039693968433045173
+    second: Interior4_167
+  - first:
+      213: 5398660543827048893
+    second: Interior4_168
+  - first:
+      213: -4161176831980136885
+    second: Interior4_169
+  - first:
+      213: 6570643419494783223
+    second: Interior4_170
+  - first:
+      213: 7257684398726767532
+    second: Interior4_171
+  - first:
+      213: -715868172246405251
+    second: Interior4_172
+  - first:
+      213: 2503512729938847455
+    second: Interior4_173
+  - first:
+      213: 5924883112973103733
+    second: Interior4_174
+  - first:
+      213: 5612320122000062403
+    second: Interior4_175
+  - first:
+      213: -3889857610605559468
+    second: Interior4_176
+  - first:
+      213: -1520803476595826515
+    second: Interior4_177
+  - first:
+      213: 4683072823271649117
+    second: Interior4_178
+  - first:
+      213: 6958749147974795146
+    second: Interior4_179
+  - first:
+      213: 795220695840970945
+    second: Interior4_180
+  - first:
+      213: -5235389765701950351
+    second: Interior4_181
+  - first:
+      213: -1108908565797972902
+    second: Interior4_182
+  - first:
+      213: -3706478537029070765
+    second: Interior4_183
+  - first:
+      213: -7707246789605133970
+    second: Interior4_184
+  - first:
+      213: -7716853466354129332
+    second: Interior4_185
+  - first:
+      213: 7554168698057049738
+    second: Interior4_186
+  - first:
+      213: 6383276155474033537
+    second: Interior4_187
+  - first:
+      213: -8481850919608169219
+    second: Interior4_188
+  - first:
+      213: 6539601363096450495
+    second: Interior4_189
+  - first:
+      213: -336083622614400177
+    second: Interior4_190
+  - first:
+      213: 2961860705465684126
+    second: Interior4_191
+  - first:
+      213: -3677101861454850863
+    second: Interior4_192
+  - first:
+      213: -7399608052328687743
+    second: Interior4_193
+  - first:
+      213: 7600667721475560460
+    second: Interior4_194
+  - first:
+      213: 1825382251206920992
+    second: Interior4_195
+  - first:
+      213: 4032456586296591965
+    second: Interior4_196
+  - first:
+      213: 4547792147476810304
+    second: Interior4_197
+  - first:
+      213: -5779939253491584670
+    second: Interior4_198
+  - first:
+      213: -737497129999911066
+    second: Interior4_199
+  - first:
+      213: -513765373514533171
+    second: Interior4_200
+  - first:
+      213: -126909510335780189
+    second: Interior4_201
+  - first:
+      213: -5128220923129339184
+    second: Interior4_202
+  - first:
+      213: -688209089921785028
+    second: Interior4_203
+  - first:
+      213: -6217317116498130412
+    second: Interior4_204
+  - first:
+      213: 7035471638269869608
+    second: Interior4_205
+  - first:
+      213: -5199199044657806299
+    second: Interior4_206
+  - first:
+      213: -7898335021093661420
+    second: Interior4_207
+  - first:
+      213: -252190748290676789
+    second: Interior4_208
+  - first:
+      213: 6737319998832392255
+    second: Interior4_209
+  - first:
+      213: -8589638228576825215
+    second: Interior4_210
+  - first:
+      213: -7195411757404450994
+    second: Interior4_211
+  - first:
+      213: 1834293297107713454
+    second: Interior4_212
+  - first:
+      213: -8475244656222900752
+    second: Interior4_213
+  - first:
+      213: -4431834516248543070
+    second: Interior4_214
+  - first:
+      213: -3314030612605056060
+    second: Interior4_215
+  - first:
+      213: 9063068474146847810
+    second: Interior4_216
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +683,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +692,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +719,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +740,4564 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Interior4_0
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2629
+        width: 53
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc5ec8dcd0c27c70800000000000000
+      internalID: 8967441862810819796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2560
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90478f1f85cfe5550800000000000000
+      internalID: 6151631599981589513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 2575
+        width: 52
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b81a7f31cfb22cf0800000000000000
+      internalID: -278449390228989767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 2582
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6900e44e04e31b70800000000000000
+      internalID: 8868682841158846831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_4
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 2584
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942b89e3639b74680800000000000000
+      internalID: -8770838106651184567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_5
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 2591
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020956515fff3bd90800000000000000
+      internalID: -7083036360832610272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_6
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 2593
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876aeedb95b604b50800000000000000
+      internalID: 6575373489143719544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 2593
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdbe648806e07020800000000000000
+      internalID: 2337621130861264317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_8
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 2591
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82631b70748343a00800000000000000
+      internalID: 735274516891121192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_9
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 2593
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddc63b43a0e95cf0800000000000000
+      internalID: -262932111278289451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_10
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2591
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e9e882131389510800000000000000
+      internalID: 1556047758460100200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_11
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2593
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0a3694e0a0f8620800000000000000
+      internalID: 2778450551587971281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_12
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 2584
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b532f5ea30c4442b0800000000000000
+      internalID: -5601268457847970981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_13
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2584
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e051c01946431ba70800000000000000
+      internalID: 8840905150039856398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_14
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 2470
+        width: 81
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c42b2bb43384ab0800000000000000
+      internalID: -5023708984118195149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_15
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 2470
+        width: 80
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243eff45f68772cc0800000000000000
+      internalID: -3735884946317778110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_16
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 2470
+        width: 80
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e1b5492dd9dbb00800000000000000
+      internalID: 846005832773213709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_17
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 2470
+        width: 79
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa27a038f8ad52be0800000000000000
+      internalID: -1502554590744513873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_18
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2555
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007f087d596b98f50800000000000000
+      internalID: 6884234260094449408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_19
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 2566
+        width: 43
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4875275d41c91bdf0800000000000000
+      internalID: -166180097941678204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_20
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 2578
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6b63898daa7d9a0800000000000000
+      internalID: -6208305714063559007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_21
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 2573
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acd49c3e3ea83f70800000000000000
+      internalID: 9167268623840238755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_22
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 2566
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90293712f33d0360800000000000000
+      internalID: 7137418099316826266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_23
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 2573
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7683f20604942410800000000000000
+      internalID: 1451447733460371068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_24
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2557
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e302639c9aa7700800000000000000
+      internalID: 538929787085798924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_25
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 2557
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bcec9df828fd3c0800000000000000
+      internalID: -4332600762160985323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_26
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 2557
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff2e5bd098ea4b70800000000000000
+      internalID: 8884168923795042294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_27
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 2440
+        width: 101
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ae2f626e556bc30800000000000000
+      internalID: 4374778535021308504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_28
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 2440
+        width: 101
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d0d35af27a0e290800000000000000
+      internalID: -7863101126311342810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_29
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 2465
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3141daf175b00f0800000000000000
+      internalID: -1149729486303652923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2215
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd94fbdf927abc030800000000000000
+      internalID: 3516087732885473755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_31
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2215
+        width: 93
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6488a703dcb74ca0800000000000000
+      internalID: -6032645561286884241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_32
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 2215
+        width: 95
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8060d17b6606c70800000000000000
+      internalID: 8962276195119270096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_33
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 2350
+        width: 65
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b04dbace274aa040800000000000000
+      internalID: 4659615030763667639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_34
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 2314
+        width: 62
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7407723bfd39eb060800000000000000
+      internalID: 6971171862208802887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_35
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2314
+        width: 63
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23d7ca3bf5e3a8b0800000000000000
+      internalID: -5142013482341248209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_36
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 2314
+        width: 62
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6691b82aace32c50800000000000000
+      internalID: 6639410491245565546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_37
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 2312
+        width: 62
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450be1efc19c984c0800000000000000
+      internalID: -4284672444106624940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_38
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 2215
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61381a7d333c2cb00800000000000000
+      internalID: 847454307327509270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_39
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 2134
+        width: 286
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4ad492099ba7100800000000000000
+      internalID: 106601570016011513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_40
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2107
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e4c67f9ce673710800000000000000
+      internalID: 1672927600309980791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_41
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2107
+        width: 167
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4dec502fd1910780800000000000000
+      internalID: -8718527016105874102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_42
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2101
+        width: 66
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0084857eae10742c0800000000000000
+      internalID: -4447583998589777920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_43
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2006
+        width: 89
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b7faa7c0fc4bc70800000000000000
+      internalID: 8986034809015860078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_44
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1876
+        width: 241
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e4f992c32405530800000000000000
+      internalID: 3841643308310810238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_45
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 2006
+        width: 41
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1e318189d80c260800000000000000
+      internalID: 7115843095623885256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_46
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 2020
+        width: 122
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8e16f1e4dcff770800000000000000
+      internalID: 8646855544992295102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_47
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 2038
+        width: 98
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780f5bb7597c70560800000000000000
+      internalID: 7280006767507271815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_48
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 2020
+        width: 98
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eced3c9c7da87a50800000000000000
+      internalID: 6519151211327646953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_49
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1909
+        width: 89
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c289ee5970bfba00800000000000000
+      internalID: 774531696260907714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_50
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 1909
+        width: 48
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5445cb824e80d5f70800000000000000
+      internalID: 9177501391679935557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_51
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1864
+        width: 95
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1deb26d341f52cfe0800000000000000
+      internalID: -1170268412629041455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_52
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1853
+        width: 68
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c82292896dd79a00800000000000000
+      internalID: 763322107094509769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_53
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 1862
+        width: 75
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7815d209934a92d0800000000000000
+      internalID: -3271227854874666886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_54
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1813
+        width: 89
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92e4578b446133e0800000000000000
+      internalID: -2075767677685276004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_55
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1813
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a0e0c3cb45676e0800000000000000
+      internalID: -1840190230296130963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_56
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1831
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a472786b856e4f8c0800000000000000
+      internalID: -3966292103112743094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_57
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1831
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7ff77c3963cbc50800000000000000
+      internalID: 6682275955446118351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_58
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1831
+        width: 45
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bda50e5c0b864730800000000000000
+      internalID: 3983023805689081266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1756
+        width: 144
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794db95f97f92fdd0800000000000000
+      internalID: -2453723500803009385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_60
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1747
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd85cf03ef9d2df0800000000000000
+      internalID: -203330610590806579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_61
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1747
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08720b9da3c42c60800000000000000
+      internalID: 7792568405655189517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_62
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1747
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c69f190d792ce50800000000000000
+      internalID: 6828186907105127578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_63
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1747
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c949d6467db8f60800000000000000
+      internalID: 8037754786307939394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_64
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1741
+        width: 98
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7909d1420fd390220800000000000000
+      internalID: 2452559573687308439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_65
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1729
+        width: 80
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701a03e14c73c4080800000000000000
+      internalID: -9201918623165144825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_66
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1732
+        width: 71
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf327fc959592fa0800000000000000
+      internalID: -5825026400759693372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_67
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1646
+        width: 191
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f7c1c3af15feba0800000000000000
+      internalID: -6057532838597853411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_68
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1651
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40bcd41ab44a38080800000000000000
+      internalID: -9186318170169947388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_69
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1651
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7040c3c172b407340800000000000000
+      internalID: 4859466629282268167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_70
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1651
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdaee08f1d2388b20800000000000000
+      internalID: 3136813017854831323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_71
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1651
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17550ae5d527e1e0800000000000000
+      internalID: -2168723094871124195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_72
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 1646
+        width: 98
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abf427c0a1ac2270800000000000000
+      internalID: 8227128331206982567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_73
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 1651
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ca789ea10e03a00800000000000000
+      internalID: 734333145453145233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_74
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1651
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6bf836bfb7184e0800000000000000
+      internalID: -1981166041428937022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_75
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1651
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6d274988bf59990800000000000000
+      internalID: -7379715850352011601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_76
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1651
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353d7cf7de955a3c0800000000000000
+      internalID: -4348970988570422445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_77
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1646
+        width: 96
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0762788870276f500800000000000000
+      internalID: 429656191141357168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_78
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1561
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4faeadea33f6a7d30800000000000000
+      internalID: 4429975451239901940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_79
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1583
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c42482ee6027e820800000000000000
+      internalID: 2947360141756081348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_80
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1525
+        width: 131
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3f359ec22b9cc50800000000000000
+      internalID: 6686071027771110393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_81
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1525
+        width: 133
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c300e28bd32d780f0800000000000000
+      internalID: -1114691220226047940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_82
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1525
+        width: 128
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8cfdf4f3235a830800000000000000
+      internalID: 4081723884785617117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_83
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 1495
+        width: 72
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0fdf3cf5e66db10800000000000000
+      internalID: 2005912041629282481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_84
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1495
+        width: 70
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ba55359b6729500800000000000000
+      internalID: 401513855128546186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_85
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 1540
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878f7be094480cb20800000000000000
+      internalID: 3152665188473763960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_86
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1444
+        width: 80
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4525a04ecaf5e00d0800000000000000
+      internalID: -3454718667981696428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_87
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1430
+        width: 70
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34eac0e373ffedbb0800000000000000
+      internalID: -4909205931057959357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_88
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1439
+        width: 137
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd89054d2257c9d0800000000000000
+      internalID: -2754142292728508986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_89
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1462
+        width: 98
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62180d14852890490800000000000000
+      internalID: -7779543565732904666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_90
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1399
+        width: 65
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4421cb412c9b7b0800000000000000
+      internalID: -5207918099766819613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_91
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1441
+        width: 50
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13ec0d9f8a62b460800000000000000
+      internalID: 7255979114695025436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_92
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1349
+        width: 87
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c243f176633d850800000000000000
+      internalID: 6400519311956651014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_93
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 1349
+        width: 86
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5d4d736740b1b40800000000000000
+      internalID: 5411924283005130170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_94
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1333
+        width: 48
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de3a9d82c47f9660800000000000000
+      internalID: 7394757492113817305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_95
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 1189
+        width: 313
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf2ba5e9fa6262a0800000000000000
+      internalID: -6745711670314979400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_96
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1349
+        width: 77
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828dd834160489100800000000000000
+      internalID: 114912576987322408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_97
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1250
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f190bdf8a3af87bc0800000000000000
+      internalID: -3785000357376358113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_98
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1237
+        width: 98
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6856c8064ebe14440800000000000000
+      internalID: 4918471634170176902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_99
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1237
+        width: 53
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81517e1297e8c6c70800000000000000
+      internalID: 8965697609098794264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_100
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1234
+        width: 95
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af235023230a86e0800000000000000
+      internalID: -1834650448798994526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_101
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1234
+        width: 46
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca4ffacda0697070800000000000000
+      internalID: 8104615303981255373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_102
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1198
+        width: 36
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f68b7f845cd95bd0800000000000000
+      internalID: -2640837450733484304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_103
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1196
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2109acea0e17e1ea0800000000000000
+      internalID: -5900153251989647342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_104
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1192
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ad60123f68b9ef0800000000000000
+      internalID: -100338187896431973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_105
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 1214
+        width: 46
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b682809bca9286950800000000000000
+      internalID: 6442445088768927851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_106
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1214
+        width: 46
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f481a8c0c5e637f0800000000000000
+      internalID: -633066081436465929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_107
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1198
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe0bf97f379fe7a0800000000000000
+      internalID: -6345687051056509192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_108
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1075
+        width: 116
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023a7a33a4a335e80800000000000000
+      internalID: -8191139206888185056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_109
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1075
+        width: 50
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a4ced09b3479350800000000000000
+      internalID: 6023357488712927860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_110
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1075
+        width: 115
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b568cc4b4b1f75d0800000000000000
+      internalID: -3062699211363949130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_111
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1075
+        width: 50
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4212e260819229b60800000000000000
+      internalID: 7751303091817685284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_112
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1124
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5413ff563fc6a10800000000000000
+      internalID: 1904164361869542882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_113
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1124
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b266b718423f2f170800000000000000
+      internalID: 8210892408766555691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_114
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 931
+        width: 116
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557bf74001637b4b0800000000000000
+      internalID: -5424807783721617579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_115
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 931
+        width: 50
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1628c97305d7efcb0800000000000000
+      internalID: -4828283967010733471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_116
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 931
+        width: 115
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120659532b8cfb6f0800000000000000
+      internalID: -666593552098828255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_117
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 931
+        width: 50
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925860ee234794f30800000000000000
+      internalID: 4560303859779929385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_118
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1027
+        width: 69
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c4feb94497e6020800000000000000
+      internalID: 2336938592232754180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_119
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1027
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23243f981dcf275e0800000000000000
+      internalID: -1913188914786254286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_120
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 931
+        width: 194
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec09757b751431c0800000000000000
+      internalID: -4524968105604477719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_121
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 823
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8077d662ff5264350800000000000000
+      internalID: 6000525331309360904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_122
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 823
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99eaf2f98bde8f390800000000000000
+      internalID: -7784210578709434727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_123
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 823
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b73a32a08e6205f0800000000000000
+      internalID: -791949085707192394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_124
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 823
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fb095a6e9caeaa0800000000000000
+      internalID: -6130865950254121163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_125
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 823
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d132658606f8660800000000000000
+      internalID: 7390231514776280339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_126
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 769
+        width: 68
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4eead5f9a7968470800000000000000
+      internalID: 8396565311508901451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_127
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 820
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a267a11443749330800000000000000
+      internalID: 3716722328678654632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_128
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 820
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ab77cfe9ec07a20800000000000000
+      internalID: 3058171329220426269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_129
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 820
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51f68ce4d6fe1e40800000000000000
+      internalID: 5629207978621464924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_130
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 805
+        width: 93
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f42e9a05452c1800800000000000000
+      internalID: 584383030112429305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_131
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 805
+        width: 47
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9181ff3617d57290800000000000000
+      internalID: -7893166281334881891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_132
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 838
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7117779955db460800000000000000
+      internalID: 7259052292013365164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_133
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 838
+        width: 41
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1ff672616ff64f0800000000000000
+      internalID: -833176831028891158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_134
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 728
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855d29ef699f2f220800000000000000
+      internalID: 2518349568564974936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_135
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 728
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15b9b331b3c141b0800000000000000
+      internalID: -5674038889665678051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_136
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 728
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06d29f91d520b110800000000000000
+      internalID: 1274560276801443343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_137
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 728
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd519cf5af36412c0800000000000000
+      internalID: -4461831403817331235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_138
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 728
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53b4bd46632c8550800000000000000
+      internalID: 6164340912260690782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_139
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 739
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27f9abb552555d20800000000000000
+      internalID: 3266607632901338926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_140
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 739
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3aaa3283b17e630800000000000000
+      internalID: 3956160725598774225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_141
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 739
+        width: 144
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0c3a19b9ca71ec0800000000000000
+      internalID: -3596215993268715311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_142
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 739
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fb9497cd284ad90800000000000000
+      internalID: -7087396030135025816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_143
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 739
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6a8f333d4f96f70800000000000000
+      internalID: 9181138503318677242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_144
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 692
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7e8589770ad1f60800000000000000
+      internalID: 8006732148052125680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_145
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 688
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674dab0e3337b5390800000000000000
+      internalID: -7828536860602608522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_146
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 665
+        width: 75
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea97dcb1cbad23680800000000000000
+      internalID: -8776712222336517714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_147
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 586
+        width: 80
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ae993699ccdfa10800000000000000
+      internalID: 1944935573267016337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_148
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 643
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ec595b832765420800000000000000
+      internalID: 2618405821252750988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_149
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 643
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7406a30a01dee970800000000000000
+      internalID: 8786189763987506300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_150
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 647
+        width: 99
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffced0385f4a90b10800000000000000
+      internalID: 1948269688187120895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_151
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 640
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42943306dc015a3c0800000000000000
+      internalID: -4349051390888031964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_152
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 643
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4a8626c9856cde0800000000000000
+      internalID: -1313264812642753309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_153
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 640
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c46a125ec79a2a0800000000000000
+      internalID: -6725707244947223551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_154
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 598
+        width: 68
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0008a021b33f900800000000000000
+      internalID: 716981714353651875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_155
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 517
+        width: 92
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f3ddf0a24f0f8c0800000000000000
+      internalID: -3967402810221445361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_156
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 589
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96cb099ff0294fc0800000000000000
+      internalID: -3510238152402155873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_157
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 584
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6792d4862eafc3aa0800000000000000
+      internalID: -6179788738339722890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_158
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 580
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30110d1bbb92492f0800000000000000
+      internalID: -967102133858987773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_159
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 532
+        width: 77
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba58cda921906130800000000000000
+      internalID: 3558003313817967288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_160
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 532
+        width: 78
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeee335929c64a660800000000000000
+      internalID: 7396155864873430762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_161
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 532
+        width: 77
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fad886445d9bccd0800000000000000
+      internalID: -2536760979806954760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_162
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 532
+        width: 76
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf8931cf435959d0800000000000000
+      internalID: -2785103292542644300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_163
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 93
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33002dd567715860800000000000000
+      internalID: 7516920532443333435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_164
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 397
+        width: 100
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7992a2bbbf2a04fe0800000000000000
+      internalID: -1206785498074699369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_165
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 478
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ad5eacdeb9e60c0800000000000000
+      internalID: -4580552325375599987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_166
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 422
+        width: 50
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c83bb1997e0a20c0800000000000000
+      internalID: -4599848154106742585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_167
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 440
+        width: 80
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41a61432abfd4e90800000000000000
+      internalID: -7039693968433045173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_168
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 440
+        width: 68
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db97ab94925ebea40800000000000000
+      internalID: 5398660543827048893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_169
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 440
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b461d3ad7b78046c0800000000000000
+      internalID: -4161176831980136885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_170
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 478
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f89eb4906d9f2b50800000000000000
+      internalID: 6570643419494783223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_171
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 487
+        width: 46
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3e00ef18978b460800000000000000
+      internalID: 7257684398726767532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_172
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 397
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fae3fa0b9b016f0800000000000000
+      internalID: -715868172246405251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_173
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 424
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd66cae40934eb220800000000000000
+      internalID: 2503512729938847455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_174
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 386
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572f874ccc9693250800000000000000
+      internalID: 5924883112973103733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_175
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 346
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c737956a67f2ed40800000000000000
+      internalID: 5612320122000062403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_176
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 373
+        width: 44
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451810dcc13740ac0800000000000000
+      internalID: -3889857610605559468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_177
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 386
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0a35cab4505eae0800000000000000
+      internalID: -1520803476595826515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_178
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 388
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f6468bbed9df040800000000000000
+      internalID: 4683072823271649117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_179
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 359
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ff6162b71729060800000000000000
+      internalID: 6958749147974795146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_180
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 359
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8d3a57201390b00800000000000000
+      internalID: 795220695840970945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_181
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 359
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174ae921fb82857b0800000000000000
+      internalID: -5235389765701950351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_182
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 280
+        width: 145
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54593fd88d5c90f0800000000000000
+      internalID: -1108908565797972902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_183
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 350
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350d5c88861ff8cc0800000000000000
+      internalID: -3706478537029070765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_184
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 301
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61f05d21eb5a0590800000000000000
+      internalID: -7707246789605133970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_185
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 301
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46683278aa38e490800000000000000
+      internalID: -7716853466354129332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_186
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 276
+        width: 44
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86c01d386cc5d860800000000000000
+      internalID: 7554168698057049738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_187
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 276
+        width: 44
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b3046e7d3f59850800000000000000
+      internalID: 6383276155474033537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_188
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 276
+        width: 43
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc4fe207896a4a80800000000000000
+      internalID: -8481850919608169219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_189
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 184
+        width: 217
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5360c9ac451ca50800000000000000
+      internalID: 6539601363096450495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_190
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 244
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f430e33d9bdf55bf0800000000000000
+      internalID: -336083622614400177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_191
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 249
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9058777e94aa1920800000000000000
+      internalID: 2961860705465684126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_192
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 244
+        width: 77
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d45e01d65f48fcc0800000000000000
+      internalID: -3677101861454850863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_193
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 181
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18714d36eaf4f4990800000000000000
+      internalID: -7399608052328687743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_194
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 181
+        width: 44
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04145ac50ffa7960800000000000000
+      internalID: 7600667721475560460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_195
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 181
+        width: 43
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bcd767c7f055910800000000000000
+      internalID: 1825382251206920992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_196
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 231
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56846e76e926f730800000000000000
+      internalID: 4032456586296591965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_197
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 208
+        width: 56
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a8aa6ecd00d1f30800000000000000
+      internalID: 4547792147476810304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_198
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 204
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2613c445fd789cfa0800000000000000
+      internalID: -5779939253491584670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_199
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 15
+        width: 138
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6673c778442e3c5f0800000000000000
+      internalID: -737497129999911066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_200
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 15
+        width: 136
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc635c56d1dbed8f0800000000000000
+      internalID: -513765373514533171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_201
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 96
+        width: 56
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa21d509702d3ef0800000000000000
+      internalID: -126909510335780189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_202
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 91
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2662bad36e4d8b0800000000000000
+      internalID: -5128220923129339184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_203
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 94
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c336400aa7df276f0800000000000000
+      internalID: -688209089921785028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_204
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 94
+        width: 41
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a4c27f507a7b9a0800000000000000
+      internalID: -6217317116498130412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_205
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 94
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e3962fd2403a160800000000000000
+      internalID: 7035471638269869608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_206
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 148
+        width: 77
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5240f92f30cb8d7b0800000000000000
+      internalID: -5199199044657806299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_207
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 91
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4155fae352a736290800000000000000
+      internalID: -7898335021093661420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_208
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 51
+        width: 50
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc78e70c9d9008cf0800000000000000
+      internalID: -252190748290676789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_209
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 82
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f383a84d7d4cf7d50800000000000000
+      internalID: 6737319998832392255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_210
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 87
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180109c7a897bc880800000000000000
+      internalID: -8589638228576825215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_211
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 51
+        width: 77
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f0d3b2123c42c90800000000000000
+      internalID: -7195411757404450994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_212
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 15
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead3cf30908b47910800000000000000
+      internalID: 1834293297107713454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_213
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 24
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fd6e4193e1e16a80800000000000000
+      internalID: -8475244656222900752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_214
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 15
+        width: 41
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0c0b30df5fe72c0800000000000000
+      internalID: -4431834516248543070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_215
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 4
+        width: 77
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbc7e067b23202d0800000000000000
+      internalID: -3314030612605056060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior4_216
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 4
+        width: 78
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c709052cc76cd70800000000000000
+      internalID: 9063068474146847810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
