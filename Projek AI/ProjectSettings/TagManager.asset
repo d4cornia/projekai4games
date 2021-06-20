@@ -17,6 +17,7 @@ TagManager:
   - Key
   - Chest
   - Location
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -41,8 +42,8 @@ TagManager:
   - Layer 1
   - Layer 2
   - Layer 3
-  - Layer 4
-  - Interaction
+  - Highlight
+  - 
   - 
   - 
   - 
@@ -63,6 +64,6 @@ TagManager:
   - name: Layer 3
     uniqueID: 4189426099
     locked: 0
-  - name: Layer 4
+  - name: Highlight
     uniqueID: 2886465671
     locked: 0
