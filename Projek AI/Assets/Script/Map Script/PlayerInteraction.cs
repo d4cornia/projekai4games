@@ -12,7 +12,12 @@ public class PlayerInteraction : MonoBehaviour
     private GameObject parentDoor;
     private string tag;
     public GameObject locationText;
+    public string defaultLocation;
 
+    private void Awake()
+    {
+        locationText.GetComponent<Text>().text = defaultLocation;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
