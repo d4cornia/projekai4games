@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
+using TMPro;
 
 public class playerController : MonoBehaviour
 {
@@ -369,7 +370,27 @@ public class playerController : MonoBehaviour
                 {
                     if (pickedUp.GetComponent<objectiveController>().reqiurement())
                     {
+                        if (listObj.Contains($"Find {pickedUp.name}"))
+                        {
+                            listObj.Remove($"Find {pickedUp.name}");
+                            GameObject objPopUp = findChild(GameObject.Find("Player UI"), "ObjectiveAdded");
+                            objPopUp.SetActive(true);
+                            objPopUp.GetComponent<TextMeshProUGUI>().text = "*Objective Removed*";
+                            CountDown(5);
+                            IEnumerator CountDown(float seconds)
+                            {
+                                while (seconds > 0)
+                                {
+                                    yield return new WaitForSeconds(1f);
+                                    seconds--;
+                                }
+                                objPopUp.SetActive(false);
+                                objPopUp.GetComponent<TextMeshProUGUI>().text = "*Objective Added*";
+                            }
+                        }
                         keys.Add(pickedUp.name);
+                        pickedUp.GetComponent<objectiveController>().reqTextGO.GetComponent<reqTextController>().showText();
+                        pickedUp.GetComponent<objectiveController>().reqTextGO.GetComponent<TextMeshProUGUI>().text = $"Got {pickedUp.name}";
                         destroyItem();
                         pickedUp = null;
                     }
@@ -522,6 +543,19 @@ public class playerController : MonoBehaviour
         Vector3 targetPosition = UtilsClass.GetWorldPositionFromUI();
         curAngle = UtilsClass.GetAngleFromVectorFloat((targetPosition - transform.position).normalized);
         playerLight.transform.rotation = Quaternion.Euler(0, 0, curAngle - 90);
+    }
+
+    private GameObject findChild(GameObject parent, string name)
+    {
+        Transform[] trs = parent.GetComponentsInChildren<Transform>(true);
+        foreach (Transform t in trs)
+        {
+            if (t.name == name)
+            {
+                return t.gameObject;
+            }
+        }
+        return null;
     }
 
     /*void spriteOrientation()

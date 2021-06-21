@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,8 +46,25 @@ public class objectiveController : MonoBehaviour
     public void showTextReq()
     {
         reqTextGO.GetComponent<reqTextController>().showText();
-        reqTextGO.GetComponent<Text>().text = requirementText;
+        reqTextGO.GetComponent<TextMeshProUGUI>().text = requirementText;
+        GameObject player = GameObject.Find("PF Player");
+        if(!player.GetComponent<playerController>().listObj.Contains("Find Green Key"))
+        {
+            player.GetComponent<playerController>().listObj.Add("Find Green Key");
+            findChild(GameObject.Find("Player UI"), "ObjectiveAdded").SetActive(true);
+            CountDown(5);
+        }
         Debug.Log(requirementText);
+
+        IEnumerator CountDown(float seconds)
+        {
+            while (seconds > 0)
+            {
+                yield return new WaitForSeconds(1f);
+                seconds--;
+            }
+            findChild(GameObject.Find("Player UI"), "ObjectiveAdded").SetActive(false);
+        }
     }
 
     // ditaro setelah requirement untuk menyelesaikan objective terpenuhi dan objective telah di selesaikan
@@ -84,4 +102,17 @@ public class objectiveController : MonoBehaviour
             Debug.Log("Missing req");
         }
     }
+    private GameObject findChild(GameObject parent, string name)
+    {
+        Transform[] trs = parent.GetComponentsInChildren<Transform>(true);
+        foreach (Transform t in trs)
+        {
+            if (t.name == name)
+            {
+                return t.gameObject;
+            }
+        }
+        return null;
+    }
+
 }
