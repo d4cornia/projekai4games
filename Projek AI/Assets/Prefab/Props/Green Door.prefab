@@ -211,8 +211,7 @@ MonoBehaviour:
   requirementText: 
   listNewObj: []
   finishedObj: []
-  listReq:
-  - 
+  listReq: []
 --- !u!61 &5600492743708485130
 BoxCollider2D:
   m_ObjectHideFlags: 0
