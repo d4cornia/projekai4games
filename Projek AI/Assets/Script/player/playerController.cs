@@ -112,7 +112,6 @@ public class playerController : MonoBehaviour
             flagM = false;
 
             listObj = new List<string>();
-            listObj.Add("Get Blue Key");
             updateCtrItem();
         }
         look = 4;
@@ -368,32 +367,13 @@ public class playerController : MonoBehaviour
                 }
                 else if(pickedUp.tag == "Key")
                 {
-                    if (pickedUp.GetComponent<objectiveController>().reqiurement())
-                    {
-                        if (listObj.Contains($"Find {pickedUp.name}"))
-                        {
-                            listObj.Remove($"Find {pickedUp.name}");
-                            GameObject objPopUp = findChild(GameObject.Find("Player UI"), "ObjectiveAdded");
-                            objPopUp.SetActive(true);
-                            objPopUp.GetComponent<TextMeshProUGUI>().text = "*Objective Removed*";
-                            CountDown(5);
-                            IEnumerator CountDown(float seconds)
-                            {
-                                while (seconds > 0)
-                                {
-                                    yield return new WaitForSeconds(1f);
-                                    seconds--;
-                                }
-                                objPopUp.SetActive(false);
-                                objPopUp.GetComponent<TextMeshProUGUI>().text = "*Objective Added*";
-                            }
-                        }
-                        keys.Add(pickedUp.name);
-                        pickedUp.GetComponent<objectiveController>().reqTextGO.GetComponent<reqTextController>().showText();
-                        pickedUp.GetComponent<objectiveController>().reqTextGO.GetComponent<TextMeshProUGUI>().text = $"Got {pickedUp.name}";
-                        destroyItem();
-                        pickedUp = null;
-                    }
+                    // show text dapat keynya
+                    pickedUp.GetComponent<objectiveController>().reqTextGO.GetComponent<reqTextController>().showText();
+                    pickedUp.GetComponent<objectiveController>().reqTextGO.GetComponent<TextMeshProUGUI>().text = $"Got {pickedUp.name}";
+
+                    keys.Add(pickedUp.name);
+                    destroyItem();
+                    pickedUp = null;
                 }
                 else if (pickedUp.tag == "Chest")
                 {
@@ -410,6 +390,7 @@ public class playerController : MonoBehaviour
                     else
                     {
                         pickedUp.GetComponent<objectiveController>().showTextReq();
+                        pickedUp.GetComponent<objectiveController>().finishAndNewObjective();
                     }
                     pickedUp = null;
                 }
@@ -543,19 +524,6 @@ public class playerController : MonoBehaviour
         Vector3 targetPosition = UtilsClass.GetWorldPositionFromUI();
         curAngle = UtilsClass.GetAngleFromVectorFloat((targetPosition - transform.position).normalized);
         playerLight.transform.rotation = Quaternion.Euler(0, 0, curAngle - 90);
-    }
-
-    private GameObject findChild(GameObject parent, string name)
-    {
-        Transform[] trs = parent.GetComponentsInChildren<Transform>(true);
-        foreach (Transform t in trs)
-        {
-            if (t.name == name)
-            {
-                return t.gameObject;
-            }
-        }
-        return null;
     }
 
     /*void spriteOrientation()

@@ -47,32 +47,14 @@ public class objectiveController : MonoBehaviour
     {
         reqTextGO.GetComponent<reqTextController>().showText();
         reqTextGO.GetComponent<TextMeshProUGUI>().text = requirementText;
-        GameObject player = GameObject.Find("PF Player");
-        if(!player.GetComponent<playerController>().listObj.Contains("Find Green Key"))
-        {
-            player.GetComponent<playerController>().listObj.Add("Find Green Key");
-            findChild(GameObject.Find("Player UI"), "ObjectiveAdded").SetActive(true);
-            CountDown(5);
-        }
-        Debug.Log(requirementText);
-
-        IEnumerator CountDown(float seconds)
-        {
-            while (seconds > 0)
-            {
-                yield return new WaitForSeconds(1f);
-                seconds--;
-            }
-            findChild(GameObject.Find("Player UI"), "ObjectiveAdded").SetActive(false);
-        }
     }
 
     // ditaro setelah requirement untuk menyelesaikan objective terpenuhi dan objective telah di selesaikan
     public void finishAndNewObjective()
     {
+        GameObject player = GameObject.Find("PF Player");
         if (reqiurement())
         {
-            GameObject player = GameObject.Find("PF Player");
             List<string> temp = new List<string>();
 
             foreach (var item in finishedObj)
@@ -88,20 +70,43 @@ public class objectiveController : MonoBehaviour
             foreach (var item in temp)
             {
                 player.GetComponent<playerController>().listObj.Remove(item);
+                GameObject objPopUp = findChild(GameObject.Find("UI"), "ObjectiveAdded");
+                objPopUp.GetComponent<reqTextController>().showText();
+                objPopUp.GetComponent<TextMeshProUGUI>().text = "*Objective Removed*";
             }
             foreach (var item in listNewObj)
             {
                 player.GetComponent<playerController>().listObj.Add(item);
             }
 
-            // refresh on text
-            player.GetComponent<playerController>().updateObjective();
         }
         else
         {
+            // complete new obj
+            foreach (var item in listNewObj)
+            {
+                bool flag = true;
+                foreach (var pitem in player.GetComponent<playerController>().listObj)
+                {
+                    if (pitem == item)
+                    {
+                        flag = false;
+                    }
+                }
+                if (flag)
+                {
+                    player.GetComponent<playerController>().listObj.Add(item);
+                    GameObject objPopUp = findChild(GameObject.Find("UI"), "ObjectiveAdded");
+                    objPopUp.GetComponent<reqTextController>().showText();
+                    objPopUp.GetComponent<TextMeshProUGUI>().text = "*New Objective Added*";
+                }
+            }
             Debug.Log("Missing req");
         }
+        // refresh on text
+        player.GetComponent<playerController>().updateObjective();
     }
+
     private GameObject findChild(GameObject parent, string name)
     {
         Transform[] trs = parent.GetComponentsInChildren<Transform>(true);
@@ -114,5 +119,4 @@ public class objectiveController : MonoBehaviour
         }
         return null;
     }
-
 }
