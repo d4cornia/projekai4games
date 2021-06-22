@@ -10,6 +10,7 @@ public class merchantController : MonoBehaviour
     public GameObject totalText;
     public GameObject[] qtys;
     public int[] values;
+    public Animator animator;
 
     public void buySection()
     {
@@ -178,6 +179,25 @@ public class merchantController : MonoBehaviour
         {
             merchant.SetActive(true);
             resetCart();
+        }
+    }
+
+    private void Update()
+    {
+        int blinking = Mathf.FloorToInt(Random.Range(0f, 20f));
+        int looking = Mathf.FloorToInt(Random.Range(0f, 50f));
+        if (animator.GetCurrentAnimatorClipInfo(0).Length == 0)
+        {
+            if (blinking > 15)
+            {
+                animator.SetBool("blinking", true);
+                animator.SetBool("blinking", false);
+            }
+            if (looking > 40)
+            {
+                animator.SetBool("lookingAround", true);
+                animator.SetBool("lookingAround", false);
+            }
         }
     }
 }

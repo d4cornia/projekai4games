@@ -10,8 +10,8 @@ public class CraftController : MonoBehaviour
     public int index;
     private string[] desc = new string[3]
     {
-        "burnin baby",
-        "healing you",
+        "Brighten a limited area for 20 seconds.",
+        "Heals you a small amount.",
         "Thrown to distract nearby enemies for 10 seconds."
     };
     public GameObject description;
@@ -100,7 +100,7 @@ public class CraftController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Ada bahan yang kurang");
+            Debug.Log("Insufficient Resource");
         }
     }
 
