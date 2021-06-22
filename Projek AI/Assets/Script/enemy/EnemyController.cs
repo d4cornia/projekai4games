@@ -16,9 +16,11 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
+    [SerializeField] private float delayLostPlayer;
     [Range(0,360)][SerializeField] private int coneDegree;
     [SerializeField] private float coneRadius;
     [SerializeField] private int damage;
+    [SerializeField] private int INCDEG = 1;
 
     [Header("NanoBot")]
     [SerializeField] private GameObject nanoBotPrefab;
@@ -41,6 +43,7 @@ public class EnemyController : MonoBehaviour
     // Target
     private bool hasTarget = false;
     private bool targetIsWaypoint = false;
+    private float delayTarget = 0;
     private Vector2 target;
     // NanoBot
     private int ctrNano = 0;
@@ -49,7 +52,6 @@ public class EnemyController : MonoBehaviour
 
     public EnemyController() {
         id = ctr_id++;
-        
     }
 
     // Update is called once per frame
@@ -114,16 +116,20 @@ public class EnemyController : MonoBehaviour
             }
         } else { // Pergi ke Target
             Vector2 origin = this.gameObject.transform.position;
-            if (!this.hasTarget) { // Jika tidak punya target
+            if(delayTarget < delayLostPlayer) {
+                delayTarget += Time.deltaTime;
+            }else if (!this.hasTarget) { // Jika tidak punya target
                 setTargetToNearestWaypoint();
             } else {
                 bool isArrive = Vector2.Distance(origin, target) < 1; // Check sudah sampai posisi
                 if (isArrive) { // Jika sudah sampai
                     Debug.Log("Reset target");
+                    this.hasTarget = false;
                     if (this.targetIsWaypoint) { // Jika targetnya waypoint mk cari waypoint tetangga
+                        this.hasTarget = true;
                         this.target = graphWaypoint.getRandomNeighbourPos(origin, isWallIgnore);
                     } else { // Jika targetnya player, mk cari waypoint terdekat
-                        setTargetToNearestWaypoint();
+                        delayTarget = 0;
                     }
                 }
             }
@@ -143,13 +149,16 @@ public class EnemyController : MonoBehaviour
         int sign = this.rb.velocity.x > 0 ? 1 : -1; // Dapetin Polaritas
         float degreeVelo = Vector2.Angle(new Vector2(0,1), this.rb.velocity); // Dapetin Degreenya arah hadepannya
         degreeVelo *= sign; // Dapetin Degree + polaritas
-        for (int deg = -coneDegree/2; deg < coneDegree/2; deg+=10) {
+        for (int deg = -coneDegree/2; deg < coneDegree/2; deg += INCDEG) {
             float degree = (degreeVelo + deg) * Mathf.Deg2Rad;
             Vector2 direction = new Vector2(Mathf.Sin(degree), Mathf.Cos(degree));
-            Vector3 origin = (Vector3)this.rb.position + (Vector3)direction;
+            Vector3 origin;
+            //origin = (Vector3)this.rb.position + (Vector3)direction;
+            origin = (Vector3)this.rb.position;
             RaycastHit2D raycastHit2D;
             if (!isWallIgnore) { // Jika tidak wall ignore maka cast biasa
-                raycastHit2D = Physics2D.Raycast(origin, direction, coneRadius);
+                int layerMask = 1 << LayerMask.NameToLayer("Layer 2");
+                raycastHit2D = Physics2D.Raycast(origin, direction, coneRadius, layerMask);
             } else { // Jika wall ignore maka cast hanya layer player
                 int layerMask = 1 << LayerMask.NameToLayer("Layer 2");
                 raycastHit2D = Physics2D.Raycast(origin, direction, coneRadius, layerMask);
