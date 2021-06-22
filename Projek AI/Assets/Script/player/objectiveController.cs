@@ -12,7 +12,7 @@ public class objectiveController : MonoBehaviour
     public List<string> finishedObj;
     public List<string> listReq; // req di dalam key
 
-    public bool reqiurement()
+    public bool requirement()
     {
         bool flag = false;
         GameObject player = GameObject.Find("PF Player");
@@ -53,7 +53,7 @@ public class objectiveController : MonoBehaviour
     public void finishAndNewObjective()
     {
         GameObject player = GameObject.Find("PF Player");
-        if (reqiurement())
+        if (requirement())
         {
             List<string> temp = new List<string>();
 
@@ -78,11 +78,10 @@ public class objectiveController : MonoBehaviour
             {
                 player.GetComponent<playerController>().listObj.Add(item);
             }
-
         }
         else
         {
-            // complete new obj
+            // given task complete new obj
             foreach (var item in listNewObj)
             {
                 bool flag = true;

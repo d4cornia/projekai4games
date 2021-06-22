@@ -17,7 +17,7 @@ public class waypointController : MonoBehaviour
         }
         else
         {
-            int idx = Random.Range(0, 5);
+            int idx = Random.Range(0, 6);
             PFitems[idx].transform.position = this.gameObject.transform.position;
             Instantiate(PFitems[idx]);
         }

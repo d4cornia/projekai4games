@@ -58,6 +58,7 @@ public class playerController : MonoBehaviour
     // 3 : kabel
     // 4 : besi
     // 5 : botol
+    // 6 : duct tape
     GameObject pickedUp;
 
 
@@ -100,7 +101,7 @@ public class playerController : MonoBehaviour
 
             health = 100;
             range = 6;
-            rawItems = new int[6] { 1, 2, 2, 3, 5, 7 };
+            rawItems = new int[7] { 1, 2, 2, 3, 5, 7, 3 };
             items = new int[3] { 3, 3, 3};
             pickedUp = null;
             fstate = true;
@@ -324,6 +325,10 @@ public class playerController : MonoBehaviour
                         {
                             idx = 5;
                         }
+                        else if (namaItem.Contains("Duct Tape"))
+                        {
+                            idx = 6;
+                        }
                         Debug.Log(namaItem);
                         rawItems[idx]++;
                         destroyItem();
@@ -377,22 +382,18 @@ public class playerController : MonoBehaviour
                 }
                 else if (pickedUp.tag == "Chest")
                 {
-                    pickedUp.GetComponent<keySpawner>().destroyChest();
-                    pickedUp = null;
+                    if (checkPickedupReqObj())
+                    {
+                        pickedUp.GetComponent<keySpawner>().destroyChest();
+                    }
                 }
                 else if (pickedUp.tag == "Door")
                 {
-                    if (pickedUp.GetComponent<objectiveController>().reqiurement())
+                    if (checkPickedupReqObj())
                     {
                         // script door ambil next location dan tp kesana
                         pickedUp.GetComponent<doorController>().tp();
                     }
-                    else
-                    {
-                        pickedUp.GetComponent<objectiveController>().showTextReq();
-                        pickedUp.GetComponent<objectiveController>().finishAndNewObjective();
-                    }
-                    pickedUp = null;
                 }
             }
         }
@@ -413,6 +414,18 @@ public class playerController : MonoBehaviour
         animator.SetBool("IsMoving", dir.magnitude > 0);
 
         rb.velocity = speed * dir;
+    }
+
+    public bool checkPickedupReqObj()
+    {
+        if (pickedUp.GetComponent<objectiveController>().requirement())
+        {
+            return true;
+        }
+        pickedUp.GetComponent<objectiveController>().showTextReq();
+        pickedUp.GetComponent<objectiveController>().finishAndNewObjective();
+        pickedUp = null;
+        return false;
     }
 
     public void destroyItem()
@@ -492,7 +505,7 @@ public class playerController : MonoBehaviour
     {
         int total = 0;
         // raw items take 80% backpack
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 7; i++)
         {
             total += rawItems[i];
         }

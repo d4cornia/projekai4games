@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2209587620788706478
+--- !u!1 &301224218985949468
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,77 +8,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2209587620788706474}
-  - component: {fileID: 4053174440226139191}
-  - component: {fileID: 762808050316667698}
-  - component: {fileID: 2209587620788706473}
-  - component: {fileID: 2209587620788706472}
-  - component: {fileID: 2209587620788706479}
-  m_Layer: 21
-  m_Name: PF Key Spawner
-  m_TagString: Chest
+  - component: {fileID: 1095392261932284457}
+  - component: {fileID: 1385595421936171715}
+  - component: {fileID: 9016851175307319777}
+  - component: {fileID: 2864664706715339974}
+  - component: {fileID: 7764793624912495777}
+  m_Layer: 0
+  m_Name: PF Duct Tape
+  m_TagString: rawItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2209587620788706474
+--- !u!4 &1095392261932284457
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2209587620788706478}
+  m_GameObject: {fileID: 301224218985949468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1916.44, y: -1071.18, z: 0}
+  m_LocalPosition: {x: -25.316559, y: 33.375355, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4053174440226139191
+--- !u!114 &1385595421936171715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2209587620788706478}
+  m_GameObject: {fileID: 301224218985949468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76332edf3b18d054391cb6d5ac6068b2, type: 3}
+  m_Script: {fileID: 11500000, guid: 1206365bc652a18498c7a5aa8710da75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PFkey: {fileID: 5045772497905375438, guid: 1b6d3dba24038114e979ec19ab93806f, type: 3}
-  keyName: Red Key
-  delay: 3
-  reqTextGO: {fileID: 0}
-  requirementText: 
-  listNewObj: []
-  finishedObj: []
-  listReq: []
---- !u!114 &762808050316667698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2209587620788706478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 552518989c576f444a83d50c9490bd5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reqTextGO: {fileID: 0}
-  requirementText: 
-  listNewObj: []
-  finishedObj: []
-  listReq: []
---- !u!212 &2209587620788706473
+  ri: {fileID: 301224218985949468}
+--- !u!212 &9016851175307319777
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2209587620788706478}
+  m_GameObject: {fileID: 301224218985949468}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -109,8 +84,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -105541197
-  m_SortingLayer: 3
+  m_SortingLayerID: -44025399
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
     type: 3}
@@ -124,13 +99,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2209587620788706472
+--- !u!58 &2864664706715339974
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2209587620788706478}
+  m_GameObject: {fileID: 301224218985949468}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -140,14 +115,14 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!50 &2209587620788706479
+--- !u!50 &7764793624912495777
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2209587620788706478}
+  m_GameObject: {fileID: 301224218985949468}
   m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
