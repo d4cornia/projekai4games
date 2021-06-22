@@ -3,12 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Steering
-{
-    public Vector2 linear { get; set; }
-    public float angular { get; set; }
-}
-
 public class enemyController : MonoBehaviour
 {
     public Rigidbody2D rb;
