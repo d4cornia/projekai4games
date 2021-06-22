@@ -22,11 +22,16 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private int INCDEG = 1;
 
-    [Header("NanoBot")]
+    [Header("Spawner Bot")]
     [SerializeField] private GameObject nanoBotPrefab;
     [SerializeField] private bool spawnNanobot;
+    [SerializeField] private int nanoBotsPerSpawn; // brp ctr sblm spawn nanobot
+    [SerializeField] private int spawnNanoBotDelay; // brp ctr sblm spawn nanobot
 
-    [SerializeField] private int nanoBotDelay; // brp ctr sblm spawn nanobot
+    [Header("Nano Bot")]
+    [SerializeField] private bool isNanobot;
+    [SerializeField] private float lifeSpan; // umur nanobot dlm detik
+
     [Header("Glitch Bot")]
     [SerializeField] private bool isWheepingAngel;
 
@@ -45,8 +50,13 @@ public class EnemyController : MonoBehaviour
     private bool targetIsWaypoint = false;
     private float delayTarget = 0;
     private Vector2 target;
+    // Spawner
+    private List<GameObject> childs = new List<GameObject>();
+    private float delaySpawn = 0;
     // NanoBot
-    private int ctrNano = 0;
+    private GameObject parentNanobot = null;
+    private float life = 0; // umur nano bot
+
     // Glitch Bot
     private bool isFreeze = false;
 
@@ -69,34 +79,37 @@ public class EnemyController : MonoBehaviour
         if (rb.velocity.magnitude > maxSpeed) {
             rb.velocity = rb.velocity.normalized * maxSpeed;
         }
-        // Ctr Nanobot 
+        // Spawner
         if (spawnNanobot) {
-            ctrNano++;
-            if(ctrNano >= nanoBotDelay) {
-                ctrNano = 0;
-                // Clone Nano bot di posisi Induk
-                var nanobot = nanoBotPrefab;
-                var tempGrapCtrl = nanobot.GetComponent<EnemyController>();
-                tempGrapCtrl.graphWaypoint = this.graphWaypoint;
-                var newBot = GameObject.Instantiate(nanobot);
-                newBot.transform.position = this.rb.transform.position;
+            if(delaySpawn > 0) {
+                delaySpawn -= Time.deltaTime;
+            }
+        }
+        // NanoBot
+        if (isNanobot) {
+            life += Time.deltaTime;
+            if(life >= lifeSpan) { // Jika sudah melebihi batas hidup
+                var controller = parentNanobot.GetComponent<EnemyController>();
+                controller.childs.Remove(this.gameObject);
+                Destroy(this.gameObject);
             }
         }
     }
 
     // on collide
     void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.CompareTag("player")) {
+        if (col.gameObject.CompareTag("Player")) {
             if (isExplode) { // Jika explore maka meledak
                 Debug.Log($"{this.gameObject.name} explode!");
                 Destroy(this.gameObject);
             }
-        }else if (col.gameObject.CompareTag("wall")) {
-            // harusny ga mungkin
-            // tapi jika mungkin maka cara waypoint terdekat
-            Debug.Log("Nabrak wall");
-            this.setTargetToNearestWaypoint();
         }
+        //else if (col.gameObject.CompareTag("wall")) {
+        //    // harusny ga mungkin
+        //    // tapi jika mungkin maka cara waypoint terdekat
+        //    Debug.Log("Nabrak wall");
+        //    this.setTargetToNearestWaypoint();
+        //}
     }
 
     // Helper Function
@@ -106,13 +119,35 @@ public class EnemyController : MonoBehaviour
         rb.drag = 0;
         if (player != null) { // Jika melihat player maka target jadi player
             Debug.Log("See player!");
-            if (isWheepingAngel) {
+            if (spawnNanobot) { // Jika spawner
+                if(delaySpawn <= 0) {// Clone nanobot
+                    // Prefab Setup
+                    var nanobot = nanoBotPrefab;
+                    var tempController = nanobot.GetComponent<EnemyController>();
+                    tempController.graphWaypoint = this.graphWaypoint;
+                    for (int i = 0; i < nanoBotsPerSpawn; i++) {
+                        // Clone
+                        var newBot = GameObject.Instantiate(nanobot);
+                        newBot.transform.position = this.rb.transform.position;
+                        tempController = newBot.GetComponent<EnemyController>();
+                        tempController.setTargetToPlayer(player);
+                        tempController.parentNanobot = this.gameObject;
+                        // Simpan d List
+                        childs.Add(newBot);
+                    }
+                    // Update Delay
+                    delaySpawn = spawnNanoBotDelay;
+                }
+                // Inform Nanobot
+                informNanobots(player);
+            } else if (isNanobot) { // Jika Nanobot
+                var controllerParent = parentNanobot.GetComponent<EnemyController>();
+                controllerParent.informNanobots(player);
+            } else if (isWheepingAngel) {// Jika Wheeping Angel
                 isFreeze = true;
                 rb.drag = 5;
-            } else {
-                this.target = player.transform.position;
-                this.targetIsWaypoint = false;
-                this.hasTarget = true;
+            } else { // Jika Selain bot diatas
+                setTargetToPlayer(player);
             }
         } else { // Pergi ke Target
             Vector2 origin = this.gameObject.transform.position;
@@ -134,6 +169,13 @@ public class EnemyController : MonoBehaviour
                 }
             }
         }
+    }
+
+    void setTargetToPlayer(GameObject player) {
+        this.targetIsWaypoint = false;
+        this.hasTarget = true;
+        this.target = player.transform.position;
+        Debug.Log("New Target: Player " + this.target);
     }
 
     void setTargetToNearestWaypoint() {
@@ -191,4 +233,14 @@ public class EnemyController : MonoBehaviour
             rb.AddForce(steering.linear * Time.deltaTime);
         }
     }
+
+    // Spawner
+    void informNanobots(GameObject player) {
+        foreach (var nanobot in childs) {
+            var controller = nanobot.GetComponent<EnemyController>();
+            controller.setTargetToPlayer(player);
+        }
+        this.setTargetToPlayer(player);
+    }
+
 }
