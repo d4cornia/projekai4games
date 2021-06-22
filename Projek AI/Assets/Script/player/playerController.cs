@@ -425,10 +425,12 @@ public class playerController : MonoBehaviour
 
     public void updateObjective()
     {
-        foreach (var item in listObj)
-        {
-            objectiveText.GetComponent<Text>().text = item + "\n ";
-        }
+        if(listObj.Count == 0) objectiveText.GetComponent<TextMeshProUGUI>().text = "None";
+        else 
+            foreach (var item in listObj)
+            {
+                objectiveText.GetComponent<TextMeshProUGUI>().text = "- " + item + "\n ";
+            }
     }
 
     public void changeFlashlight()

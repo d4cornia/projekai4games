@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void Awake()
     {
-        locationText.GetComponent<Text>().text = defaultLocation;
+        locationText.GetComponent<TextMeshProUGUI>().text = defaultLocation;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +25,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if(collision.gameObject.tag == "Location")
         {
-            locationText.GetComponent<Text>().text = collision.gameObject.name;
+            locationText.GetComponent<TextMeshProUGUI>().text = collision.gameObject.name;
         }
         else if (collision.gameObject.name == GATE)
         {

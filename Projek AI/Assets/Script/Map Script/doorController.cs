@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,6 @@ public class doorController : MonoBehaviour
     public void tp()
     {
         GameObject.Find("PF Player").GetComponent<playerController>().transform.position = nextDoor.transform.position + offset;
-        GameObject.Find("PF Player").GetComponent<PlayerInteraction>().locationText.GetComponent<Text>().text = nextLocationName;
+        GameObject.Find("PF Player").GetComponent<PlayerInteraction>().locationText.GetComponent<TextMeshProUGUI>().text = nextLocationName;
     }
 }
