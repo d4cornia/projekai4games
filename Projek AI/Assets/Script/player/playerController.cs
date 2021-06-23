@@ -126,15 +126,11 @@ public class playerController : MonoBehaviour
         processInput();
     }
 
-    void TakeDamage(int damage)
-    {
-        if(currentHealth - damage >= 0)
-        {
+    void TakeDamage(int damage){
+        if(currentHealth - damage >= 0){
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
-        }
-        else
-        {
+        }else{
             currentHealth = 0;
         }
     }

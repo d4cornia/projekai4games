@@ -17,9 +17,10 @@ public class GraphWaypointController : MonoBehaviour
             Vector2 wpPos = waypoint.transform.position;
             var dist = Vector2.Distance(origin, wpPos);
             if (closestWaypoint != null) { // TODO Implementasi WALL
-                int layerMask = 1 << LayerMask.NameToLayer("Layer 2"); // Layernya tembok
-                var raycast = Physics2D.Raycast(origin, (wpPos - origin).normalized, 100, layerMask);
-                bool isRaycastValid = raycast.collider == null;
+                //int layerMask = 1 << LayerMask.NameToLayer("Layer 2"); // Layernya tembok
+                //var raycast = Physics2D.Raycast(origin, (wpPos - origin).normalized, 100, layerMask);
+                //bool isRaycastValid = raycast.collider == null;
+                bool isRaycastValid = true;
                 bool isPossible = isWallIgnore || isRaycastValid; // Check Raycast
                 bool isCloser = dist < closestDistance;
                 if (!isPossible || !isCloser) {

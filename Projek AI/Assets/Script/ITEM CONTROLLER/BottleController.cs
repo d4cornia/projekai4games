@@ -78,7 +78,7 @@ public class BottleController : MonoBehaviour
                     enemy = otherObj;
                     Debug.Log("Bait Sound");
                     // panggil fungsi bait setiap bot yang kena untuk kesini
-
+                        
                 }
             }
         }

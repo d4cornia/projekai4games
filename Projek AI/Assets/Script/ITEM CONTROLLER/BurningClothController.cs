@@ -10,6 +10,8 @@ public class BurningClothController : MonoBehaviour
     public static int id;
     public float diO, diY;
 
+    public float range { get => (float)(lightYellow.pointLightOuterRadius - (1.9 + lightYellow.falloffIntensity * lightYellow.falloffIntensity)); }
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -58,7 +60,8 @@ public class BurningClothController : MonoBehaviour
             Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
             Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
             Vector3 origin = this.gameObject.transform.position + offset;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, (float)(lightYellow.pointLightOuterRadius - (1.9 + lightYellow.falloffIntensity * lightYellow.falloffIntensity)));
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, range);
+            
             if (raycastHit2D.collider != null)
             {
                 // hit object

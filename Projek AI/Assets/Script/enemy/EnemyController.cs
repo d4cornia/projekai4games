@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
     private bool hasTarget = false;
     private bool targetIsWaypoint = false;
     private float delayTarget = 0;
-    private Vector2 target;
+    private Vector2 target; // Target: waypoint, player, decoy, burning cloth
     // Spawner
     private List<GameObject> childs = new List<GameObject>();
     private float delaySpawn = 0;
@@ -114,6 +114,26 @@ public class EnemyController : MonoBehaviour
 
     // Helper Function
     void getTarget() {
+        // Check Burning Cloth & Decoy Around
+        //var items = GameObject.FindGameObjectsWithTag("Item");
+        //foreach (var item in items) {
+        //    Vector2 itemPos = item.transform.position;
+        //    Vector2 vector = itemPos - (Vector2)this.transform.position;
+        //    var btlController = item.GetComponent<BottleController>();
+        //    var brnController = item.GetComponent<BurningClothController>();
+        //    Debug.Log(brnController == null);
+        //    float radius = btlController == null ? brnController.range : btlController.range;
+        //    if (vector.magnitude < radius) { // Ketemu Decoy
+        //        if (isWheepingAngel) {
+        //            rb.drag = 5;
+        //            isFreeze = true;
+        //        } else {
+        //            this.target = itemPos;
+        //        }
+        //        return;
+        //    }
+        //}
+
         // Check Player
         var player = getPlayerAround();
         rb.drag = 0;
@@ -210,7 +230,8 @@ public class EnemyController : MonoBehaviour
                 GameObject otherObj = raycastHit2D.collider.gameObject;
                 Debug.Log($"Hit {otherObj.tag}");
                 if (otherObj.CompareTag("Player")) {
-                    player = otherObj;
+                    player = otherObj; 
+                    break;
                 }
             }
         }
