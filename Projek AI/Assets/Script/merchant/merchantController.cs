@@ -1,35 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class merchantController : MonoBehaviour
 {
     public GameObject merchant;
-    public GameObject acationText;
-    public GameObject totalText;
+    public GameObject totalItemText;
+    public GameObject totalCostText;
+    public GameObject backPackCtr;
+    public GameObject coinCtr;
     public GameObject[] qtys;
     public int[] values;
     public Animator animator;
+    private int total;
 
     public void buySection()
     {
+        GameObject.Find("buyNav").GetComponent<TextMeshProUGUI>().color = new Color(1f, 1f, 1f, 1f);
+        GameObject.Find("sellNav").GetComponent<TextMeshProUGUI>().color = new Color(1f, 1f, 1f, 0.25f);
+        GameObject.Find("transBtn").GetComponent<TextMeshProUGUI>().text = "BUY";
         resetCart();
-        GameObject.Find("section info").GetComponent<Text>().text = "Buy Section";
-        acationText.GetComponent<Text>().text = "Buy";
     }
 
     public void sellSection()
     {
+        GameObject.Find("buyNav").GetComponent<TextMeshProUGUI>().color = new Color(1f, 1f, 1f, 0.25f);
+        GameObject.Find("sellNav").GetComponent<TextMeshProUGUI>().color = new Color(1f, 1f, 1f, 1f);
+        GameObject.Find("transBtn").GetComponent<TextMeshProUGUI>().text = "SELL";
         resetCart();
-        GameObject.Find("section info").GetComponent<Text>().text = "Sell Section";
-        acationText.GetComponent<Text>().text = "Sell";
     }
 
     public void action()
     {
         //transaksi
-        if(acationText.GetComponent<Text>().text == "Buy")
+        if(GameObject.Find("transBtn").GetComponent<TextMeshProUGUI>().text.ToLower() == "buy")
         {
             if (checkBuyItems())
             {
@@ -37,13 +43,9 @@ public class merchantController : MonoBehaviour
                 buyItems();
             }
         }
-        else if(acationText.GetComponent<Text>().text == "Sell")
+        else if(GameObject.Find("transBtn").GetComponent<TextMeshProUGUI>().text.ToLower() == "sell")
         {
-            if (checkSellItem())
-            {
-                // jika barang yang dijual ada stoknya diplayer maka berhasil jual
-                sellItems();
-            }
+            sellItems();
         }
 
         resetCart();
@@ -53,15 +55,15 @@ public class merchantController : MonoBehaviour
     {
         bool flag = true;
         int plusBackpack = 0;
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 10; i++)
         {
             if (i < 3)
             {
-                plusBackpack += int.Parse(qtys[i].GetComponent<Text>().text);
+                plusBackpack += int.Parse(qtys[i].GetComponent<TextMeshProUGUI>().text);
             }
             else
             {
-                plusBackpack += (int)(int.Parse(qtys[i].GetComponent<Text>().text) * 0.8);
+                plusBackpack += (int)(int.Parse(qtys[i].GetComponent<TextMeshProUGUI>().text) * 0.8);
             }
         }
 
@@ -71,10 +73,10 @@ public class merchantController : MonoBehaviour
             flag = false;
             Debug.Log("Your backpack is full!");
         }
-        if (playerObj.GetComponent<playerController>().money - int.Parse(totalText.GetComponent<Text>().text) < 0)
+        if (playerObj.GetComponent<playerController>().coin - total < 0)
         {
             flag = false;
-            Debug.Log("You need more money!");
+            Debug.Log("You need more coin!");
         }
 
         return flag;
@@ -83,89 +85,66 @@ public class merchantController : MonoBehaviour
     public void buyItems()
     {
         GameObject playerObj = GameObject.Find("PF Player");
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 10; i++)
         {
             if (i < 3)
             {
-                playerObj.GetComponent<playerController>().items[i] += int.Parse(qtys[i].GetComponent<Text>().text);
+                playerObj.GetComponent<playerController>().items[i] += int.Parse(qtys[i].GetComponent<TextMeshProUGUI>().text);
             }
             else
             {
-                playerObj.GetComponent<playerController>().rawItems[i - 3] += int.Parse(qtys[i].GetComponent<Text>().text);
+                playerObj.GetComponent<playerController>().rawItems[i - 3] += int.Parse(qtys[i].GetComponent<TextMeshProUGUI>().text);
             }
         }
-        playerObj.GetComponent<playerController>().money -= int.Parse(totalText.GetComponent<Text>().text);
-    }
-
-    public bool checkSellItem()
-    {
-        bool flag = true;
-        GameObject playerObj = GameObject.Find("PF Player");
-        for (int i = 0; i < 9; i++)
-        {
-            if(i < 3)
-            {
-                if (playerObj.GetComponent<playerController>().items[i] - int.Parse(qtys[i].GetComponent<Text>().text) < 0)
-                {
-                    flag = false;
-                }
-            }
-            else
-            {
-                if (playerObj.GetComponent<playerController>().rawItems[i - 3] - int.Parse(qtys[i].GetComponent<Text>().text) < 0)
-                {
-                    flag = false;
-                }
-            }
-        }
-
-        return flag;
+        playerObj.GetComponent<playerController>().coin -= total;
     }
 
     public void sellItems()
     {
         GameObject playerObj = GameObject.Find("PF Player");
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 10; i++)
         {
             if (i < 3)
             {
-                playerObj.GetComponent<playerController>().items[i] -= int.Parse(qtys[i].GetComponent<Text>().text);
+                playerObj.GetComponent<playerController>().items[i] -= int.Parse(qtys[i].GetComponent<TextMeshProUGUI>().text);
             }
             else
             {
-                playerObj.GetComponent<playerController>().rawItems[i - 3] -= int.Parse(qtys[i].GetComponent<Text>().text);
+                playerObj.GetComponent<playerController>().rawItems[i - 3] -= int.Parse(qtys[i].GetComponent<TextMeshProUGUI>().text);
             }
         }
 
         // tambahkan uang player
-        playerObj.GetComponent<playerController>().money += int.Parse(totalText.GetComponent<Text>().text);
+        playerObj.GetComponent<playerController>().coin += total;
     }
 
     public void countTotal()
     {
-        int total = 0;
-        for (int i = 0; i < 9; i++)
+        total = 0;
+        int qty = 0;
+        for (int i = 0; i < 10; i++)
         {
-            total += (int.Parse(qtys[i].GetComponent<Text>().text) * values[i]);
+            total += (int.Parse(qtys[i].GetComponent<TextMeshProUGUI>().text) * values[i]);
+            qty += int.Parse(qtys[i].GetComponent<TextMeshProUGUI>().text);
         }
-        totalText.GetComponent<Text>().text = total + "";
+        totalCostText.GetComponent<TextMeshProUGUI>().text = "Total Cost : " + total;
+        totalItemText.GetComponent<TextMeshProUGUI>().text = "Total Items : " + qty;
     }
    
     public void resetCart()
     {
         // semua text di 0
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 10; i++)
         {
-            qtys[i].GetComponent<Text>().text = "0";
+            qtys[i].GetComponent<TextMeshProUGUI>().text = "0";
         }
         //reset total
         countTotal();
 
         // info player di refresh
         GameObject playerObj = GameObject.Find("PF Player");
-        GameObject.Find("money ctr").GetComponent<Text>().text = playerObj.GetComponent<playerController>().money + "";
-        GameObject.Find("countBP").GetComponent<Text>().text = playerObj.GetComponent<playerController>().countBackpack() + "";
-        GameObject.Find("Max Size").GetComponent<Text>().text = playerObj.GetComponent<playerController>().maxBackpack + "";
+        coinCtr.GetComponent<TextMeshProUGUI>().text = playerObj.GetComponent<playerController>().coin + " DRAG";
+        backPackCtr.GetComponent<TextMeshProUGUI>().text = playerObj.GetComponent<playerController>().countBackpack() + " / " + playerObj.GetComponent<playerController>().maxBackpack;
         playerObj.GetComponent<playerController>().updateCtrItem();
     }
 

@@ -39,29 +39,9 @@ public class BottleController : MonoBehaviour
 
         // mekanik gerak
         rb.velocity = speed * direction;
-
-        // pengecekkan collision dengan wall, kalo kena botol berhenti disana
-        // jika sudah sampai tujuan maka pecah
-        if (false)
-        {
-            pecah();
-        }
-    }
-    
-    void pecah()
-    {
-        // play sound pecah
-
-        // bait semua bot kecuali weeping angle
-        bait();
-
-        // animasi pecah
-
-        // destroy
-        Destroy(this);
     }
 
-    void bait()
+    /*void bait()
     {
         for (float deg = 0; deg < 360; deg++)
         {
@@ -82,5 +62,5 @@ public class BottleController : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }

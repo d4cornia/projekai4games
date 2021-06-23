@@ -12,12 +12,12 @@ public class waypointController : MonoBehaviour
         if(r * 100 < 15)
         {
             int idx = Random.Range(0, 2);
-            PFitems[idx + 6].transform.position = this.gameObject.transform.position;
+            PFitems[idx + 7].transform.position = this.gameObject.transform.position;
             Instantiate(PFitems[idx + 6]);
         }
         else
         {
-            int idx = Random.Range(0, 6);
+            int idx = Random.Range(0, 7);
             PFitems[idx].transform.position = this.gameObject.transform.position;
             Instantiate(PFitems[idx]);
         }

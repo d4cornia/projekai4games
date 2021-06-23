@@ -6,9 +6,11 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class BurningClothController : MonoBehaviour
 {
     GameObject enemy;
+    Rigidbody2D rb;
     Light2D lightOrange, lightYellow;
     public static int id;
     public float diO, diY;
+    public int delay;
 
     // Start is called before the first frame update
     void Awake()
@@ -20,18 +22,22 @@ public class BurningClothController : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = GameObject.Find("PF Player").GetComponent<SpriteRenderer>().sortingLayerName;
         this.gameObject.layer = GameObject.Find("PF Player").layer;
 
+        rb = this.gameObject.GetComponent<Rigidbody2D>();
+
         lightOrange = GameObject.Find("Light Source Orange").GetComponent<Light2D>();
         lightOrange.name += id;
         lightYellow = GameObject.Find("Light Source Yellow").GetComponent<Light2D>();
         lightYellow.name += id;
+        delay = 10;
     }
 
     private void Start()
     {
         lightOrange.pointLightOuterRadius = 4;
-        lightOrange.intensity = (float)0.35;
+        lightOrange.intensity = (float)0.30;
         lightYellow.pointLightOuterRadius = 6;
-        lightYellow.intensity = (float)0.4;
+        lightYellow.intensity = (float)0.35;
+        StartCoroutine(CountDown());
     }
 
 
@@ -40,18 +46,28 @@ public class BurningClothController : MonoBehaviour
     {
         lightOrange.intensity += diO;
         lightYellow.intensity += diY;
-        if(lightOrange.intensity >= 0.50 || lightOrange.intensity <= 0.35)
+        if(lightOrange.intensity >= 0.45 || lightOrange.intensity <= 0.30)
         {
             diO *= -1;
         }
-        if (lightYellow.intensity >= 0.60 || lightYellow.intensity <= 0.25)
+        if (lightYellow.intensity >= 0.55 || lightYellow.intensity <= 0.25)
         {
             diY *= -1;
         }
-        bait();
     }
 
-    void bait()
+    IEnumerator CountDown()
+    {
+        while (delay > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            delay--;
+        }
+
+        Destroy(this.gameObject);
+    }
+
+    /*void bait()
     {
         for (float deg = 0; deg < 360; deg++)
         {
@@ -72,5 +88,5 @@ public class BurningClothController : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }

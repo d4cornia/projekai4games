@@ -28,7 +28,7 @@ public class playerController : MonoBehaviour
     public float fov;
     public int idxItem;
     public int maxBackpack;
-    public int money;
+    public int coin;
     public const float MAX_FLASH = .5f;
 
 
@@ -66,7 +66,7 @@ public class playerController : MonoBehaviour
     public List<string> keys;
 
     public GameObject[] activeItem;
-    public GameObject[] texts;
+    public GameObject[] ctrTexts;
 
     // objectives
     public List<string> listObj;
@@ -77,12 +77,6 @@ public class playerController : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
-
-    void Start()
-    {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-    }
 
     void Awake()
     {
@@ -106,10 +100,13 @@ public class playerController : MonoBehaviour
             fstate = true;
             maxBackpack = 30;
             flashLife = MAX_FLASH;
-            money = 250;
+            coin = 250;
 
             flagi = false;
             flagM = false;
+
+            currentHealth = maxHealth;
+            healthBar.SetMaxHealth(maxHealth);
 
             listObj = new List<string>();
             updateCtrItem();
@@ -457,7 +454,7 @@ public class playerController : MonoBehaviour
         {
             rawItems[0]--;
             flashLife = MAX_FLASH;
-            texts[6].GetComponent<Text>().text = rawItems[0] + "";
+            ctrTexts[3].GetComponent<TextMeshProUGUI>().text = rawItems[0] + "";
         }
         else
         {
@@ -493,11 +490,10 @@ public class playerController : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            texts[i].GetComponent<Text>().text = items[i] + "";
-            texts[i + 3].GetComponent<Text>().text = items[i] + "";
+            ctrTexts[i].GetComponent<TextMeshProUGUI>().text = items[i] + "";
         }
 
-        texts[6].GetComponent<Text>().text = rawItems[0] + "";
+        ctrTexts[3].GetComponent<TextMeshProUGUI>().text = rawItems[0] + "";
     }
 
     public int countBackpack()
