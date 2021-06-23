@@ -42,12 +42,10 @@ public class BurningClothController : MonoBehaviour
     {
         lightOrange.intensity += diO;
         lightYellow.intensity += diY;
-        if(lightOrange.intensity >= 0.50 || lightOrange.intensity <= 0.35)
-        {
+        if(lightOrange.intensity >= 0.50 || lightOrange.intensity <= 0.35){
             diO *= -1;
         }
-        if (lightYellow.intensity >= 0.60 || lightYellow.intensity <= 0.25)
-        {
+        if (lightYellow.intensity >= 0.60 || lightYellow.intensity <= 0.25){
             diY *= -1;
         }
         bait();
@@ -55,13 +53,14 @@ public class BurningClothController : MonoBehaviour
 
     void bait()
     {
-        for (float deg = 0; deg < 360; deg++)
+        Debug.Log("Vector: " + range);
+        for (float deg = 0; deg < 360; deg+=10)
         {
             Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
             Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
             Vector3 origin = this.gameObject.transform.position + offset;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, range);
-            
+            Debug.DrawRay(origin, direction.normalized * range, Color.green);
             if (raycastHit2D.collider != null)
             {
                 // hit object

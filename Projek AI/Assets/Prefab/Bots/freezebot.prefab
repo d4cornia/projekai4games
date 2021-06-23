@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3275427354782824070}
   - component: {fileID: 3275427354782824069}
   - component: {fileID: 911220274449387568}
-  m_Layer: 20
+  m_Layer: 19
   m_Name: freezebot
   m_TagString: enemy
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4583305388805502594}
   - component: {fileID: 4583305388805502593}
   - component: {fileID: 2182770446456279092}
-  m_Layer: 20
+  m_Layer: 19
   m_Name: normalbot
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   acceleration: 0.25
   delayLostPlayer: 1
   coneDegree: 60
-  coneRadius: 5
+  coneRadius: 2
   damage: 0
   INCDEG: 1
   nanoBotPrefab: {fileID: 0}

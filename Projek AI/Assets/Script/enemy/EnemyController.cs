@@ -8,8 +8,7 @@ class Steering {
     public float angular { get; set; }
 }
 
-public class EnemyController : MonoBehaviour
-{
+public class EnemyController : MonoBehaviour {
     //// Parameters
     [Header("General")]
     [SerializeField] private GraphWaypointController graphWaypoint;
@@ -99,6 +98,12 @@ public class EnemyController : MonoBehaviour
     // on collide
     void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject.CompareTag("Player")) {
+            // Damage Player
+            var player = col.gameObject;
+            var controller = player.GetComponent<playerController>();
+            controller.TakeDamage(this.damage, this.gameObject);
+            Debug.Log($"Hit Player! {this.damage}");
+            // Jika Kamikaze
             if (isExplode) { // Jika explore maka meledak
                 Debug.Log($"{this.gameObject.name} explode!");
                 Destroy(this.gameObject);
@@ -115,30 +120,30 @@ public class EnemyController : MonoBehaviour
     // Helper Function
     void getTarget() {
         // Check Burning Cloth & Decoy Around
-        //var items = GameObject.FindGameObjectsWithTag("Item");
-        //foreach (var item in items) {
-        //    Vector2 itemPos = item.transform.position;
-        //    Vector2 vector = itemPos - (Vector2)this.transform.position;
-        //    var btlController = item.GetComponent<BottleController>();
-        //    var brnController = item.GetComponent<BurningClothController>();
-        //    Debug.Log(brnController == null);
-        //    float radius = btlController == null ? brnController.range : btlController.range;
-        //    if (vector.magnitude < radius) { // Ketemu Decoy
-        //        if (isWheepingAngel) {
-        //            rb.drag = 5;
-        //            isFreeze = true;
-        //        } else {
-        //            this.target = itemPos;
-        //        }
-        //        return;
-        //    }
-        //}
+        var items = GameObject.FindGameObjectsWithTag("Item");
+        foreach (var item in items) {
+            Vector2 itemPos = item.transform.position;
+            Vector2 vector = itemPos - (Vector2)this.transform.position;
+            var btlController = item.GetComponent<BottleController>();
+            var brnController = item.GetComponent<BurningClothController>();
+            if(btlController != null || brnController != null) { // Jika null dua" maka buang
+                float radius = btlController == null ? brnController.range : btlController.range;
+                Debug.Log($"{item}, {vector.magnitude}-{radius}");
+                if (vector.magnitude < radius) { // Ketemu Decoy
+                    if (isWheepingAngel) {
+                        rb.drag = 5;
+                        isFreeze = true;
+                    }
+                    setTarget(itemPos);
+                    return;
+                }
+            }
+        }
 
-        // Check Player
-        var player = getPlayerAround();
+        // Check Found Object
+        GameObject player = getPlayerAround();
         rb.drag = 0;
         if (player != null) { // Jika melihat player maka target jadi player
-            Debug.Log("See player!");
             if (spawnNanobot) { // Jika spawner
                 if(delaySpawn <= 0) {// Clone nanobot
                     // Prefab Setup
@@ -191,11 +196,14 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void setTargetToPlayer(GameObject player) {
+    void setTarget(Vector2 targetPos) {
         this.targetIsWaypoint = false;
         this.hasTarget = true;
-        this.target = player.transform.position;
-        Debug.Log("New Target: Player " + this.target);
+        this.target = targetPos;
+    }
+
+    void setTargetToPlayer(GameObject player) {
+        setTarget(player.transform.position);
     }
 
     void setTargetToNearestWaypoint() {
@@ -228,9 +236,8 @@ public class EnemyController : MonoBehaviour
             Debug.DrawRay(origin, direction.normalized * coneRadius, Color.red);
             if (raycastHit2D.collider != null) { // hit object
                 GameObject otherObj = raycastHit2D.collider.gameObject;
-                Debug.Log($"Hit {otherObj.tag}");
                 if (otherObj.CompareTag("Player")) {
-                    player = otherObj; 
+                    player = otherObj;
                     break;
                 }
             }

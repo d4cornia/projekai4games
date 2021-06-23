@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 289278742589047877}
   - component: {fileID: 289278742589047878}
   - component: {fileID: 2725329422412047091}
-  m_Layer: 20
+  m_Layer: 19
   m_Name: kamikazebot
   m_TagString: enemy
   m_Icon: {fileID: 0}

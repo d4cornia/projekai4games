@@ -126,13 +126,22 @@ public class playerController : MonoBehaviour
         processInput();
     }
 
-    void TakeDamage(int damage){
+    // Function yang dipanggil ketika enemy hit Player
+    public void TakeDamage(int damage, GameObject hitter){
+        Debug.Log("Player Take Damage!");
+        //
+        Vector2 diffPos = hitter.transform.position - this.gameObject.transform.position;
+        Vector2 direction = -diffPos.normalized;
+        this.rb.AddForce(direction * 3000);
+        //
         if(currentHealth - damage >= 0){
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
         }else{
             currentHealth = 0;
         }
+        Debug.Log($"Player HP: {currentHealth}!");
+        // TODO Knockback(?)
     }
 
     void FixedUpdate()

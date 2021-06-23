@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5616803882942576957}
   - component: {fileID: 5616803882942576958}
   - component: {fileID: 7792085588937432971}
-  m_Layer: 20
+  m_Layer: 19
   m_Name: ghostbot
   m_TagString: enemy
   m_Icon: {fileID: 0}

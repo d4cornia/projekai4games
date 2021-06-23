@@ -19,6 +19,8 @@ TagManager:
   - Location
   - Interactable
   - Door
+  - waypoint
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -39,7 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Enemy
   - Layer 1
   - Layer 2
   - Layer 3
