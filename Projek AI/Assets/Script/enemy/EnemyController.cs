@@ -103,6 +103,10 @@ public class EnemyController : MonoBehaviour {
                 Destroy(this.gameObject);
             }
         }
+        else if (col.gameObject.CompareTag("Item")) {
+            Destroy(col.gameObject);
+            Debug.Log("Item destroyed");
+        }
         //else if (col.gameObject.CompareTag("wall")) {
         //    // harusny ga mungkin
         //    // tapi jika mungkin maka cara waypoint terdekat
@@ -140,8 +144,8 @@ public class EnemyController : MonoBehaviour {
         if (decoyTarget != null) { // Jika target adalah decoy
             this.target = decoyTarget.transform.position; // Update Target Position
             return;
-        }else if (targetType == TargetType.DECOY) { // Jika tidak ada decoy tapi 
-            setTargetToNearestWaypoint();
+        }else if (targetType == TargetType.DECOY) { // Jika tidak ada decoy lagi... 
+            clearTarget();
             return;
         }
 
@@ -180,7 +184,7 @@ public class EnemyController : MonoBehaviour {
                     if (this.targetType == TargetType.WAYPOINT) { // Jika targetnya waypoint mk cari waypoint tetangga
                         setTargetToNeighbourWaypoint();
                     } else if(this.targetType == TargetType.PLAYER){ // Jika targetnya player, mk cari waypoint terdekat
-                        delayTarget = 0;
+                        clearTarget();
                     }
                 }
             }
@@ -204,6 +208,13 @@ public class EnemyController : MonoBehaviour {
         } else { // Jika Selain bot diatas
             setTargetToGameObject(gameObject, targetType);
         }
+    }
+
+    void clearTarget() { // Clear target dan beri delayTarget
+        this.hasTarget = false;
+        this.target = new Vector2();
+        this.targetType = TargetType.NONE;
+        this.delayTarget = 0;
     }
 
     void setTargetToGameObject(GameObject targetObject, TargetType targetType) {
