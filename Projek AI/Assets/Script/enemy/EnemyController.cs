@@ -19,12 +19,12 @@ public class EnemyController : MonoBehaviour {
     //// Parameters
     [Header("General")]
     [SerializeField] private GraphWaypointController graphWaypoint;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
     [SerializeField] private float delayLostPlayer;
-    [Range(0,360)][SerializeField] private int coneDegree;
-    [SerializeField] private float coneRadius;
+    [Range(0,360)][SerializeField] public int coneDegree;
+    [SerializeField] public float coneRadius;
     [SerializeField] private int damage;
     [SerializeField] private int INCDEG = 1;
 
@@ -39,7 +39,7 @@ public class EnemyController : MonoBehaviour {
     [SerializeField] private float lifeSpan; // umur nanobot dlm detik
 
     [Header("Glitch Bot")]
-    [SerializeField] private bool isWheepingAngel;
+    [SerializeField] public bool isWheepingAngel;
 
     [Header("Kamikaze")]
     [SerializeField] private bool isExplode;
@@ -65,10 +65,19 @@ public class EnemyController : MonoBehaviour {
     private float life = 0; // umur nano bot
 
     // Glitch Bot
-    private bool isFreeze = false;
+    public int freezeTime = 1;
+
 
     public EnemyController() {
         id = ctr_id++;
+    }
+
+    private void Awake()
+    {
+        if (isWheepingAngel)
+        {
+            StartCoroutine(CountDown());
+        }
     }
 
     // Update is called once per frame
@@ -76,11 +85,10 @@ public class EnemyController : MonoBehaviour {
         preUpdate();
         // Get Target
         getTarget();
-        if (isFreeze) return;
         // Jalan ke Target
         if (this.hasTarget) {
-            Steering steering = move_seek(this.target);
-            updateMovement(steering);
+             Steering steering = move_seek(this.target);
+             updateMovement(steering);
         }
         // Check kecepatan
         if (rb.velocity.magnitude > maxSpeed) {
@@ -117,10 +125,28 @@ public class EnemyController : MonoBehaviour {
 
     void preUpdate() { // Function yg dipanggil tiap kali update belum dilakukan (dibuat nambah ctr dll)
         // Wheeping Angel
-        isFreeze = false; 
-        rb.drag = 0;
-
+        if (isWheepingAngel)
+        {
+            if (freezeTime == 0)
+            {
+                rb.drag = 0;
+            }
+            else
+            {
+                rb.drag = 2000;
+            }
+        }
     }
+
+    public IEnumerator CountDown()
+    {
+        while (freezeTime > 0)
+        {
+            yield return new WaitForSeconds(1f);
+            freezeTime--;
+        }
+    }
+
     void postUpdate() { // Function yg dipanggil tiap kali update selesai dilakukan (dibuat nambah ctr dll)
         // Spawner
         if (spawnNanobot) {
@@ -158,7 +184,7 @@ public class EnemyController : MonoBehaviour {
             var brnController = item.GetComponent<BurningClothController>();
             if(btlController != null || brnController != null) { // Jika null dua" maka buang
                 float radius = btlController == null ? brnController.range : btlController.range;
-                Debug.Log($"{item}, {vector.magnitude}-{radius}");
+                //Debug.Log($"{item}, {vector.magnitude}-{radius}");
                 if (vector.magnitude < radius) { // Ketemu Decoy
                     reactToTarget(item, TargetType.DECOY);
                     return;
@@ -179,7 +205,7 @@ public class EnemyController : MonoBehaviour {
             } else {
                 bool isArrive = Vector2.Distance(origin, target) < 1; // Check sudah sampai posisi
                 if (isArrive) { // Jika sudah sampai
-                    Debug.Log("Reset target");
+                    // Debug.Log("Reset target");
                     this.hasTarget = false;
                     if (this.targetType == TargetType.WAYPOINT) { // Jika targetnya waypoint mk cari waypoint tetangga
                         setTargetToNeighbourWaypoint();
@@ -202,9 +228,6 @@ public class EnemyController : MonoBehaviour {
         } else if (isNanobot) { // Jika Nanobot
             var controllerParent = parentNanobot.GetComponent<EnemyController>();
             controllerParent.informNanobots(gameObject, targetType);
-        } else if (isWheepingAngel) {// Jika Wheeping Angel
-            isFreeze = true;
-            rb.drag = 5;
         } else { // Jika Selain bot diatas
             setTargetToGameObject(gameObject, targetType);
         }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8963681135707201679}
   - component: {fileID: 8963681135707201677}
   - component: {fileID: 8963681135707201676}
+  - component: {fileID: -1725506299898406187}
   m_Layer: 0
   m_Name: PF Decoy Bottle
   m_TagString: Item
@@ -118,5 +119,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ab104b11f706e40bc2b1da33fdf174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  range: 5
+  speed: 2
+  range: 4
+--- !u!58 &-1725506299898406187
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8963681135707201664}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
