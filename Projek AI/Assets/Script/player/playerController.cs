@@ -120,7 +120,10 @@ public class playerController : MonoBehaviour
         {
             TakeDamage(5);
         }*/
-        processInput();
+        if (!endGame())
+        {
+            processInput();
+        }
     }
 
     void TakeDamage(int damage)
@@ -138,10 +141,24 @@ public class playerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        updateOrientationPlayer();
+        if (!endGame())
+        {
+            updateOrientationPlayer();
+        }
         //walkAnim();
         //spriteOrientation();
     }
+
+    public bool endGame()
+    {
+        if(health <= 0)
+        {
+            // game endded
+            return true;
+        }
+        return false;
+    }
+
 
     void processInput()
     {
