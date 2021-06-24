@@ -116,27 +116,28 @@ public class playerController : MonoBehaviour
 
     private void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(5);
-        }*/
         if (!endGame())
         {
             processInput();
         }
     }
 
-    void TakeDamage(int damage)
-    {
-        if(currentHealth - damage >= 0)
-        {
+    // Function yang dipanggil ketika enemy hit Player
+    public void TakeDamage(int damage, GameObject hitter){
+        Debug.Log("Player Take Damage!");
+        //
+        Vector2 diffPos = hitter.transform.position - this.gameObject.transform.position;
+        Vector2 direction = -diffPos.normalized;
+        this.rb.AddForce(direction * 3000);
+        //
+        if(currentHealth - damage >= 0){
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
-        }
-        else
-        {
+        }else{
             currentHealth = 0;
         }
+        Debug.Log($"Player HP: {currentHealth}!");
+        // TODO Knockback(?)
     }
 
     void FixedUpdate()
@@ -144,6 +145,8 @@ public class playerController : MonoBehaviour
         if (!endGame())
         {
             updateOrientationPlayer();
+            if (fstate)
+                counterWheepingAngle();
         }
         //walkAnim();
         //spriteOrientation();
@@ -159,6 +162,33 @@ public class playerController : MonoBehaviour
         return false;
     }
 
+    public void counterWheepingAngle()
+    {
+        for (float deg = (curAngle - fov / 2); deg < (curAngle + fov / 2); deg++)
+        {
+            Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
+            Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
+            Vector3 origin = (Vector3)this.rb.position + offset;
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, (float)(range - 1));
+            if (raycastHit2D.collider != null)
+            {
+                // hit object
+                GameObject otherObj = raycastHit2D.collider.gameObject;
+                if (otherObj.CompareTag("enemy"))
+                {
+                    EnemyController enemyCon = otherObj.GetComponent<EnemyController>();
+                    if (enemyCon.isWheepingAngel)
+                    {
+                        if (enemyCon.freezeTime == 0)
+                        {
+                            enemyCon.freezeTime = 5;
+                            StartCoroutine(enemyCon.CountDown());
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     void processInput()
     {
@@ -487,7 +517,7 @@ public class playerController : MonoBehaviour
             Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
             Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
             Vector3 origin = playerObj.transform.position + offset;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 1);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 0.25f);
             if (raycastHit2D.collider != null)
             {
                 // hit object
@@ -552,6 +582,7 @@ public class playerController : MonoBehaviour
         curAngle = UtilsClass.GetAngleFromVectorFloat((targetPosition - transform.position).normalized);
         playerLight.transform.rotation = Quaternion.Euler(0, 0, curAngle - 90);
     }
+
 
     /*void spriteOrientation()
     {
