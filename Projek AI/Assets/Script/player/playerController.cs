@@ -470,7 +470,7 @@ public class playerController : MonoBehaviour
             Vector2 direction = new Vector2(Mathf.Cos(Mathf.Deg2Rad * deg), Mathf.Sin(Mathf.Deg2Rad * deg));
             Vector3 offset = new Vector3((float)(Mathf.Cos(Mathf.Deg2Rad * deg) * 0.50), (float)(Mathf.Sin(Mathf.Deg2Rad * deg) * 0.50), 0);
             Vector3 origin = playerObj.transform.position + offset;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 2);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, direction, 1);
             if (raycastHit2D.collider != null)
             {
                 // hit object
