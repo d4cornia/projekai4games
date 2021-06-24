@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4583305388805502604}
   - component: {fileID: 4583305388805502595}
-  - component: {fileID: 4583305388805502594}
   - component: {fileID: 4583305388805502593}
+  - component: {fileID: 4583305388805502594}
   - component: {fileID: 2182770446456279092}
-  m_Layer: 9
+  m_Layer: 19
   m_Name: normalbot
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -85,6 +85,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4583305388805502593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4583305388805502592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6db60ba0d0dd5c469c8b9f7ec45d3a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graphWaypoint: {fileID: 0}
+  rb: {fileID: 4583305388805502594}
+  maxSpeed: 0.25
+  acceleration: 0.25
+  delayLostPlayer: 1
+  coneDegree: 60
+  coneRadius: 2
+  damage: 0
+  INCDEG: 1
+  nanoBotPrefab: {fileID: 0}
+  spawnNanobot: 0
+  nanoBotsPerSpawn: 0
+  spawnNanoBotDelay: 0
+  isNanobot: 0
+  lifeSpan: 0
+  isWheepingAngel: 0
+  isExplode: 0
+  isWallIgnore: 0
 --- !u!50 &4583305388805502594
 Rigidbody2D:
   serializedVersion: 4
@@ -106,31 +136,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4583305388805502593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4583305388805502592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6db60ba0d0dd5c469c8b9f7ec45d3a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  graphWaypoint: {fileID: 0}
-  rb: {fileID: 4583305388805502594}
-  maxSpeed: 1
-  acceleration: 1
-  coneDegree: 30
-  coneRadius: 2
-  damage: 0
-  nanoBotPrefab: {fileID: 0}
-  spawnNanobot: 0
-  nanoBotDelay: 0
-  isWheepingAngel: 0
-  isExplode: 0
-  isWallIgnore: 0
 --- !u!58 &2182770446456279092
 CircleCollider2D:
   m_ObjectHideFlags: 0

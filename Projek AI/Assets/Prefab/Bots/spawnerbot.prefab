@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 340882607271075495}
   - component: {fileID: 340882607271075496}
-  - component: {fileID: 340882607271075497}
   - component: {fileID: 340882607271075498}
+  - component: {fileID: 340882607271075497}
   - component: {fileID: -5283657066644041849}
-  m_Layer: 9
+  m_Layer: 19
   m_Name: spawnerbot
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -85,6 +85,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &340882607271075498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340882607271075499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6db60ba0d0dd5c469c8b9f7ec45d3a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graphWaypoint: {fileID: 0}
+  rb: {fileID: 340882607271075497}
+  maxSpeed: 0.125
+  acceleration: 0.125
+  delayLostPlayer: 1
+  coneDegree: 90
+  coneRadius: 2
+  damage: 10
+  INCDEG: 1
+  nanoBotPrefab: {fileID: 500240705197186982, guid: 81ef31cdc1fe5a143994756f67cb7e81,
+    type: 3}
+  spawnNanobot: 1
+  nanoBotsPerSpawn: 3
+  spawnNanoBotDelay: 20
+  isNanobot: 0
+  lifeSpan: 0
+  isWheepingAngel: 0
+  isExplode: 0
+  isWallIgnore: 0
 --- !u!50 &340882607271075497
 Rigidbody2D:
   serializedVersion: 4
@@ -106,37 +137,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &340882607271075498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340882607271075499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6db60ba0d0dd5c469c8b9f7ec45d3a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  graphWaypoint: {fileID: 0}
-  rb: {fileID: 340882607271075497}
-  maxSpeed: 1
-  acceleration: 1
-  delayLostPlayer: 0
-  coneDegree: 30
-  coneRadius: 2
-  damage: 0
-  INCDEG: 1
-  nanoBotPrefab: {fileID: 500240705197186982, guid: 81ef31cdc1fe5a143994756f67cb7e81,
-    type: 3}
-  spawnNanobot: 1
-  nanoBotsPerSpawn: 3
-  spawnNanoBotDelay: 20
-  isNanobot: 0
-  lifeSpan: 0
-  isWheepingAngel: 0
-  isExplode: 0
-  isWallIgnore: 0
 --- !u!58 &-5283657066644041849
 CircleCollider2D:
   m_ObjectHideFlags: 0
