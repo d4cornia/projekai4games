@@ -14,7 +14,7 @@ public class LiftState : MonoBehaviour
     void Start()
     {
         isOpen = 0;
-        max = 1;
+        max = 3;
         delay = max;
     }
 
@@ -23,6 +23,7 @@ public class LiftState : MonoBehaviour
         isOpen = 1;
         anim.SetBool("isOpen", true);
         blockage.enabled = false;
+        StartCoroutine(CountDownSlow());
     }
 
     public IEnumerator CountDownSlow()
