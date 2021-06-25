@@ -446,6 +446,10 @@ public class playerController : MonoBehaviour
                         pickedUp.GetComponent<doorController>().tp();
                     }
                 }
+                else if (pickedUp.tag == "Interactable")
+                {
+                    pickedUp.GetComponent<objectiveController>().showTextReq();
+                }
             }
         }
 
