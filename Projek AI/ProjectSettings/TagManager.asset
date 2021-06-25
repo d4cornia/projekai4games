@@ -3,25 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Item
-  - rawItem
-  - Merchant
-  - Flashlight
-  - Opened
-  - Closed
-  - Door Interact
-  - SurroundLight
-  - Passage
-  - Key
-  - Chest
-  - Location
-  - Interactable
-  - Door
-  - Map Ornament
-  - Map Prop
-  - waypoint
-  - enemy
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -41,13 +23,13 @@ TagManager:
   - 
   - 
   - 
-  - ItemBoundary
-  - Enemy
-  - Layer 1
-  - Layer 2
-  - Layer 3
-  - Highlight
-  - Item
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -58,16 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Layer 1
-    uniqueID: 2425651459
-    locked: 0
-  - name: Layer 2
-    uniqueID: 4250941897
-    locked: 0
-  - name: Layer 3
-    uniqueID: 4189426099
-    locked: 0
-  - name: Highlight
-    uniqueID: 2886465671
     locked: 0
