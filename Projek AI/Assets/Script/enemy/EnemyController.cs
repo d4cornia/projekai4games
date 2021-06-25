@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour {
 
     // CONSTANT
     private static string PLAYER_LAYER = "Player";
-    private static string WALL_LAYER = "Layer 2";
+    private static string WALL_LAYER = "Tembok";
     private static string ENEMY_LAYER = "Enemy";
 
     // Id
