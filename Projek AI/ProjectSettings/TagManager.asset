@@ -41,13 +41,13 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Player
   - Enemy
   - Layer 1
   - Layer 2
   - Layer 3
   - Highlight
-  - 
+  - EnemyGhost
   - 
   - 
   - 
