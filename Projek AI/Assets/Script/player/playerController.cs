@@ -43,7 +43,7 @@ public class playerController : MonoBehaviour
 
 
     //item
-    bool flagi, flagM;
+    bool flagi, flagM, flagP;
     public int[] items;
     // 0 : burning cloth
     // 1 : bottle
@@ -112,6 +112,7 @@ public class playerController : MonoBehaviour
 
             flagi = false;
             flagM = false;
+            flagP = false;
 
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
@@ -446,11 +447,21 @@ public class playerController : MonoBehaviour
                         pickedUp.GetComponent<doorController>().tp();
                     }
                 }
+                else if (pickedUp.tag == "Gate")
+                {
+                    if (checkPickedupReqObj())
+                    {
+                        // script gate and open gate
+                    }
+                }
                 else if (pickedUp.tag == "Paper")
                 {
-                    Debug.Log("BACA");
-                    pickedUp.GetComponent<objectiveController>().showTextReq();
                     pickedUp.GetComponent<OpenPaper>().openText();
+                    if (flagP)
+                    {
+                        checkPickedupReqObj();
+                    }
+                    flagP = !flagP;
                 }
             }
         }
@@ -624,7 +635,6 @@ public class playerController : MonoBehaviour
         else if (curAngle > 150 && curAngle < 230) look = 3;
         else if (curAngle > 230 && curAngle < 310) look = 4;
         else if (curAngle < 35 || curAngle > 310) look = 2;
-        Debug.Log("Angle : " + curAngle + " | Looking : " + look);
         animator.SetInteger("Look", look);
         look = 0;
     }

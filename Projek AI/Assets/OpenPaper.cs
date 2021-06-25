@@ -11,7 +11,7 @@ public class OpenPaper : MonoBehaviour
     public void openText()
     {
         GameObject paper = findChild(canvasText, paperName);
-        if (canvasText.activeSelf)
+        if (canvasText.active)
         {
             paper.SetActive(false);
             canvasText.SetActive(false);

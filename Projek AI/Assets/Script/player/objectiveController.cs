@@ -74,10 +74,6 @@ public class objectiveController : MonoBehaviour
                 objPopUp.GetComponent<reqTextController>().showText();
                 objPopUp.GetComponent<TextMeshProUGUI>().text = "*Objective Removed*";
             }
-            foreach (var item in listNewObj)
-            {
-                player.GetComponent<playerController>().listObj.Add(item);
-            }
         }
         else
         {
