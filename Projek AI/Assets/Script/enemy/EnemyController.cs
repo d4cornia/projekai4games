@@ -57,6 +57,7 @@ public class EnemyController : MonoBehaviour {
     private static string PLAYER_LAYER = "Player";
     private static string WALL_LAYER = "Tembok";
     private static string ENEMY_LAYER = "Enemy";
+    private static string ITEM_LAYER = "Item";
 
     // Id
     private static int ctr_id = 0;
@@ -304,7 +305,8 @@ public class EnemyController : MonoBehaviour {
             if (!isWallIgnore) { // Jika tidak wall ignore maka cast biasa
                 int layerMaskPlayer = 1 << LayerMask.NameToLayer(PLAYER_LAYER);
                 int layerMaskWall = 1 << LayerMask.NameToLayer(WALL_LAYER);
-                int layerMask = layerMaskPlayer | layerMaskWall;
+                int layerMaskItem = 1 << LayerMask.NameToLayer(ITEM_LAYER);
+                int layerMask = layerMaskPlayer | layerMaskWall | layerMaskItem;
                 raycastHit2D = Physics2D.Raycast(origin, direction, coneRadius, layerMask);
             } else { // Jika wall ignore maka cast hanya layer player
                 int layerMaskPlayer = 1 << LayerMask.NameToLayer(PLAYER_LAYER);

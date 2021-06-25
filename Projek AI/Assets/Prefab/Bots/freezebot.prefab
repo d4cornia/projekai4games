@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 0.77254903, g: 0.08235294, b: 0, a: 1}
   m_Intensity: 0.05
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0000000003819490c93960fdb391b5f9
+  m_ApplyToSortingLayers: 03819490c93960fd
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -188,12 +188,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphWaypoint: {fileID: 0}
   rb: {fileID: 3275427354782824070}
-  maxSpeed: 1
-  acceleration: 3
+  maxSpeed: 0.85
+  acceleration: 0.85
   delayLostPlayer: 1
   coneDegree: 50
   coneRadius: 8
-  damage: 0
+  damage: 17
   INCDEG: 1
   nanoBotPrefab: {fileID: 0}
   spawnNanobot: 0
@@ -201,6 +201,9 @@ MonoBehaviour:
   spawnNanoBotDelay: 0
   isNanobot: 0
   lifeSpan: 0
+  isTrapBot: 0
+  trapPrefab: {fileID: 0}
+  spawnTrapDelay: 0
   isWheepingAngel: 1
   isExplode: 0
   isWallIgnore: 0
@@ -291,7 +294,7 @@ MonoBehaviour:
   m_Color: {r: 0.77254903, g: 0.08235294, b: 0, a: 1}
   m_Intensity: 0.6
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0000000003819490c93960fdb391b5f9
+  m_ApplyToSortingLayers: 03819490c93960fd
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
