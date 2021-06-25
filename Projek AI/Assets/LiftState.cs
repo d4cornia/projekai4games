@@ -9,7 +9,6 @@ public class LiftState : MonoBehaviour
     public int isOpen;
     public Collider2D blockage;
     private int delay,max;
-    public int sceneIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +32,5 @@ public class LiftState : MonoBehaviour
             yield return new WaitForSeconds(1f);
             delay--;
         }
-        SceneManager.LoadScene(sceneIndex);
     }
 }
