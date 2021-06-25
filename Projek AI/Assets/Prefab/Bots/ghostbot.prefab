@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9180760870999440747}
   - component: {fileID: 7498544818706966603}
-  m_Layer: 24
+  m_Layer: 17
   m_Name: surround light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 5616803882942576958}
   - component: {fileID: 5616803882942576957}
   - component: {fileID: 7792085588937432971}
-  m_Layer: 24
+  m_Layer: 17
   m_Name: ghostbot
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -44025399
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 20
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 0.69411767, b: 0.9759724, a: 1}
   m_FlipX: 0
@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1082829256130049574}
   - component: {fileID: 8542359439929411993}
-  m_Layer: 24
+  m_Layer: 17
   m_Name: dir light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

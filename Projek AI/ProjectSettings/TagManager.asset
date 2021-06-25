@@ -41,16 +41,16 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - Player
+  - EnemyGhost
+  - ItemBoundary
   - Enemy
   - Layer 1
-  - Layer 2
+  - Player
   - Layer 3
   - Highlight
-  - EnemyGhost
-  - 
-  - 
+  - Item
+  - Tembok
+  - Collectibles
   - 
   - 
   - 
