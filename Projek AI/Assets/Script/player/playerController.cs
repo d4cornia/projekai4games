@@ -482,12 +482,15 @@ public class playerController : MonoBehaviour
 
     public void updateObjective()
     {
-        if(listObj.Count == 0) objectiveText.GetComponent<TextMeshProUGUI>().text = "None";
-        else 
+        if (listObj.Count == 0) objectiveText.GetComponent<TextMeshProUGUI>().text = "None";
+        else
+        {
+            objectiveText.GetComponent<TextMeshProUGUI>().text = "";
             foreach (var item in listObj)
             {
-                objectiveText.GetComponent<TextMeshProUGUI>().text = "- " + item + "\n ";
+                objectiveText.GetComponent<TextMeshProUGUI>().text += "- " + item + "\n";
             }
+        }
     }
 
     public void changeFlashlight()
@@ -584,12 +587,12 @@ public class playerController : MonoBehaviour
     }
 
 
-    /*void spriteOrientation()
+    void spriteOrientation()
     {
-        if (fov.curAngle > 60 && fov.curAngle < 170) look = 1;
-        else if (fov.curAngle > 170 && fov.curAngle < 250) look = 3;
-        else if (fov.curAngle > 250 && fov.curAngle < 330) look = 4;
-        else if (fov.curAngle < 60 || fov.curAngle > 330) look = 2;
+        if (curAngle > 60 && curAngle < 170) look = 1;
+        else if (curAngle > 170 && curAngle < 250) look = 3;
+        else if (curAngle > 250 && curAngle < 330) look = 4;
+        else if (curAngle < 60 || curAngle > 330) look = 2;
 
         animator.SetInteger("Look", look);
         look = 0;
@@ -598,7 +601,5 @@ public class playerController : MonoBehaviour
     void walkAnim()
     {
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x + rb.velocity.y));
-        if (Mathf.Abs(rb.velocity.x + rb.velocity.y) > 2) animator.speed = 1.3f;
-        else animator.speed = 0.6f;
-    }*/
+    }
 }

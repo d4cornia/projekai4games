@@ -5,24 +5,40 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class BehindSpriteCollision : MonoBehaviour
 {
+    int defaultValue = 20;
+    bool behind = false;
+    SpriteRenderer spriteCollision;
+    SpriteRenderer sprite;
+
+    private void Awake()
+    {
+        sprite = gameObject.GetComponent<SpriteRenderer>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" || collision.tag == "enemy")
         {
-            SpriteRenderer sprite = collision.gameObject.GetComponent<SpriteRenderer>();
-            sprite.sortingOrder = 2;
-            findChild(gameObject, "Shadow").SetActive(true);
-            Debug.Log("Enter :" + sprite.sortingLayerName);
+            behind = true;
+            spriteCollision = collision.gameObject.GetComponent<SpriteRenderer>();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" || collision.tag == "enemy")
         {
-            SpriteRenderer sprite = collision.gameObject.GetComponent<SpriteRenderer>();
-            sprite.sortingOrder = 4;
+            behind = false;
+            spriteCollision = collision.gameObject.GetComponent<SpriteRenderer>();
+            spriteCollision.sortingOrder = defaultValue;
             findChild(gameObject, "Shadow").SetActive(false);
-            Debug.Log("Exit :" + sprite.sortingLayerName);
+        }
+    }
+
+    private void Update()
+    {
+        if (behind)
+        {
+            spriteCollision.sortingOrder = sprite.sortingOrder - 1;
+            findChild(gameObject, "Shadow").SetActive(true);
         }
     }
 

@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextDoor: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
+  nextLocationName: 
 --- !u!114 &3579696431473655854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,10 +209,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reqTextGO: {fileID: 0}
-  requirementText: 
-  listNewObj: []
+  requirementText: Locked
+  listNewObj:
+  - Find Green Key
   finishedObj: []
-  listReq: []
+  listReq:
+  - Green Key
 --- !u!61 &5600492743708485130
 BoxCollider2D:
   m_ObjectHideFlags: 0
