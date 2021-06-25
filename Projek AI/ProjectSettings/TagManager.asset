@@ -23,6 +23,7 @@ TagManager:
   - waypoint
   - enemy
   - SlowTrap
+  - Gate
   layers:
   - Default
   - TransparentFX
