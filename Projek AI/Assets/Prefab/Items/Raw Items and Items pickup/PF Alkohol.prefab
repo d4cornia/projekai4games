@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 554056061935711945}
   - component: {fileID: 9044727475943528113}
   - component: {fileID: 1615788283911681920}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: PF Alkohol
   m_TagString: rawItem
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3125048759557873487}
   - component: {fileID: 5162849553511065901}
-  m_Layer: 23
+  m_Layer: 26
   m_Name: Highlighted
   m_TagString: Untagged
   m_Icon: {fileID: 0}

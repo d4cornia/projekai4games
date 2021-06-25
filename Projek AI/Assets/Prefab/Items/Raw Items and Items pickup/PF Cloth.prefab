@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3428610372950977590}
   - component: {fileID: 3428610372950977591}
   - component: {fileID: 6830544763499389473}
-  m_Layer: 22
+  m_Layer: 26
   m_Name: PF Cloth
   m_TagString: rawItem
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4258474632025459829}
   - component: {fileID: 16854930403360800}
-  m_Layer: 22
+  m_Layer: 26
   m_Name: Highlighted
   m_TagString: Untagged
   m_Icon: {fileID: 0}

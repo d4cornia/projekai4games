@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7608538771333112064}
   - component: {fileID: 2059706627037155666}
   - component: {fileID: 3932729170838465824}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: PF Batrei
   m_TagString: rawItem
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6598536080504975559}
   - component: {fileID: 6583532821895351899}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: Highlighted
   m_TagString: Untagged
   m_Icon: {fileID: 0}

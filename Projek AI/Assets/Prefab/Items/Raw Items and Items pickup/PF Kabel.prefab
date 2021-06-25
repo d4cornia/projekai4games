@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1502579423862144291}
   - component: {fileID: 6645024223539462307}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: Highlighted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2222344389699397822}
   - component: {fileID: 5778318635166096726}
   - component: {fileID: 8577969853730220869}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: PF Kabel
   m_TagString: rawItem
   m_Icon: {fileID: 0}
