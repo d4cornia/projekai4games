@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class OpenGate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject gateOpen;
+    public void openGate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        gateOpen.SetActive(true);
+        gameObject.SetActive(false);
     }
 }

@@ -13,12 +13,18 @@ public class waypointController : MonoBehaviour
         {
             int idx = Random.Range(0, 2);
             PFitems[idx + 7].transform.position = this.gameObject.transform.position;
+            PFitems[idx + 7].layer = LayerMask.NameToLayer("Collectibles");
+            PFitems[idx + 7].GetComponent<SpriteRenderer>().sortingLayerName = "Layer 2";
+            PFitems[idx + 7].GetComponent<SpriteRenderer>().sortingOrder = 0;
             Instantiate(PFitems[idx + 6]);
         }
         else
         {
             int idx = Random.Range(0, 7);
             PFitems[idx].transform.position = this.gameObject.transform.position;
+            PFitems[idx].layer = LayerMask.NameToLayer("Collectibles");
+            PFitems[idx].GetComponent<SpriteRenderer>().sortingLayerName = "Layer 2";
+            PFitems[idx].GetComponent<SpriteRenderer>().sortingOrder = 0;
             Instantiate(PFitems[idx]);
         }
         Destroy(this.gameObject);

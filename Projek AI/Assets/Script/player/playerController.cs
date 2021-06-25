@@ -203,7 +203,7 @@ public class playerController : MonoBehaviour
     {
         Vector2 dir = Vector2.zero;
         // jika tidak lagi open merchant
-        if (!flagM)
+        if (!flagM && !flagP)
         {
             // movement keybind
             if (Input.GetKey(KeyCode.A))
@@ -451,15 +451,20 @@ public class playerController : MonoBehaviour
                 {
                     if (checkPickedupReqObj())
                     {
-                        // script gate and open gate
+                        pickedUp.GetComponent<OpenGate>().openGate();
                     }
                 }
                 else if (pickedUp.tag == "Paper")
                 {
+                    if(!keys.Contains(pickedUp.name)) keys.Add(pickedUp.name);
                     pickedUp.GetComponent<OpenPaper>().openText();
                     if (flagP)
                     {
                         checkPickedupReqObj();
+                    }
+                    else
+                    {
+                        pickedUp.GetComponent<objectiveController>().finishAndNewObjective();
                     }
                     flagP = !flagP;
                 }

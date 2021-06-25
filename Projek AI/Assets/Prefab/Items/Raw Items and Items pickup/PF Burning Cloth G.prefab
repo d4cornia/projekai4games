@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7712924723058489025}
   - component: {fileID: 7712924723058489024}
   - component: {fileID: 7712924723058489027}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: PF Burning Cloth G
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7712924723058489026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.316559, y: 33.375355, z: 0}
+  m_LocalPosition: {x: -23.61728, y: 33.421677, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,9 +84,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -105541197
-  m_SortingLayer: 3
-  m_SortingOrder: 2
+  m_SortingLayerID: -44025399
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2988052862fa31d428b97c6fb083c070, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1048748739587897577}
   - component: {fileID: 1048748739587897576}
   - component: {fileID: 4080412348797325744}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: PF Bandage G
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048748739587897574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.61728, y: 33.421677, z: 0}
+  m_LocalPosition: {x: -25.316559, y: 33.375355, z: 0}
   m_LocalScale: {x: 1.1986784, y: 1.1986784, z: 1.1986784}
   m_Children:
   - {fileID: 6438606561506998635}
