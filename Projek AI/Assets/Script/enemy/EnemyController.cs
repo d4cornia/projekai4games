@@ -45,9 +45,14 @@ public class EnemyController : MonoBehaviour {
     [SerializeField] private bool isExplode;
 
     [Header("Warper")]
-    [SerializeField] private bool isWallIgnore;  
+    [SerializeField] private bool isWallIgnore;
     //// End of Parameters
-    
+
+    // CONSTANT
+    private static string PLAYER_LAYER = "Player";
+    private static string WALL_LAYER = "Layer 2";
+    private static string ENEMY_LAYER = "Enemy";
+
     // Id
     private static int ctr_id = 0;
     private int id;
@@ -170,6 +175,7 @@ public class EnemyController : MonoBehaviour {
         GameObject player = getPlayerAround();
         if (player != null) { // Jika melihat player maka target jadi player
             reactToTarget(player, TargetType.PLAYER);
+<<<<<<< Updated upstream
         } else { // State Pergi ke Target...
             Vector2 origin = this.gameObject.transform.position;
             if(delayTarget < delayLostPlayer) { // Check apakah barusan kehilangan player
@@ -187,6 +193,33 @@ public class EnemyController : MonoBehaviour {
                         clearTarget();
                     }
                 }
+=======
+            return;
+        }
+
+        // Jika lagi delay / IDLE
+        Vector2 origin = this.gameObject.transform.position;
+        bool isIdle = delayTarget < delayLostPlayer;
+        if (isIdle) {
+            delayTarget += Time.deltaTime;
+            return;
+        }
+
+        // Jika tidak punya target maka cari waypoint terdekat
+        if (!this.hasTarget) {
+            setTargetToNearestWaypoint();
+            return;
+        }
+
+        // Jika sudah sampai target..
+        bool isArrive = Vector2.Distance(origin, target) < 1; // Check sudah sampai posisi
+        if (isArrive) { // Jika sudah sampai
+            this.hasTarget = false;
+            if (this.targetType == TargetType.WAYPOINT) { // Jika targetnya waypoint mk cari waypoint tetangga
+                setTargetToNeighbourWaypoint();
+            } else if(this.targetType == TargetType.PLAYER){ // Jika targetnya player, mk cari waypoint terdekat
+                clearTarget();
+>>>>>>> Stashed changes
             }
         }
     }
@@ -253,10 +286,13 @@ public class EnemyController : MonoBehaviour {
             origin = (Vector3)this.rb.position;
             RaycastHit2D raycastHit2D;
             if (!isWallIgnore) { // Jika tidak wall ignore maka cast biasa
-                int layerMask = 1 << LayerMask.NameToLayer("Layer 2");
+                int layerMaskPlayer = 1 << LayerMask.NameToLayer(PLAYER_LAYER);
+                int layerMaskWall = 1 << LayerMask.NameToLayer(WALL_LAYER);
+                int layerMask = layerMaskPlayer | layerMaskWall;
                 raycastHit2D = Physics2D.Raycast(origin, direction, coneRadius, layerMask);
             } else { // Jika wall ignore maka cast hanya layer player
-                int layerMask = 1 << LayerMask.NameToLayer("Layer 2");
+                int layerMaskPlayer = 1 << LayerMask.NameToLayer(PLAYER_LAYER);
+                int layerMask = layerMaskPlayer;
                 raycastHit2D = Physics2D.Raycast(origin, direction, coneRadius, layerMask);
             }
             Debug.DrawRay(origin, direction.normalized * coneRadius, Color.red);
