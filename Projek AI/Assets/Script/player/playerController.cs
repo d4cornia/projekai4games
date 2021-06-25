@@ -156,8 +156,8 @@ public class playerController : MonoBehaviour
             if (fstate)
                 counterWheepingAngle();
         }
-        //walkAnim();
-        //spriteOrientation();
+        walkAnim();
+        spriteOrientation();
     }
 
     public bool endGame()
@@ -614,11 +614,11 @@ public class playerController : MonoBehaviour
 
     void spriteOrientation()
     {
-        if (curAngle > 60 && curAngle < 170) look = 1;
-        else if (curAngle > 170 && curAngle < 250) look = 3;
-        else if (curAngle > 250 && curAngle < 330) look = 4;
-        else if (curAngle < 60 || curAngle > 330) look = 2;
-
+        if (curAngle > 35 && curAngle < 150) look = 1;
+        else if (curAngle > 150 && curAngle < 230) look = 3;
+        else if (curAngle > 230 && curAngle < 310) look = 4;
+        else if (curAngle < 35 || curAngle > 310) look = 2;
+        Debug.Log("Angle : " + curAngle + " | Looking : " + look);
         animator.SetInteger("Look", look);
         look = 0;
     }
