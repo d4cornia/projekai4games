@@ -450,6 +450,11 @@ public class playerController : MonoBehaviour
                 {
                     pickedUp.GetComponent<objectiveController>().showTextReq();
                 }
+                else if(pickedUp.tag == "Paper")
+                {
+                    Debug.Log("BACA");
+                    pickedUp.GetComponent<OpenPaper>().openText();
+                }
             }
         }
 

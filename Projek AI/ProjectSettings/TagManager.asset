@@ -24,6 +24,7 @@ TagManager:
   - enemy
   - SlowTrap
   - Gate
+  - Paper
   layers:
   - Default
   - TransparentFX
