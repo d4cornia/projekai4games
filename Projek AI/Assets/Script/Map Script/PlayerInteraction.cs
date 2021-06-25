@@ -59,6 +59,7 @@ public class PlayerInteraction : MonoBehaviour
         //Gate
         if (Input.GetKeyDown(KeyCode.E) && isInBoundary)
         {
+            Debug.Log(tag);
             switch (tag)
             {
                 case GATE:

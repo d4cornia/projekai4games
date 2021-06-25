@@ -611,9 +611,8 @@ public class playerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
+        //Debug.Log(collision.tag);
         pickedUp = collision.gameObject;
-        Debug.Log(collision.tag);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
