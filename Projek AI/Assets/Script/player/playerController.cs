@@ -446,13 +446,10 @@ public class playerController : MonoBehaviour
                         pickedUp.GetComponent<doorController>().tp();
                     }
                 }
-                else if (pickedUp.tag == "Interactable")
-                {
-                    pickedUp.GetComponent<objectiveController>().showTextReq();
-                }
-                else if(pickedUp.tag == "Paper")
+                else if (pickedUp.tag == "Paper")
                 {
                     Debug.Log("BACA");
+                    pickedUp.GetComponent<objectiveController>().showTextReq();
                     pickedUp.GetComponent<OpenPaper>().openText();
                 }
             }
@@ -584,7 +581,7 @@ public class playerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.tag);
-        if (collision.tag == "rawItem" || collision.tag == "Item" || collision.tag == "Key" || collision.tag == "Chest" || collision.tag == "Door")
+        if (collision.tag == "rawItem" || collision.tag == "Item" || collision.tag == "Key" || collision.tag == "Chest" || collision.tag == "Door" || collision.tag == "Paper")
         {
             pickedUp = collision.gameObject;
             Debug.Log(collision.tag);
