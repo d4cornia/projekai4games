@@ -460,6 +460,29 @@ public class playerController : MonoBehaviour
                         pickedUp.GetComponent<objectiveController>().finishAndNewObjective();
                     }
                     flagP = !flagP;
+                }else if(pickedUp.tag == "ControlRoom")
+                {
+                    string roomName = "";
+                    if (keys.Contains("Office Top"))
+                    {
+                        roomName = "Office Center";
+                        keys.Remove("Office Top");
+                        keys.Add("Office Center");
+                    }
+                    else if (keys.Contains("Office Center"))
+                    {
+                        roomName = "Office Bottom";
+                        keys.Remove("Office Center");
+                        keys.Add("Office Bottom");
+                    }
+                    else if (keys.Contains("Office Bottom"))
+                    {
+                        roomName = "Office Top";
+                        keys.Remove("Office Bottom");
+                        keys.Add("Office Top");
+                    }
+                    pickedUp.GetComponent<objectiveController>().reqTextGO.GetComponent<reqTextController>().showText();
+                    pickedUp.GetComponent<objectiveController>().reqTextGO.GetComponent<TextMeshProUGUI>().text = $"Switched to {roomName}";
                 }
             }
         }
@@ -589,11 +612,8 @@ public class playerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.tag);
-        if (collision.tag == "rawItem" || collision.tag == "Item" || collision.tag == "Key" || collision.tag == "Chest" || collision.tag == "Door" || collision.tag == "Paper")
-        {
-            pickedUp = collision.gameObject;
-            Debug.Log(collision.tag);
-        }
+        pickedUp = collision.gameObject;
+        Debug.Log(collision.tag);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

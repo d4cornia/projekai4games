@@ -25,6 +25,7 @@ TagManager:
   - SlowTrap
   - Gate
   - Paper
+  - ControlRoom
   layers:
   - Default
   - TransparentFX
