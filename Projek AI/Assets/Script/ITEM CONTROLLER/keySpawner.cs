@@ -10,9 +10,6 @@ public class keySpawner : MonoBehaviour
 
     public GameObject reqTextGO;
     public string requirementText;
-    /*public List<string> listNewObj;
-    public List<string> finishedObj;
-    public List<string> listReq; // req di dalam key*/
 
     public void destroyChest()
     {
@@ -31,8 +28,8 @@ public class keySpawner : MonoBehaviour
         PFkey.GetComponent<objectiveController>().reqTextGO = this.reqTextGO;
         PFkey.GetComponent<objectiveController>().requirementText = this.requirementText;
         /*PFkey.GetComponent<objectiveController>().listNewObj = this.listNewObj;
-        PFkey.GetComponent<objectiveController>().listReq = this.listReq;
-        PFkey.GetComponent<objectiveController>().finishedObj = this.finishedObj;*/
+        PFkey.GetComponent<objectiveController>().listReq = this.listReq;*/
+        PFkey.GetComponent<objectiveController>().finishedObj = this.gameObject.GetComponent<objectiveController>().finishedObj;
         PFkey.transform.position = this.gameObject.transform.position + new Vector3(Random.Range((float)-0.3, (float)0.3), Random.Range((float)-0.3, (float)0.3), 0);
         PFkey.GetComponent<keyItem>().keyName = keyName;
         Instantiate(PFkey);

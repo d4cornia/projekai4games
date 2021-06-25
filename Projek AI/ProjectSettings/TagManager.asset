@@ -7,7 +7,6 @@ TagManager:
   - Item
   - rawItem
   - Merchant
-  - CenterWall
   - Flashlight
   - Opened
   - Closed
@@ -19,6 +18,8 @@ TagManager:
   - Location
   - Interactable
   - Door
+  - Map Ornament
+  - Map Prop
   - waypoint
   - enemy
   layers:
