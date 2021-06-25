@@ -22,6 +22,7 @@ TagManager:
   - Map Prop
   - waypoint
   - enemy
+  - SlowTrap
   layers:
   - Default
   - TransparentFX

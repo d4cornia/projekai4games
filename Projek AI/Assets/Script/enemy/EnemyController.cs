@@ -38,6 +38,11 @@ public class EnemyController : MonoBehaviour {
     [SerializeField] private bool isNanobot;
     [SerializeField] private float lifeSpan; // umur nanobot dlm detik
 
+    [Header("Trap Bot")]
+    [SerializeField] private bool isTrapBot;
+    [SerializeField] private GameObject trapPrefab;
+    [SerializeField] private int spawnTrapDelay;
+
     [Header("Glitch Bot")]
     [SerializeField] public bool isWheepingAngel;
 
@@ -68,9 +73,10 @@ public class EnemyController : MonoBehaviour {
     // NanoBot
     private GameObject parentNanobot = null;
     private float life = 0; // umur nano bot
-
     // Glitch Bot
     public int freezeTime = 1;
+    // Trapbot
+    private float ctrSpawnTrap = 0;
 
 
     public EnemyController() {
@@ -168,6 +174,10 @@ public class EnemyController : MonoBehaviour {
                 Destroy(this.gameObject);
             }
         }
+        // Trapbot
+        if (isTrapBot) {
+            ctrSpawnTrap += Time.deltaTime;
+        }
     }
 
     // Helper Function
@@ -241,6 +251,9 @@ public class EnemyController : MonoBehaviour {
         } else if (isNanobot) { // Jika Nanobot
             var controllerParent = parentNanobot.GetComponent<EnemyController>();
             controllerParent.informNanobots(gameObject, targetType);
+        } else if (isTrapBot) { // Jika TrapBot
+            tryGenerateTrap();
+            setTargetToGameObject(gameObject, targetType);
         } else { // Jika Selain bot diatas
             setTargetToGameObject(gameObject, targetType);
         }
@@ -354,5 +367,18 @@ public class EnemyController : MonoBehaviour {
             controller.setTargetToGameObject(gameObject, targetType);
         }
         this.setTargetToGameObject(gameObject, targetType);
+    }
+
+    // Trap bot
+    void tryGenerateTrap() {
+        if(ctrSpawnTrap >= spawnTrapDelay) {
+            // Prefab Setup
+            var prefab = trapPrefab;
+            // Clone
+            var newTrap = GameObject.Instantiate(prefab);
+            newTrap.transform.position = this.rb.transform.position;
+            // Reset CTR
+            ctrSpawnTrap = 0;
+        }
     }
 }

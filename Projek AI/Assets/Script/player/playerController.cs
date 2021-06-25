@@ -78,6 +78,14 @@ public class playerController : MonoBehaviour
 
     public HealthBar healthBar;
 
+
+    [Header("Slow Player")]
+    public float dragSlow;
+    public int timeSlow;
+
+    // Drag Slow
+    int ctrSlow = 0;
+
     void Awake()
     {
         if (rb == null)
@@ -581,6 +589,23 @@ public class playerController : MonoBehaviour
         Vector3 targetPosition = UtilsClass.GetWorldPositionFromUI();
         curAngle = UtilsClass.GetAngleFromVectorFloat((targetPosition - transform.position).normalized);
         playerLight.transform.rotation = Quaternion.Euler(0, 0, curAngle - 90);
+    }
+
+    // Slow Player
+    public void slowPlayer() {
+        this.rb.drag = dragSlow;
+        this.ctrSlow = timeSlow;
+        if (this.ctrSlow > 0) {
+            StartCoroutine(CountDownSlow());
+        }
+    }
+
+    public IEnumerator CountDownSlow() {
+        while (ctrSlow > 0) {
+            yield return new WaitForSeconds(1f);
+            ctrSlow--;
+        }
+        this.rb.drag = 0;
     }
 
 
