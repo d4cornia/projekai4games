@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenGate : MonoBehaviour
 {
     public GameObject gateOpen;
+
     public void openGate()
     {
         gateOpen.SetActive(true);
