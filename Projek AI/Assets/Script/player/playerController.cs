@@ -21,7 +21,6 @@ public class playerController : MonoBehaviour
 
 
     // stats
-    public float health;
     public float speed;
     public float curAngle;
     public float range;
@@ -100,7 +99,6 @@ public class playerController : MonoBehaviour
             lightPlayer = playerLight.GetComponent<Light2D>();
             lightPlayer.intensity = 1;
 
-            health = 100;
             range = 6;
             rawItems = new int[7] { 1, 2, 2, 3, 5, 7, 3 };
             items = new int[3] { 3, 3, 3};
@@ -163,7 +161,7 @@ public class playerController : MonoBehaviour
 
     public bool endGame()
     {
-        if(health <= 0)
+        if(currentHealth <= 0)
         {
             // game endded
             return true;
