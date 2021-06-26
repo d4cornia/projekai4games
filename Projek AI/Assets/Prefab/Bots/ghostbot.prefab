@@ -188,11 +188,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphWaypoint: {fileID: 0}
   rb: {fileID: 5616803882942576957}
-  maxSpeed: 0.15
-  acceleration: 0.15
+  maxSpeed: 0.25
+  acceleration: 0.2
   delayLostPlayer: 1
-  coneDegree: 360
-  coneRadius: 20
+  coneDegree: 220
+  coneRadius: 15
   damage: 15
   INCDEG: 1
   nanoBotPrefab: {fileID: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Color: {r: 0.77254903, g: 0.08235294, b: 0, a: 1}
   m_Intensity: 0.6
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: c93960fd03819490
+  m_ApplyToSortingLayers: 0000000003819490c93960fdb391b5f987f80bac
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0

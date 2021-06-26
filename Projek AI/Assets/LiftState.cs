@@ -49,6 +49,10 @@ public class LiftState : MonoBehaviour
         GameObject.Find("PF Player").GetComponent<PlayerInteraction>().locationText.GetComponent<TextMeshProUGUI>().text = nextLocationName;
         closeLift();
         StartCoroutine(CountDownClose());
+        if (gameObject.GetComponent<enemySpawn>() != null)
+        {
+            gameObject.GetComponent<enemySpawn>().unhide();
+        }
     }
 
     public IEnumerator CountDownClose()
