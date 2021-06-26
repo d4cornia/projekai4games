@@ -192,7 +192,7 @@ MonoBehaviour:
   acceleration: 0.15
   delayLostPlayer: 1
   coneDegree: 360
-  coneRadius: 5
+  coneRadius: 20
   damage: 15
   INCDEG: 1
   nanoBotPrefab: {fileID: 0}

@@ -119,9 +119,9 @@ MonoBehaviour:
   maxSpeed: 0.125
   acceleration: 0.125
   delayLostPlayer: 1
-  coneDegree: 90
-  coneRadius: 2
-  damage: 0
+  coneDegree: 80
+  coneRadius: 7
+  damage: 2
   INCDEG: 1
   nanoBotPrefab: {fileID: 500240705197186982, guid: 81ef31cdc1fe5a143994756f67cb7e81,
     type: 3}
